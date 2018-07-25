@@ -1,29 +1,19 @@
 //
-//  SplashViewController.swift
+//  NoteViewController.swift
 //  LeisureMap
 //
-//  Created by stu1 on 2018/7/23.
+//  Created by stu1 on 2018/7/25.
 //  Copyright © 2018年 YungFan. All rights reserved.
 //
 
 import UIKit
 
-class SplashViewController: UIViewController {
+class NoteViewController: UIViewController {
 
-    @IBOutlet weak var version: UILabel!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        
-        let userDefaults = UserDefaults.standard
-        
-        let url:URL = URL(string:"https://score.azurewebsites.net/api/version/1")!
-    
-        let session: URLSession = URLSession()
-            
-        userDefaults.synchronize()
     }
     
 

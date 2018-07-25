@@ -16,6 +16,10 @@
 		AD54F56A2105D622007A2114 /* LeisureMapUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD54F5692105D622007A2114 /* LeisureMapUITests.swift */; };
 		AD54F5782105DB03007A2114 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD54F5772105DB03007A2114 /* SplashViewController.swift */; };
 		AD54F57B2105DB66007A2114 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD54F57A2105DB66007A2114 /* LoginViewController.swift */; };
+		AD760064210858BD003F7733 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD760063210858BD003F7733 /* MasterViewController.swift */; };
+		AD760066210858D2003F7733 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD760065210858D2003F7733 /* DetailViewController.swift */; };
+		AD76006921085911003F7733 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD76006821085911003F7733 /* MapViewController.swift */; };
+		AD76006C2108592F003F7733 /* NoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD76006B2108592F003F7733 /* NoteViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +55,10 @@
 		AD54F56B2105D622007A2114 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AD54F5772105DB03007A2114 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		AD54F57A2105DB66007A2114 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		AD760063210858BD003F7733 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
+		AD760065210858D2003F7733 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		AD76006821085911003F7733 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		AD76006B2108592F003F7733 /* NoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +109,9 @@
 		AD54F5482105D621007A2114 /* LeisureMap */ = {
 			isa = PBXGroup;
 			children = (
+				AD76006A21085917003F7733 /* NoteFlow */,
+				AD760067210858DD003F7733 /* MapFlow */,
+				AD76006221085896003F7733 /* MasterDetail */,
 				AD54F5792105DB48007A2114 /* LoginFlow */,
 				AD54F5492105D621007A2114 /* AppDelegate.swift */,
 				AD54F54B2105D621007A2114 /* ViewController.swift */,
@@ -137,6 +148,31 @@
 				AD54F57A2105DB66007A2114 /* LoginViewController.swift */,
 			);
 			path = LoginFlow;
+			sourceTree = "<group>";
+		};
+		AD76006221085896003F7733 /* MasterDetail */ = {
+			isa = PBXGroup;
+			children = (
+				AD760063210858BD003F7733 /* MasterViewController.swift */,
+				AD760065210858D2003F7733 /* DetailViewController.swift */,
+			);
+			path = MasterDetail;
+			sourceTree = "<group>";
+		};
+		AD760067210858DD003F7733 /* MapFlow */ = {
+			isa = PBXGroup;
+			children = (
+				AD76006821085911003F7733 /* MapViewController.swift */,
+			);
+			path = MapFlow;
+			sourceTree = "<group>";
+		};
+		AD76006A21085917003F7733 /* NoteFlow */ = {
+			isa = PBXGroup;
+			children = (
+				AD76006B2108592F003F7733 /* NoteViewController.swift */,
+			);
+			path = NoteFlow;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,10 +306,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD76006C2108592F003F7733 /* NoteViewController.swift in Sources */,
+				AD760064210858BD003F7733 /* MasterViewController.swift in Sources */,
 				AD54F57B2105DB66007A2114 /* LoginViewController.swift in Sources */,
 				AD54F5782105DB03007A2114 /* SplashViewController.swift in Sources */,
+				AD760066210858D2003F7733 /* DetailViewController.swift in Sources */,
 				AD54F54C2105D621007A2114 /* ViewController.swift in Sources */,
 				AD54F54A2105D621007A2114 /* AppDelegate.swift in Sources */,
+				AD76006921085911003F7733 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
