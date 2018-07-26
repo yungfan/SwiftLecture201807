@@ -1,0 +1,6 @@
+framework module Pods_LeisureMapUITests {
+  umbrella header "Pods-LeisureMapUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

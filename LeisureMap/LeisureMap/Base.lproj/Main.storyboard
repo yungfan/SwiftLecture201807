@@ -19,11 +19,12 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6jY-Mp-SBp">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" name="systemBlueColor" catalog="System" colorSpace="catalog"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="获取版本ing" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZlE-Xl-LFk">
-                                <rect key="frame" x="141" y="626" width="93" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <rect key="frame" x="146.5" y="629" width="82.5" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LwP-4S-ap7">
@@ -63,7 +64,7 @@
                     <view key="view" contentMode="scaleToFill" id="9YC-bX-P2a">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" name="systemBlueColor" catalog="System" colorSpace="catalog"/>
                         <viewLayoutGuide key="safeArea" id="7tb-XB-vW2"/>
                     </view>
                 </viewController>
@@ -78,7 +79,7 @@
                     <view key="view" contentMode="scaleToFill" id="Tqu-4q-HQU">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" name="systemBlueColor" catalog="System" colorSpace="catalog"/>
                         <viewLayoutGuide key="safeArea" id="LUU-gC-GvL"/>
                     </view>
                 </viewController>
@@ -94,7 +95,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="用户名" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Nbn-Ew-5Vf">
+                            <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="yf" borderStyle="roundedRect" placeholder="用户名" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Nbn-Ew-5Vf">
                                 <rect key="frame" x="16" y="120" width="343" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="CDB-uI-6Ml"/>
@@ -106,8 +107,8 @@
                                     <outlet property="delegate" destination="Rit-FT-8pw" id="obT-GT-K3v"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="密码" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="fYb-bE-Ur6">
-                                <rect key="frame" x="16" y="180" width="343" height="30"/>
+                            <textField opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="123" borderStyle="roundedRect" placeholder="密码" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="fYb-bE-Ur6">
+                                <rect key="frame" x="16" y="210" width="343" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
@@ -115,32 +116,35 @@
                                     <outlet property="delegate" destination="Rit-FT-8pw" id="kdg-Ye-UAo"/>
                                 </connections>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cMM-PS-aWw">
-                                <rect key="frame" x="172" y="240" width="31" height="30"/>
-                                <state key="normal" title="登录"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c7a-tQ-XQW">
+                                <rect key="frame" x="166.5" y="614" width="42" height="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Login">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
-                                    <action selector="login:" destination="Rit-FT-8pw" eventType="touchUpInside" id="06P-3U-Rhv"/>
+                                    <action selector="login:" destination="Rit-FT-8pw" eventType="touchUpInside" id="QIT-LI-i6D"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" name="systemBlueColor" catalog="System" colorSpace="catalog"/>
                         <constraints>
                             <constraint firstItem="fYb-bE-Ur6" firstAttribute="height" secondItem="Nbn-Ew-5Vf" secondAttribute="height" id="4s0-uQ-Oks"/>
+                            <constraint firstItem="dHp-70-tpK" firstAttribute="bottom" secondItem="c7a-tQ-XQW" secondAttribute="bottom" constant="20" id="6zI-Pr-i9q"/>
                             <constraint firstItem="dHp-70-tpK" firstAttribute="trailing" secondItem="Nbn-Ew-5Vf" secondAttribute="trailing" constant="16" id="DE2-5T-Xyu"/>
-                            <constraint firstItem="cMM-PS-aWw" firstAttribute="top" secondItem="fYb-bE-Ur6" secondAttribute="bottom" constant="30" id="FLm-do-hDI"/>
                             <constraint firstItem="fYb-bE-Ur6" firstAttribute="leading" secondItem="Nbn-Ew-5Vf" secondAttribute="leading" id="H3z-6U-Zd4"/>
+                            <constraint firstItem="c7a-tQ-XQW" firstAttribute="centerX" secondItem="aFo-wo-mZW" secondAttribute="centerX" id="JxH-kx-EJk"/>
                             <constraint firstItem="Nbn-Ew-5Vf" firstAttribute="leading" secondItem="dHp-70-tpK" secondAttribute="leading" constant="16" id="hm1-Jb-DCf"/>
                             <constraint firstItem="fYb-bE-Ur6" firstAttribute="trailing" secondItem="Nbn-Ew-5Vf" secondAttribute="trailing" id="i6Y-u4-aqB"/>
                             <constraint firstItem="Nbn-Ew-5Vf" firstAttribute="top" secondItem="dHp-70-tpK" secondAttribute="top" constant="100" id="is7-vD-N9T"/>
-                            <constraint firstItem="cMM-PS-aWw" firstAttribute="centerX" secondItem="aFo-wo-mZW" secondAttribute="centerX" id="jER-rm-94f"/>
-                            <constraint firstItem="fYb-bE-Ur6" firstAttribute="top" secondItem="Nbn-Ew-5Vf" secondAttribute="bottom" constant="30" id="mhD-5j-in2"/>
+                            <constraint firstItem="fYb-bE-Ur6" firstAttribute="top" secondItem="Nbn-Ew-5Vf" secondAttribute="bottom" constant="60" id="mhD-5j-in2"/>
                             <constraint firstItem="fYb-bE-Ur6" firstAttribute="width" secondItem="Nbn-Ew-5Vf" secondAttribute="width" id="z9a-UZ-YGb"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="dHp-70-tpK"/>
                     </view>
                     <connections>
-                        <outlet property="btnLogin" destination="cMM-PS-aWw" id="aUd-Is-jdp"/>
-                        <outlet property="tetAccount" destination="Nbn-Ew-5Vf" id="O8A-bT-IZe"/>
+                        <outlet property="btnLogin" destination="c7a-tQ-XQW" id="BFe-ba-zGH"/>
+                        <outlet property="txtAccount" destination="Nbn-Ew-5Vf" id="YeK-hx-uPp"/>
                         <outlet property="txtPassword" destination="fYb-bE-Ur6" id="Xf7-fP-0Rz"/>
                         <segue destination="4KN-DG-tLq" kind="show" identifier="moveToMasterViewSegue" id="jGR-br-R5y"/>
                     </connections>
@@ -156,7 +160,7 @@
                     <view key="view" contentMode="scaleToFill" id="Fhy-Nb-QwJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" name="systemBlueColor" catalog="System" colorSpace="catalog"/>
                         <viewLayoutGuide key="safeArea" id="gKs-ax-C05"/>
                     </view>
                     <navigationItem key="navigationItem" id="NBN-LN-ilY"/>
@@ -175,7 +179,7 @@
                     <view key="view" contentMode="scaleToFill" id="lTB-6X-LPh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" name="systemBlueColor" catalog="System" colorSpace="catalog"/>
                         <viewLayoutGuide key="safeArea" id="xp3-3B-u9y"/>
                     </view>
                     <connections>

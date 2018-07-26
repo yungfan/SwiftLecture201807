@@ -1,0 +1,6 @@
+framework module Pods_LeisureMap {
+  umbrella header "Pods-LeisureMap-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -13,16 +13,3 @@
 //  5.在StoryBoard中设置界面和他们之间的跳转关系并创建相应的类与之关联
 //  6.针对StoryBoard中的每个界面开始具体的界面设计和功能开发
 
-
-import UIKit
-
-class ViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
-
-
-}
-
