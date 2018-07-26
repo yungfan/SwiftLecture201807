@@ -68,7 +68,7 @@ class FileWorker {
                 //交给Delegate处理
                 self.fileWorkDelegate?.filewWorkReadCompleted(self, fileName: fileURL.absoluteString, tag: tag)
                 
-                print(" 读取成功")
+                print("读取成功")
                 
             } catch {
                 
