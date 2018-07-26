@@ -8,33 +8,71 @@
 
 import UIKit
 
-class SplashViewController: UIViewController {
-
-    @IBOutlet weak var version: UILabel!
+class SplashViewController: UIViewController, AsyncResponseDelegate {
+    
+    @IBOutlet weak var lbVersion: UILabel!
+    
+    var appVersion:String?   //版本号
+    
+    var requestWorker:AsyncRequestWorker?  //工具类
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        //创建网络请求工具类
+        self.requestWorker = AsyncRequestWorker()
         
+        //让当前的UIViewController成为代理，因为工具类返回的结果需要由它来处理，处理的方法就是协议中的方法
+        self.requestWorker?.responseDelegate = self
+        
+        //从info.plist中获取app版本号
+        self.appVersion = "" + (Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String)!
+        
+        //网络请求的url
+        let url = "https://score.azurewebsites.net/api/version/\(self.appVersion!)"
+        
+        //让网络工具类去完成请求
+        self.requestWorker?.getResponse(from: url, tag: 1)
+    }
+    
+    
+    // MARK: - 保存信息
+    fileprivate func saveInfo(obj:String) {
+        
+        //获取用户设置
         let userDefaults = UserDefaults.standard
         
-        let url:URL = URL(string:"https://score.azurewebsites.net/api/version/1")!
-    
-        let session: URLSession = URLSession()
-            
+        //存储版本信息
+        userDefaults.setValue(obj, forKey:"serverVersion")
+        
+        //将数据同步缓存
         userDefaults.synchronize()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    //界面跳转
+    @objc fileprivate func moveToLoginViewSegue(){
+        
+        //withIdentifier：StoryBoard中设置的"连接线"的identifier
+        self.performSegue(withIdentifier: "moveToLoginViewSegue", sender: self)
     }
-    */
-
+    
+    
+    // MARK: - 从服务器获取信息
+    func receivedResponse(_ sender: AsyncRequestWorker, responseString: String, tag: Int) {
+        
+        self.saveInfo(obj: responseString)
+       
+         //网络请求会自动开启一个新线程，而iOS中更新UI的操作必须在主线程，所以回到主线程去更新Label的文本和跳转
+         DispatchQueue.main.async {
+            //设置Label的文本
+            self.lbVersion.text = responseString
+            
+            //1秒后跳转到下一个界面
+            self.perform(#selector(self.moveToLoginViewSegue), with: nil, afterDelay: 2)
+        }
+       
+        
+    }
+    
 }

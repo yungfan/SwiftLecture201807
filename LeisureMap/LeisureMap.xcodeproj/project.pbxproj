@@ -20,6 +20,7 @@
 		AD760066210858D2003F7733 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD760065210858D2003F7733 /* DetailViewController.swift */; };
 		AD76006921085911003F7733 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD76006821085911003F7733 /* MapViewController.swift */; };
 		AD76006C2108592F003F7733 /* NoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD76006B2108592F003F7733 /* NoteViewController.swift */; };
+		ADD80E542109618400A7DBEB /* NetWork.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD80E532109618400A7DBEB /* NetWork.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		AD760065210858D2003F7733 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		AD76006821085911003F7733 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		AD76006B2108592F003F7733 /* NoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewController.swift; sourceTree = "<group>"; };
+		ADD80E532109618400A7DBEB /* NetWork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetWork.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 		AD54F5482105D621007A2114 /* LeisureMap */ = {
 			isa = PBXGroup;
 			children = (
+				ADD80E522109615200A7DBEB /* Worker */,
 				AD76006A21085917003F7733 /* NoteFlow */,
 				AD760067210858DD003F7733 /* MapFlow */,
 				AD76006221085896003F7733 /* MasterDetail */,
@@ -173,6 +176,14 @@
 				AD76006B2108592F003F7733 /* NoteViewController.swift */,
 			);
 			path = NoteFlow;
+			sourceTree = "<group>";
+		};
+		ADD80E522109615200A7DBEB /* Worker */ = {
+			isa = PBXGroup;
+			children = (
+				ADD80E532109618400A7DBEB /* NetWork.swift */,
+			);
+			path = Worker;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -314,6 +325,7 @@
 				AD54F54C2105D621007A2114 /* ViewController.swift in Sources */,
 				AD54F54A2105D621007A2114 /* AppDelegate.swift in Sources */,
 				AD76006921085911003F7733 /* MapViewController.swift in Sources */,
+				ADD80E542109618400A7DBEB /* NetWork.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

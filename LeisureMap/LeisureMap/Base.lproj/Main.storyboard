@@ -20,8 +20,8 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6jY-Mp-SBp">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YungFan LeiSureMap V1.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZlE-Xl-LFk">
-                                <rect key="frame" x="88.5" y="626" width="198" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="获取版本ing" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZlE-Xl-LFk">
+                                <rect key="frame" x="141" y="626" width="93" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -48,7 +48,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="version" destination="ZlE-Xl-LFk" id="kcX-iV-fOY"/>
+                        <outlet property="lbVersion" destination="ZlE-Xl-LFk" id="670-cy-Lqh"/>
                         <segue destination="Rit-FT-8pw" kind="show" identifier="moveToLoginViewSegue" id="RgF-bm-qH7"/>
                     </connections>
                 </viewController>
@@ -116,7 +116,7 @@
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cMM-PS-aWw">
-                                <rect key="frame" x="172" y="617" width="31" height="30"/>
+                                <rect key="frame" x="172" y="240" width="31" height="30"/>
                                 <state key="normal" title="登录"/>
                                 <connections>
                                     <action selector="login:" destination="Rit-FT-8pw" eventType="touchUpInside" id="06P-3U-Rhv"/>
@@ -126,8 +126,8 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="fYb-bE-Ur6" firstAttribute="height" secondItem="Nbn-Ew-5Vf" secondAttribute="height" id="4s0-uQ-Oks"/>
-                            <constraint firstItem="dHp-70-tpK" firstAttribute="bottom" secondItem="cMM-PS-aWw" secondAttribute="bottom" constant="20" id="7Jb-Ed-1RE"/>
                             <constraint firstItem="dHp-70-tpK" firstAttribute="trailing" secondItem="Nbn-Ew-5Vf" secondAttribute="trailing" constant="16" id="DE2-5T-Xyu"/>
+                            <constraint firstItem="cMM-PS-aWw" firstAttribute="top" secondItem="fYb-bE-Ur6" secondAttribute="bottom" constant="30" id="FLm-do-hDI"/>
                             <constraint firstItem="fYb-bE-Ur6" firstAttribute="leading" secondItem="Nbn-Ew-5Vf" secondAttribute="leading" id="H3z-6U-Zd4"/>
                             <constraint firstItem="Nbn-Ew-5Vf" firstAttribute="leading" secondItem="dHp-70-tpK" secondAttribute="leading" constant="16" id="hm1-Jb-DCf"/>
                             <constraint firstItem="fYb-bE-Ur6" firstAttribute="trailing" secondItem="Nbn-Ew-5Vf" secondAttribute="trailing" id="i6Y-u4-aqB"/>
