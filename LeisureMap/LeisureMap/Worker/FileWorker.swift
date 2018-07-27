@@ -27,6 +27,11 @@ extension FileWorkerDelegate{
         print("读取沙盒数据")
         
     }
+    
+    func filewWorkWriteCompleted(_ sender:FileWorker, fileName:String, tag:Int){
+        
+          print("写入沙盒数据")
+    }
 }
 
 //MARK: - 文件工具类

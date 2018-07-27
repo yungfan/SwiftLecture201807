@@ -67,7 +67,7 @@ struct SQLiteWorker {
             
             print("创表成功")
             
-        } catch { print("创表失败\(error)") }
+        } catch { print("创表成功\(error)") }
         
         do {
             
@@ -81,11 +81,11 @@ struct SQLiteWorker {
     }
     
      //MARK: - 增加数据
-    func insertData(_name: String, _imagepath: String){
+    func insertData(_id:Int, _name: String, _imagepath: String){
         
         do {
             
-            let insert = categories.insert(name <- _name, imagepath <- _imagepath)
+            let insert = categories.insert(id <- _id,name <- _name, imagepath <- _imagepath)
             
             try db.run(insert)
             

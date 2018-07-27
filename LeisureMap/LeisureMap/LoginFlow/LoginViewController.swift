@@ -186,6 +186,7 @@ extension LoginViewController: UITextFieldDelegate, AsyncResponseDelegate, FileW
             //category
             case 3:
                 
+                
                 //解析JSON插入数据库
                 do{
                     
@@ -202,12 +203,12 @@ extension LoginViewController: UITextFieldDelegate, AsyncResponseDelegate, FileW
                         for (_, subJSON) : (String, JSON) in json {
                             
                             //取出数组中字典的Value
-                            let _ :Int = subJSON["index"].intValue
+                            let index :Int = subJSON["index"].intValue
                             let name :String = subJSON["name"].stringValue
                             let imagePath :String = subJSON["imagePath"].stringValue
                             
                             //插入数据库
-                            sqliteWorker.insertData(_name: name, _imagepath: imagePath)
+                            sqliteWorker.insertData(_id:index, _name: name, _imagepath: imagePath)
                         }
       
                     }
@@ -229,42 +230,6 @@ extension LoginViewController: UITextFieldDelegate, AsyncResponseDelegate, FileW
             case 4:
                 
                 self.fileWorker?.writeToFile(content: responseString, fileName: storeFileName, tag: tag)
-//                do{
-//
-//                    if let dataFromString = responseString.data(using: .utf8, allowLossyConversion: false) {
-//
-//                        let json = try JSON(data: dataFromString)
-//
-//                        for (_, subJSON) : (String, JSON) in json {
-//
-//                            let serviceIndex :Int = subJSON["serviceIndex"].intValue
-//                            let name :String = subJSON["name"].stringValue
-//                            let location :JSON = subJSON["location"]
-//                            let imagePath :String = subJSON["imagePath"].stringValue
-//                            let index :Int = subJSON["index"].intValue
-//
-//                            let address :String = location["address"].stringValue
-//                            let latitude :Double = location["latitude"].doubleValue
-//                            let longitude :Double = location["longitude"].doubleValue
-//
-//                            let l = LocationDesc(address: address, latitude: latitude, longitude: longitude)
-//
-//                            let s = Store(serviceIndex: serviceIndex, name: name, location: l, imagePath: imagePath, index: index)
-//
-//
-//                            store?.append(s)
-//
-//                        }
-//
-//                        print(store!)
-//                    }
-//
-//                }
-//
-//                catch{
-//
-//                    print("\(error)")
-//                }
             
                 break
             default:

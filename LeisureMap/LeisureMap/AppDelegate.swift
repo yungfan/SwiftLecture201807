@@ -12,16 +12,9 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    
-    //var database: Database! //数据库
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        
-        //与数据库建立连接
-        //database = Database()
-        //建立列表（有列表后不再建立）
-        //database.tableUserCreate()
         
         return true
     }
