@@ -14,6 +14,16 @@ class MasterViewController: UIViewController {
         super.viewDidLoad()
 
         self.title = "Master"
+        
+        //初始化数据库工具类并完成创表等动作
+        let sqliteWorker = SQLiteWorker()
+        
+        let categories: [ServiceCategory] = sqliteWorker.readData()
+        
+        print(categories.count)
+        
+        print("\(#file):\(#line):\(#function)")
+        
     }
     
 

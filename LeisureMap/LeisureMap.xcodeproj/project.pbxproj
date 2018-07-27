@@ -9,10 +9,13 @@
 /* Begin PBXBuildFile section */
 		0663307A3B6ADA3549A50F12 /* Pods_LeisureMap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1344B55F775C645322ACEBA0 /* Pods_LeisureMap.framework */; };
 		13E0B38A0EDF048A7A286867 /* Pods_LeisureMapUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3F57B9647FAA7BC0414FACE /* Pods_LeisureMapUITests.framework */; };
+		AD465845210AAAD4006F02BD /* ServiceCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD465844210AAAD4006F02BD /* ServiceCategory.swift */; };
+		AD465847210AAB68006F02BD /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD465846210AAB68006F02BD /* Store.swift */; };
+		AD465849210AB972006F02BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD465848210AB972006F02BD /* Assets.xcassets */; };
+		AD46584B210ABEDF006F02BD /* SQLiteWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD46584A210ABEDF006F02BD /* SQLiteWorker.swift */; };
 		AD54F54A2105D621007A2114 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD54F5492105D621007A2114 /* AppDelegate.swift */; };
 		AD54F54C2105D621007A2114 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD54F54B2105D621007A2114 /* ViewController.swift */; };
 		AD54F54F2105D621007A2114 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD54F54D2105D621007A2114 /* Main.storyboard */; };
-		AD54F5512105D622007A2114 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD54F5502105D622007A2114 /* Assets.xcassets */; };
 		AD54F5542105D622007A2114 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD54F5522105D622007A2114 /* LaunchScreen.storyboard */; };
 		AD54F55F2105D622007A2114 /* LeisureMapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD54F55E2105D622007A2114 /* LeisureMapTests.swift */; };
 		AD54F56A2105D622007A2114 /* LeisureMapUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD54F5692105D622007A2114 /* LeisureMapUITests.swift */; };
@@ -22,7 +25,6 @@
 		AD760066210858D2003F7733 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD760065210858D2003F7733 /* DetailViewController.swift */; };
 		AD76006921085911003F7733 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD76006821085911003F7733 /* MapViewController.swift */; };
 		AD76006C2108592F003F7733 /* NoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD76006B2108592F003F7733 /* NoteViewController.swift */; };
-		ADAE437A2109BCB60040AABD /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAE43792109BCB60040AABD /* Database.swift */; };
 		ADAE437D2109CF6B0040AABD /* FileWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAE437C2109CF6B0040AABD /* FileWorker.swift */; };
 		ADD80E542109618400A7DBEB /* NetWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD80E532109618400A7DBEB /* NetWorker.swift */; };
 		E671C0544BC1A5B661E2A412 /* Pods_LeisureMapTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A2BEDF9EB32AAD99293B038 /* Pods_LeisureMapTests.framework */; };
@@ -52,11 +54,14 @@
 		84086AB94A8DC546A8DD5497 /* Pods-LeisureMapUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LeisureMapUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LeisureMapUITests/Pods-LeisureMapUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		989F31757CBF9EE4C16FCBE2 /* Pods-LeisureMap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LeisureMap.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LeisureMap/Pods-LeisureMap.debug.xcconfig"; sourceTree = "<group>"; };
 		A3F57B9647FAA7BC0414FACE /* Pods_LeisureMapUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LeisureMapUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD465844210AAAD4006F02BD /* ServiceCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceCategory.swift; sourceTree = "<group>"; };
+		AD465846210AAB68006F02BD /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		AD465848210AB972006F02BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AD46584A210ABEDF006F02BD /* SQLiteWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SQLiteWorker.swift; sourceTree = "<group>"; };
 		AD54F5462105D621007A2114 /* LeisureMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LeisureMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD54F5492105D621007A2114 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AD54F54B2105D621007A2114 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		AD54F54E2105D621007A2114 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		AD54F5502105D622007A2114 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AD54F5532105D622007A2114 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AD54F5552105D622007A2114 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AD54F55A2105D622007A2114 /* LeisureMapTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LeisureMapTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -71,7 +76,6 @@
 		AD760065210858D2003F7733 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		AD76006821085911003F7733 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		AD76006B2108592F003F7733 /* NoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewController.swift; sourceTree = "<group>"; };
-		ADAE43792109BCB60040AABD /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
 		ADAE437C2109CF6B0040AABD /* FileWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileWorker.swift; sourceTree = "<group>"; };
 		ADD80E532109618400A7DBEB /* NetWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetWorker.swift; sourceTree = "<group>"; };
 		C508D47469E7EDDE1C5ED4C8 /* Pods-LeisureMapUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LeisureMapUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LeisureMapUITests/Pods-LeisureMapUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -130,6 +134,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		AD465843210AAAB8006F02BD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AD465844210AAAD4006F02BD /* ServiceCategory.swift */,
+				AD465846210AAB68006F02BD /* Store.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		AD54F53D2105D621007A2114 = {
 			isa = PBXGroup;
 			children = (
@@ -155,6 +168,7 @@
 		AD54F5482105D621007A2114 /* LeisureMap */ = {
 			isa = PBXGroup;
 			children = (
+				AD465843210AAAB8006F02BD /* Model */,
 				ADD80E522109615200A7DBEB /* Worker */,
 				AD76006A21085917003F7733 /* NoteFlow */,
 				AD760067210858DD003F7733 /* MapFlow */,
@@ -163,8 +177,8 @@
 				AD54F5492105D621007A2114 /* AppDelegate.swift */,
 				AD54F54B2105D621007A2114 /* ViewController.swift */,
 				AD54F54D2105D621007A2114 /* Main.storyboard */,
-				AD54F5502105D622007A2114 /* Assets.xcassets */,
 				AD54F5522105D622007A2114 /* LaunchScreen.storyboard */,
+				AD465848210AB972006F02BD /* Assets.xcassets */,
 				AD54F5552105D622007A2114 /* Info.plist */,
 				AD54F5772105DB03007A2114 /* SplashViewController.swift */,
 			);
@@ -225,7 +239,7 @@
 		ADD80E522109615200A7DBEB /* Worker */ = {
 			isa = PBXGroup;
 			children = (
-				ADAE43792109BCB60040AABD /* Database.swift */,
+				AD46584A210ABEDF006F02BD /* SQLiteWorker.swift */,
 				ADD80E532109618400A7DBEB /* NetWorker.swift */,
 				ADAE437C2109CF6B0040AABD /* FileWorker.swift */,
 			);
@@ -341,7 +355,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD54F5542105D622007A2114 /* LaunchScreen.storyboard in Resources */,
-				AD54F5512105D622007A2114 /* Assets.xcassets in Resources */,
+				AD465849210AB972006F02BD /* Assets.xcassets in Resources */,
 				AD54F54F2105D621007A2114 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -447,12 +461,14 @@
 				AD76006C2108592F003F7733 /* NoteViewController.swift in Sources */,
 				AD760064210858BD003F7733 /* MasterViewController.swift in Sources */,
 				AD54F57B2105DB66007A2114 /* LoginViewController.swift in Sources */,
+				AD465845210AAAD4006F02BD /* ServiceCategory.swift in Sources */,
 				AD54F5782105DB03007A2114 /* SplashViewController.swift in Sources */,
+				AD46584B210ABEDF006F02BD /* SQLiteWorker.swift in Sources */,
 				AD760066210858D2003F7733 /* DetailViewController.swift in Sources */,
 				AD54F54C2105D621007A2114 /* ViewController.swift in Sources */,
+				AD465847210AAB68006F02BD /* Store.swift in Sources */,
 				AD54F54A2105D621007A2114 /* AppDelegate.swift in Sources */,
 				AD76006921085911003F7733 /* MapViewController.swift in Sources */,
-				ADAE437A2109BCB60040AABD /* Database.swift in Sources */,
 				ADD80E542109618400A7DBEB /* NetWorker.swift in Sources */,
 				ADAE437D2109CF6B0040AABD /* FileWorker.swift in Sources */,
 			);

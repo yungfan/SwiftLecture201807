@@ -48,6 +48,8 @@ class AsyncRequestWorker {
                     
                     //将返回的data转成String
                     let responseResult = String(data: data!, encoding: String.Encoding.utf8)
+                    
+                    print("tag为\(tag)的网络请求Server返回的数据：\(responseResult!)")
                
                     //将返回的数据交给代理去完成，至于谁是代理，就看谁实现了AsyncResponseDelegate协议
                     self.responseDelegate?.receivedResponse(self, responseString: responseResult!, tag: tag)

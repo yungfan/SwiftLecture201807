@@ -14,8 +14,19 @@ protocol FileWorkerDelegate{
     
     func filewWorkWriteCompleted(_ sender:FileWorker, fileName:String, tag:Int)
     
-    func filewWorkReadCompleted(_ sender:FileWorker, fileName:String, tag:Int)
+    func filewWorkReadCompleted(_ sender:FileWorker, content:String, tag:Int)
     
+}
+
+
+//MARK: - 将协议（protocol）中的部分方法设计成可选（optional)
+extension FileWorkerDelegate{
+    
+    func filewWorkReadCompleted(_ sender:FileWorker, content:String, tag:Int){
+        
+        print("读取沙盒数据")
+        
+    }
 }
 
 //MARK: - 文件工具类
@@ -34,16 +45,16 @@ class FileWorker {
             do {
                 
                 //写入文件
-                try content.write(to: fileURL, atomically: true, encoding: String.Encoding.utf8)
+                try content.write(to: fileURL, atomically: true, encoding: .utf8)
                 
                 //交给Delegate处理
                 self.fileWorkDelegate?.filewWorkWriteCompleted(self, fileName: fileURL.absoluteString, tag: tag)
                 
-                print("写入成功")
+                print("😎😎😎😎😎😎数据写入沙盒成功")
                 
             } catch {
                 
-                print("写入失败：\(error)")
+                print("😭😭😭😭😭😭数据写入沙盒失败：\(error)")
                 
             }
         }
@@ -63,16 +74,18 @@ class FileWorker {
             do {
                 
                 //读取文件
-                result =  try String(contentsOf: fileURL)
+                let content =  try String(contentsOf: fileURL, encoding: .utf8)
                 
                 //交给Delegate处理
-                self.fileWorkDelegate?.filewWorkReadCompleted(self, fileName: fileURL.absoluteString, tag: tag)
+                self.fileWorkDelegate?.filewWorkReadCompleted(self, content: content, tag: tag)
                 
-                print("读取成功")
+                result = content
+                
+                print("😎😎😎😎😎😎从沙盒读取数据成功")
                 
             } catch {
                 
-                print("读取失败：\(error)")
+                print("😭😭😭😭😭😭从沙盒读取数据失败：\(error)")
                 
             }
         }

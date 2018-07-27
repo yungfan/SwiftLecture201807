@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SplashViewController: UIViewController, AsyncResponseDelegate {
+class SplashViewController: UIViewController {
     
     @IBOutlet weak var lbVersion: UILabel!
     
@@ -36,7 +36,7 @@ class SplashViewController: UIViewController, AsyncResponseDelegate {
     }
     
     
-    // MARK: - 保存信息
+    // MARK: - UserDefaults保存信息
     fileprivate func saveInfo(obj:String) {
         
         //获取用户设置
@@ -58,20 +58,25 @@ class SplashViewController: UIViewController, AsyncResponseDelegate {
     }
     
     
+}
+
+
+extension SplashViewController: AsyncResponseDelegate{
+    
     // MARK: - 从服务器获取信息
     func receivedResponse(_ sender: AsyncRequestWorker, responseString: String, tag: Int) {
         
         self.saveInfo(obj: responseString)
-       
-         //网络请求会自动开启一个新线程，而iOS中更新UI的操作必须在主线程，所以回到主线程去更新Label的文本和跳转
-         DispatchQueue.main.async {
+        
+        //网络请求会自动开启一个新线程，而iOS中更新UI的操作必须在主线程，所以回到主线程去更新Label的文本和跳转
+        DispatchQueue.main.async {
             //设置Label的文本
             self.lbVersion.text = responseString
             
             //1秒后跳转到下一个界面
             self.perform(#selector(self.moveToLoginViewSegue), with: nil, afterDelay: 2)
         }
-       
+        
         
     }
     

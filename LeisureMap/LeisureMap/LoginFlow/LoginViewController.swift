@@ -9,7 +9,7 @@
 import UIKit
 import SwiftyJSON
 
-class LoginViewController: UIViewController, UITextFieldDelegate, AsyncResponseDelegate {
+class LoginViewController: UIViewController {
 
     
     
@@ -20,9 +20,11 @@ class LoginViewController: UIViewController, UITextFieldDelegate, AsyncResponseD
     
     @IBOutlet weak var btnLogin: UIButton!
     
-    var requestWorker:AsyncRequestWorker?  //工具类
-
-    var database: Database! //数据库
+    var requestWorker:AsyncRequestWorker?  //网络工具类
+    
+    var fileWorker:FileWorker? //文件工具类
+    
+    let storeFileName:String = "store.json" //存储到沙盒的StoreJSON的文件名
     
     
     //MARK: - UIViewController LifeCircle
@@ -30,14 +32,78 @@ class LoginViewController: UIViewController, UITextFieldDelegate, AsyncResponseD
         
         super.viewDidLoad()
         
-        //创建网络请求工具类
+        //创建工具类
         self.requestWorker = AsyncRequestWorker()
+        
+        self.fileWorker = FileWorker()
         
         //让当前的UIViewController成为代理，因为工具类返回的结果需要由它来处理，处理的方法就是协议中的方法
         self.requestWorker?.responseDelegate = self
+        
+        self.fileWorker?.fileWorkDelegate = self
 
     }
     
+    
+    //MARK: -  @IBAction
+    //Login按钮
+    @IBAction func login(_ sender: Any) {
+        
+        self.view .endEditing(true)
+        
+        //获取用户输入的信息
+        let account = self.txtAccount.text!
+        
+        let password = self.txtPassword.text!
+        
+        if account.count > 0, password.count > 0{
+            
+            let url = "https://score.azurewebsites.net/api/login/\(account)/\(password)"
+            
+            //让网络工具类去完成请求
+            self.requestWorker?.getResponse(from: url, tag: 2)
+        
+        }
+
+    }
+    
+    //MARK: -  获取Category数据
+    fileprivate func getCategory(){
+        
+        let url = "https://score.azurewebsites.net/api/servicecategory"
+        
+        self.requestWorker?.getResponse(from: url, tag: 3)
+        
+    }
+    
+    //MARK: -  获取Store数据
+    fileprivate func getStore(){
+
+        let url = "https://score.azurewebsites.net/api/store"
+        
+        self.requestWorker?.getResponse(from: url, tag: 4)
+        
+        
+    }
+    
+    
+    //MARK: - UserDefaults保存信息
+    fileprivate func saveInfo(obj:String) {
+        
+        //获取用户设置
+        let userDefaults = UserDefaults.standard
+        
+        //存储返回的JSON信息
+        userDefaults.setValue(obj, forKey:"userAccount")
+        
+        //将数据同步缓存
+        userDefaults.synchronize()
+    }
+    
+    
+}
+
+extension LoginViewController: UITextFieldDelegate, AsyncResponseDelegate, FileWorkerDelegate{
     
     //MARK: - UITextFieldDelegate
     //按下键盘的 return 按钮执行的操作
@@ -52,12 +118,12 @@ class LoginViewController: UIViewController, UITextFieldDelegate, AsyncResponseD
             self.txtPassword.becomeFirstResponder()
             
         }
-        
-        //如果输入框是密码
+            
+            //如果输入框是密码
         else{
-             //键盘收起来
+            //键盘收起来
             textField.resignFirstResponder()
-             //按钮可点击
+            //按钮可点击
             //self.btnLogin.isEnabled = true
             
             
@@ -91,8 +157,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate, AsyncResponseD
             maxLength = 8
             
         }
-        
-        //设置密码输入的最大长度
+            
+            //设置密码输入的最大长度
         else{
             
             maxLength = 6
@@ -107,75 +173,118 @@ class LoginViewController: UIViewController, UITextFieldDelegate, AsyncResponseD
         return newString.length <= maxLength
     }
     
-    //MARK: -  @IBAction
-    //Login按钮
-    @IBAction func login(_ sender: Any) {
+    //MARK: - AsyncResponseDelegate
+    func receivedResponse(_ sender: AsyncRequestWorker, responseString: String, tag: Int) {
         
-        self.view .endEditing(true)
-        
-        //获取用户输入的信息
-        let account = self.txtAccount.text!
-        
-        let password = self.txtPassword.text!
-        
-        if account.count > 0, password.count > 0{
+        switch tag {
             
-            let url = "https://score.azurewebsites.net/api/login/\(account)/\(password)"
+            //login
+            case 2:
+           
+                //login成功后获取Category
+                getCategory()
+            //category
+            case 3:
+                
+                //解析JSON插入数据库
+                do{
+                    
+                    if let dataFromString = responseString.data(using: .utf8, allowLossyConversion: false) {
+                        
+                        let json = try JSON(data: dataFromString)
+                        
+                        //初始化数据库工具类并完成创表等动作
+                        let sqliteWorker = SQLiteWorker()
+                        sqliteWorker.createDatabase()
+                        sqliteWorker.clearAll()
+                        
+                        //遍历JSON的数组
+                        for (_, subJSON) : (String, JSON) in json {
+                            
+                            //取出数组中字典的Value
+                            let _ :Int = subJSON["index"].intValue
+                            let name :String = subJSON["name"].stringValue
+                            let imagePath :String = subJSON["imagePath"].stringValue
+                            
+                            //插入数据库
+                            sqliteWorker.insertData(_name: name, _imagepath: imagePath)
+                        }
+      
+                    }
+
+                }
+                
+                catch{
+                    
+                    print("\(error)")
+                }
+                
+               
+                
+                //获取Category后获取Store
+                getStore()
             
-            //让网络工具类去完成请求
-            self.requestWorker?.getResponse(from: url, tag: 2)
+                break
+            //store
+            case 4:
+                
+                self.fileWorker?.writeToFile(content: responseString, fileName: storeFileName, tag: tag)
+//                do{
+//
+//                    if let dataFromString = responseString.data(using: .utf8, allowLossyConversion: false) {
+//
+//                        let json = try JSON(data: dataFromString)
+//
+//                        for (_, subJSON) : (String, JSON) in json {
+//
+//                            let serviceIndex :Int = subJSON["serviceIndex"].intValue
+//                            let name :String = subJSON["name"].stringValue
+//                            let location :JSON = subJSON["location"]
+//                            let imagePath :String = subJSON["imagePath"].stringValue
+//                            let index :Int = subJSON["index"].intValue
+//
+//                            let address :String = location["address"].stringValue
+//                            let latitude :Double = location["latitude"].doubleValue
+//                            let longitude :Double = location["longitude"].doubleValue
+//
+//                            let l = LocationDesc(address: address, latitude: latitude, longitude: longitude)
+//
+//                            let s = Store(serviceIndex: serviceIndex, name: name, location: l, imagePath: imagePath, index: index)
+//
+//
+//                            store?.append(s)
+//
+//                        }
+//
+//                        print(store!)
+//                    }
+//
+//                }
+//
+//                catch{
+//
+//                    print("\(error)")
+//                }
+            
+                break
+            default:
+            
+                print("error")
+                break
+        }
+    }
+    
+    
+    //MARK: - FileWorkerDelegate
+    func filewWorkWriteCompleted(_ sender: FileWorker, fileName: String, tag: Int) {
+        
+        //print(fileName)
+
+        DispatchQueue.main.async {
+            
+            self.performSegue(withIdentifier:"moveToMasterViewSegue", sender: self)
             
         }
 
     }
-    
-    
-    //MARK: - 保存信息
-    fileprivate func saveInfo(obj:String) {
-        
-        //获取用户设置
-        let userDefaults = UserDefaults.standard
-        
-        //存储返回的JSON信息
-        userDefaults.setValue(obj, forKey:"userAccount")
-        
-        //将数据同步缓存
-        userDefaults.synchronize()
-    }
-    
-    //MARK: - AsyncResponseDelegate
-    func receivedResponse(_ sender: AsyncRequestWorker, responseString: String, tag: Int) {
-        
-        print("Server返回的数据：\(responseString)")
-        
-        self.saveInfo(obj: responseString)
-        //服务器JSON数据
-        // {
-        //    "Name" : "使用者一",
-        //    "LoginContent" : "account:yf;password:123",
-        //    "Phone" : "13213215895"
-        // }
-        //通过Swifty处理JSON数据
-        let json = JSON(parseJSON: responseString)["LoginContent"].stringValue
-        
-        //获取LoginContent数据
-        let loginContent = json.split(separator: ";")
-        
-        print(loginContent)
-        
-        //网络请求会自动开启一个新线程，而iOS中更新UI的操作必须在主线程
-        DispatchQueue.main.async {
-            //与数据库建立连接
-            self.database = Database()
-            
-            //将用户名和密码存储到数据库
-            self.database.userInsert(name: String(loginContent[0]), pwd: String(loginContent[1]))
-            
-            self.performSegue(withIdentifier:"moveToMasterViewSegue", sender: self)
-       
-        }
-        
-    }
-    
-    
 }
