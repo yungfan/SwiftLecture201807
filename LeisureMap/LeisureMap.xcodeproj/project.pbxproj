@@ -27,6 +27,9 @@
 		AD760066210858D2003F7733 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD760065210858D2003F7733 /* DetailViewController.swift */; };
 		AD76006921085911003F7733 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD76006821085911003F7733 /* MapViewController.swift */; };
 		AD76006C2108592F003F7733 /* NoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD76006B2108592F003F7733 /* NoteViewController.swift */; };
+		ADA04E98210C5284007853F6 /* abc.edu.gpx in Resources */ = {isa = PBXBuildFile; fileRef = ADA04E97210C5284007853F6 /* abc.edu.gpx */; };
+		ADA04E9A210C63D2007853F6 /* LocationTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA04E99210C63D2007853F6 /* LocationTransform.swift */; };
+		ADA04E9C210C69EF007853F6 /* MapFlag.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA04E9B210C69EF007853F6 /* MapFlag.swift */; };
 		ADAE437D2109CF6B0040AABD /* FileWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAE437C2109CF6B0040AABD /* FileWorker.swift */; };
 		ADD80E542109618400A7DBEB /* NetWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD80E532109618400A7DBEB /* NetWorker.swift */; };
 		E671C0544BC1A5B661E2A412 /* Pods_LeisureMapTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A2BEDF9EB32AAD99293B038 /* Pods_LeisureMapTests.framework */; };
@@ -80,6 +83,11 @@
 		AD760065210858D2003F7733 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		AD76006821085911003F7733 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		AD76006B2108592F003F7733 /* NoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewController.swift; sourceTree = "<group>"; };
+		ADA04E93210C4FBE007853F6 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		ADA04E95210C4FC9007853F6 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		ADA04E97210C5284007853F6 /* abc.edu.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = abc.edu.gpx; sourceTree = "<group>"; };
+		ADA04E99210C63D2007853F6 /* LocationTransform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationTransform.swift; sourceTree = "<group>"; };
+		ADA04E9B210C69EF007853F6 /* MapFlag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapFlag.swift; sourceTree = "<group>"; };
 		ADAE437C2109CF6B0040AABD /* FileWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileWorker.swift; sourceTree = "<group>"; };
 		ADD80E532109618400A7DBEB /* NetWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetWorker.swift; sourceTree = "<group>"; };
 		C508D47469E7EDDE1C5ED4C8 /* Pods-LeisureMapUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LeisureMapUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LeisureMapUITests/Pods-LeisureMapUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -131,6 +139,8 @@
 		7618EBCD4FC3194CC48EB802 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				ADA04E95210C4FC9007853F6 /* CoreLocation.framework */,
+				ADA04E93210C4FBE007853F6 /* MapKit.framework */,
 				1344B55F775C645322ACEBA0 /* Pods_LeisureMap.framework */,
 				2A2BEDF9EB32AAD99293B038 /* Pods_LeisureMapTests.framework */,
 				A3F57B9647FAA7BC0414FACE /* Pods_LeisureMapUITests.framework */,
@@ -181,6 +191,7 @@
 		AD54F5482105D621007A2114 /* LeisureMap */ = {
 			isa = PBXGroup;
 			children = (
+				ADA04E97210C5284007853F6 /* abc.edu.gpx */,
 				AD465843210AAAB8006F02BD /* Model */,
 				ADD80E522109615200A7DBEB /* Worker */,
 				AD76006A21085917003F7733 /* NoteFlow */,
@@ -237,7 +248,9 @@
 		AD760067210858DD003F7733 /* MapFlow */ = {
 			isa = PBXGroup;
 			children = (
+				ADA04E9B210C69EF007853F6 /* MapFlag.swift */,
 				AD76006821085911003F7733 /* MapViewController.swift */,
+				ADA04E99210C63D2007853F6 /* LocationTransform.swift */,
 			);
 			path = MapFlow;
 			sourceTree = "<group>";
@@ -370,6 +383,7 @@
 			files = (
 				AD54F5542105D622007A2114 /* LaunchScreen.storyboard in Resources */,
 				AD465849210AB972006F02BD /* Assets.xcassets in Resources */,
+				ADA04E98210C5284007853F6 /* abc.edu.gpx in Resources */,
 				AD54F54F2105D621007A2114 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -474,6 +488,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ADA04E9C210C69EF007853F6 /* MapFlag.swift in Sources */,
 				AD76006C2108592F003F7733 /* NoteViewController.swift in Sources */,
 				AD760064210858BD003F7733 /* MasterViewController.swift in Sources */,
 				AD54F57B2105DB66007A2114 /* LoginViewController.swift in Sources */,
@@ -481,6 +496,7 @@
 				AD54F5782105DB03007A2114 /* SplashViewController.swift in Sources */,
 				AD46584B210ABEDF006F02BD /* SQLiteWorker.swift in Sources */,
 				AD760066210858D2003F7733 /* DetailViewController.swift in Sources */,
+				ADA04E9A210C63D2007853F6 /* LocationTransform.swift in Sources */,
 				AD54F54C2105D621007A2114 /* ViewController.swift in Sources */,
 				AD465847210AAB68006F02BD /* Store.swift in Sources */,
 				AD6E257D210B073000BD02EF /* StoreCellView.swift in Sources */,
@@ -668,7 +684,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z55FN6W3PH;
 				INFOPLIST_FILE = LeisureMap/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -689,7 +705,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z55FN6W3PH;
 				INFOPLIST_FILE = LeisureMap/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

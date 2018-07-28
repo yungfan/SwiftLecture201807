@@ -18,9 +18,13 @@ class ServiceCellView: UICollectionViewCell {
         
         self.lbName.text = service.Name
         
-        let url = URL(string: service.ImagePath!)
+        let imagePath = URL(string: service.ImagePath!)
         
-        self.bgImageView.kf.setImage(with: url)
+        let placeholder = UIImage(named: "placeholder")
+        
+        self.bgImageView.kf.setImage(with: imagePath, placeholder: placeholder)
+        
+
     }
     
 }

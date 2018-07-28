@@ -18,11 +18,30 @@ class StoreCellView: UITableViewCell {
         
         self.lbName.text = store.Name
         
-        let url = URL(string: store.ImagePath!)
+        let imagePath = URL(string: store.ImagePath!)
         
-        self.bgImageView.kf.setImage(with: url)
+        let bgPlaceholder = UIImage(named: "bgPlaceholder")
+        
+        self.bgImageView.kf.setImage(with: imagePath, placeholder: bgPlaceholder)
     }
     
+
+    override var frame: CGRect{
+        
+            didSet {
+                var newFrame = frame
+                
+                newFrame.origin.x += 5
+                
+                newFrame.size.width -= newFrame.origin.x * 2
+                
+                newFrame.origin.y += newFrame.origin.x
+                
+                newFrame.size.height -= newFrame.origin.x * 2
+                
+                super.frame = newFrame
+            }
+    }
 
 
 }

@@ -19,7 +19,7 @@ protocol FileWorkerDelegate{
 }
 
 
-//MARK: - 将协议（protocol）中的部分方法设计成可选（optional)
+//MARK: - 将协议（protocol）中的部分方法实现，这样间接实现协议方法的可选（optional)
 extension FileWorkerDelegate{
     
     func filewWorkReadCompleted(_ sender:FileWorker, content:String, tag:Int){

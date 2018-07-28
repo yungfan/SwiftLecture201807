@@ -225,17 +225,15 @@ extension LoginViewController: UITextFieldDelegate, AsyncResponseDelegate, FileW
                 //获取Category后获取Store
                 getStore()
             
-                break
             //store
             case 4:
                 
                 self.fileWorker?.writeToFile(content: responseString, fileName: storeFileName, tag: tag)
             
-                break
+   
             default:
             
                 print("error")
-                break
         }
     }
     

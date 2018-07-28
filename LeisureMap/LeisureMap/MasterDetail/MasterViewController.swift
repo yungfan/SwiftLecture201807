@@ -48,6 +48,20 @@ class MasterViewController: UIViewController {
         self.getStores()
        
         self.getCategoryService()
+        
+        
+        //设置横向间距
+        (self.serveceCollectionView.collectionViewLayout as! UICollectionViewFlowLayout).minimumInteritemSpacing = 20
+        
+        //设置纵向间距-行间距
+        (self.serveceCollectionView.collectionViewLayout as! UICollectionViewFlowLayout).minimumLineSpacing = 10
+    }
+    
+    //MARK: - Actions
+    //退出登录
+    @IBAction func logout(_ sender: Any) {
+        
+        self.dismiss(animated: true, completion: nil)
     }
     
     //MARK: - 读取沙盒中的store.json并转成数组
@@ -137,7 +151,15 @@ extension MasterViewController: UITableViewDataSource, UITableViewDelegate{
     
     //UITableViewDelegate
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("click\(indexPath.row)")
+        
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        self.selectedStore = self.displayStores[indexPath.row]
+        
+        self.performSegue(withIdentifier: "moveToDetailViewSegue", sender: self)
+        
+       
+        
     }
     
 }
@@ -168,18 +190,42 @@ extension MasterViewController: UICollectionViewDataSource, UICollectionViewDele
     //UICollectionViewDelegate
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        selectedCategory = self.categories[indexPath.row]
+        collectionView.deselectItem(at: indexPath, animated: true)
+        
+        self.selectedCategory = self.categories[indexPath.row]
         
         self.displayStores = self.stores.filter({ (store:Store) -> Bool in
             
-            
             //左边的0-5  右边Index从1-6
-            return store.ServiceIndex == selectedCategory!.Index
+            return store.ServiceIndex == self.selectedCategory!.Index
             
         })
         
         
         self.storeTableView.reloadData()
     }
+    
+    
+    // MARK: - Navigation
+    
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+       
+        //通过segue的identifier判断到底是跳转的哪根线
+        switch segue.identifier {
+            
+            case "moveToDetailViewSegue":
+                
+                let detailViewController = segue.destination as! DetailViewController
+                
+                detailViewController.selectedStore = self.selectedStore
+
+            default:
+   
+                print("error")
+        }
+       
+    }
+    
 
 }
