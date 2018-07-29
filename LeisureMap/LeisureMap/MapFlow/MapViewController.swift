@@ -53,7 +53,7 @@ class MapViewController: UIViewController {
         
     }
     
-    // 切换地图的视角
+    //切换地图的视角
     func centerMapOnLocation (location:CLLocation) {
         
         let coordinateRegion = MKCoordinateRegion(center: location.coordinate, latitudinalMeters: self.regionRadius, longitudinalMeters: self.regionRadius)
@@ -62,9 +62,11 @@ class MapViewController: UIViewController {
         
     }
     
+    
+    //点击跳转到Note
     @objc func moveToWebView(_ sender: Any){
         
-        self.performSegue(withIdentifier: "moveToNoteViewSegue", sender: self)
+        self.performSegue(withIdentifier: "moveToWebViewSegue", sender: self)
     }
     
     func addFlag() {
@@ -73,7 +75,7 @@ class MapViewController: UIViewController {
         let gcjLat =   LocationTransform.wgs2gcj(wgsLat: 31.2916511800, wgsLng: 118.3623587000).gcjLat
         let gcjLng =   LocationTransform.wgs2gcj(wgsLat: 31.2916511800, wgsLng: 118.3623587000).gcjLng
     
-        flag = MapFlag(title: "iOS App by Swift", locationName: "商贸学院", discipline: "好学校", coordinate: CLLocationCoordinate2DMake(gcjLat,gcjLng), url: "https://www.baidu.com")
+        flag = MapFlag(title: "iOS App by Swift", locationName: "商贸学院", discipline: "Apple", coordinate: CLLocationCoordinate2DMake(gcjLat,gcjLng), url: "https://www.apple.com/cn")
     
         self.mapView.addAnnotation(flag!)
        
@@ -89,11 +91,11 @@ class MapViewController: UIViewController {
         //通过segue的identifier判断到底是跳转的哪根线
         switch segue.identifier {
             
-        case "moveToNoteViewSegue":
+        case "moveToWebViewSegue":
             
-            let noteViewController = segue.destination as! NoteViewController
+            let webViewController = segue.destination as! WebViewController
             
-            noteViewController.urlString = self.flag?.urlString
+            webViewController.selectedFlag = self.flag
             
         default:
             

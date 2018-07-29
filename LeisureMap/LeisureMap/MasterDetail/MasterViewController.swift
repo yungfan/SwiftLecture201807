@@ -39,8 +39,6 @@ class MasterViewController: UIViewController {
 
         self.title = "Master"
         
-        print("\(#file):\(#line):\(#function)")
-        
         self.storeTableView.rowHeight = 80.0
         
         self.storeTableView.tableFooterView = UIView()

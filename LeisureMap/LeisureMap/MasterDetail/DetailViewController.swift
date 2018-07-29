@@ -34,7 +34,7 @@ class DetailViewController: UIViewController {
     @IBAction func btnWebClicked(_ sender: Any) {
         
         
-         //self.performSegue(withIdentifier: "moveToNoteViewSegue", sender: self)
+         self.performSegue(withIdentifier: "moveToNoteViewSegue", sender: self)
         
     }
    

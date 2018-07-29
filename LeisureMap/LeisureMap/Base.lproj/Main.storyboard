@@ -84,42 +84,71 @@
                     </view>
                     <connections>
                         <outlet property="mapView" destination="a2i-72-nRQ" id="dlB-cc-d4s"/>
-                        <segue destination="HSX-wE-daX" kind="show" identifier="moveToNoteViewSegue" id="EhF-vx-MOx"/>
+                        <segue destination="HSX-wE-daX" kind="show" identifier="moveToWebViewSegue" id="EhF-vx-MOx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KsR-qf-XlX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2728.8000000000002" y="876.61169415292363"/>
+            <point key="canvasLocation" x="4625" y="609"/>
         </scene>
-        <!--Note View Controller-->
+        <!--Web View Controller-->
         <scene sceneID="LiH-4B-SKP">
             <objects>
-                <viewController id="HSX-wE-daX" customClass="NoteViewController" customModule="LeisureMap" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="HSX-wE-daX" customClass="WebViewController" customModule="LeisureMap" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Tqu-4q-HQU">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qJe-VO-Uhz">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
-                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </webView>
-                        </subviews>
                         <color key="backgroundColor" name="systemBlueColor" catalog="System" colorSpace="catalog"/>
-                        <constraints>
-                            <constraint firstItem="qJe-VO-Uhz" firstAttribute="leading" secondItem="LUU-gC-GvL" secondAttribute="leading" id="NCG-mu-otK"/>
-                            <constraint firstItem="qJe-VO-Uhz" firstAttribute="bottom" secondItem="LUU-gC-GvL" secondAttribute="bottom" id="doE-2V-XPM"/>
-                            <constraint firstItem="qJe-VO-Uhz" firstAttribute="top" secondItem="LUU-gC-GvL" secondAttribute="top" id="rC8-dW-LYT"/>
-                            <constraint firstItem="qJe-VO-Uhz" firstAttribute="trailing" secondItem="LUU-gC-GvL" secondAttribute="trailing" id="ypy-ZP-Kdh"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="LUU-gC-GvL"/>
                     </view>
-                    <connections>
-                        <outlet property="noteWebView" destination="qJe-VO-Uhz" id="ntB-cS-tfe"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="upI-ch-GJv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3440.8000000000002" y="876.61169415292363"/>
+            <point key="canvasLocation" x="5413.6000000000004" y="608.54572713643188"/>
+        </scene>
+        <!--Note View Controller-->
+        <scene sceneID="Imc-P5-JQ9">
+            <objects>
+                <viewController id="lNJ-0u-fqn" customClass="NoteViewController" customModule="LeisureMap" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XLk-fH-Nkl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YIm-Pd-pcw">
+                                <rect key="frame" x="161.5" y="114" width="52" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Photo">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnPhotoClicked:" destination="lNJ-0u-fqn" eventType="touchUpInside" id="I2e-LN-hz4"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tIY-Xl-Qam">
+                                <rect key="frame" x="0.0" y="213.5" width="375" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="EFr-BB-1Y0"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" name="systemBlueColor" catalog="System" colorSpace="catalog"/>
+                        <constraints>
+                            <constraint firstItem="tIY-Xl-Qam" firstAttribute="centerX" secondItem="XLk-fH-Nkl" secondAttribute="centerX" id="CNQ-9d-tgD"/>
+                            <constraint firstItem="YIm-Pd-pcw" firstAttribute="centerX" secondItem="XLk-fH-Nkl" secondAttribute="centerX" id="O2O-EG-s8w"/>
+                            <constraint firstItem="YIm-Pd-pcw" firstAttribute="top" secondItem="8ot-Ce-YQw" secondAttribute="top" constant="50" id="UZO-Xx-ddK"/>
+                            <constraint firstItem="tIY-Xl-Qam" firstAttribute="centerY" secondItem="XLk-fH-Nkl" secondAttribute="centerY" id="ZGL-Sp-J9B"/>
+                            <constraint firstItem="8ot-Ce-YQw" firstAttribute="trailing" secondItem="tIY-Xl-Qam" secondAttribute="trailing" id="pIw-lz-pAm"/>
+                            <constraint firstItem="tIY-Xl-Qam" firstAttribute="leading" secondItem="8ot-Ce-YQw" secondAttribute="leading" id="rK6-OQ-CB0"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="8ot-Ce-YQw"/>
+                    </view>
+                    <connections>
+                        <outlet property="storeImage" destination="tIY-Xl-Qam" id="tOI-wv-Uv4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5fW-YL-fpY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4625" y="-178"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="7k5-PU-KXG">
@@ -129,7 +158,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="yf" borderStyle="roundedRect" placeholder="用户名" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Nbn-Ew-5Vf">
+                            <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="yf" borderStyle="roundedRect" placeholder="username" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Nbn-Ew-5Vf">
                                 <rect key="frame" x="16" y="120" width="343" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="CDB-uI-6Ml"/>
@@ -141,7 +170,7 @@
                                     <outlet property="delegate" destination="Rit-FT-8pw" id="obT-GT-K3v"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="123" borderStyle="roundedRect" placeholder="密码" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="fYb-bE-Ur6">
+                            <textField opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="123" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="fYb-bE-Ur6">
                                 <rect key="frame" x="16" y="210" width="343" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -348,7 +377,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yoQ-dc-ptw">
                                 <rect key="frame" x="0.0" y="371.5" width="375" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Web">
+                                <state key="normal" title="Note">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -369,6 +398,7 @@
                     </view>
                     <connections>
                         <segue destination="iQa-KV-ZOP" kind="show" identifier="moveToMapViewSegue" id="Hkt-DN-tye"/>
+                        <segue destination="lNJ-0u-fqn" kind="show" identifier="moveToNoteViewSegue" id="4Nr-cB-NDE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tbl-KT-gJJ" userLabel="First Responder" sceneMemberID="firstResponder"/>

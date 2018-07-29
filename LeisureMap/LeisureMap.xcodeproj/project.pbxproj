@@ -22,11 +22,14 @@
 		AD54F56A2105D622007A2114 /* LeisureMapUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD54F5692105D622007A2114 /* LeisureMapUITests.swift */; };
 		AD54F5782105DB03007A2114 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD54F5772105DB03007A2114 /* SplashViewController.swift */; };
 		AD54F57B2105DB66007A2114 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD54F57A2105DB66007A2114 /* LoginViewController.swift */; };
+		AD62A0C7210D448800B9A38D /* NoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD62A0C6210D448800B9A38D /* NoteViewController.swift */; };
+		AD62A0C9210D47B600B9A38D /* sample.html in Resources */ = {isa = PBXBuildFile; fileRef = AD62A0C8210D47B600B9A38D /* sample.html */; };
+		AD62A0CC210D4E7D00B9A38D /* sample_js.txt in Resources */ = {isa = PBXBuildFile; fileRef = AD62A0CB210D4E7D00B9A38D /* sample_js.txt */; };
 		AD6E257D210B073000BD02EF /* StoreCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6E257C210B073000BD02EF /* StoreCellView.swift */; };
 		AD760064210858BD003F7733 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD760063210858BD003F7733 /* MasterViewController.swift */; };
 		AD760066210858D2003F7733 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD760065210858D2003F7733 /* DetailViewController.swift */; };
 		AD76006921085911003F7733 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD76006821085911003F7733 /* MapViewController.swift */; };
-		AD76006C2108592F003F7733 /* NoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD76006B2108592F003F7733 /* NoteViewController.swift */; };
+		AD76006C2108592F003F7733 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD76006B2108592F003F7733 /* WebViewController.swift */; };
 		ADA04E98210C5284007853F6 /* abc.edu.gpx in Resources */ = {isa = PBXBuildFile; fileRef = ADA04E97210C5284007853F6 /* abc.edu.gpx */; };
 		ADA04E9A210C63D2007853F6 /* LocationTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA04E99210C63D2007853F6 /* LocationTransform.swift */; };
 		ADA04E9C210C69EF007853F6 /* MapFlag.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA04E9B210C69EF007853F6 /* MapFlag.swift */; };
@@ -78,11 +81,14 @@
 		AD54F56B2105D622007A2114 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AD54F5772105DB03007A2114 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		AD54F57A2105DB66007A2114 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		AD62A0C6210D448800B9A38D /* NoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewController.swift; sourceTree = "<group>"; };
+		AD62A0C8210D47B600B9A38D /* sample.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = sample.html; sourceTree = "<group>"; };
+		AD62A0CB210D4E7D00B9A38D /* sample_js.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = sample_js.txt; sourceTree = "<group>"; };
 		AD6E257C210B073000BD02EF /* StoreCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreCellView.swift; sourceTree = "<group>"; };
 		AD760063210858BD003F7733 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
 		AD760065210858D2003F7733 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		AD76006821085911003F7733 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
-		AD76006B2108592F003F7733 /* NoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewController.swift; sourceTree = "<group>"; };
+		AD76006B2108592F003F7733 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		ADA04E93210C4FBE007853F6 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		ADA04E95210C4FC9007853F6 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		ADA04E97210C5284007853F6 /* abc.edu.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = abc.edu.gpx; sourceTree = "<group>"; };
@@ -191,7 +197,7 @@
 		AD54F5482105D621007A2114 /* LeisureMap */ = {
 			isa = PBXGroup;
 			children = (
-				ADA04E97210C5284007853F6 /* abc.edu.gpx */,
+				AD62A0CA210D4B0000B9A38D /* Resources */,
 				AD465843210AAAB8006F02BD /* Model */,
 				ADD80E522109615200A7DBEB /* Worker */,
 				AD76006A21085917003F7733 /* NoteFlow */,
@@ -235,6 +241,16 @@
 			path = LoginFlow;
 			sourceTree = "<group>";
 		};
+		AD62A0CA210D4B0000B9A38D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				AD62A0CB210D4E7D00B9A38D /* sample_js.txt */,
+				AD62A0C8210D47B600B9A38D /* sample.html */,
+				ADA04E97210C5284007853F6 /* abc.edu.gpx */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		AD76006221085896003F7733 /* MasterDetail */ = {
 			isa = PBXGroup;
 			children = (
@@ -248,6 +264,7 @@
 		AD760067210858DD003F7733 /* MapFlow */ = {
 			isa = PBXGroup;
 			children = (
+				AD76006B2108592F003F7733 /* WebViewController.swift */,
 				ADA04E9B210C69EF007853F6 /* MapFlag.swift */,
 				AD76006821085911003F7733 /* MapViewController.swift */,
 				ADA04E99210C63D2007853F6 /* LocationTransform.swift */,
@@ -258,7 +275,7 @@
 		AD76006A21085917003F7733 /* NoteFlow */ = {
 			isa = PBXGroup;
 			children = (
-				AD76006B2108592F003F7733 /* NoteViewController.swift */,
+				AD62A0C6210D448800B9A38D /* NoteViewController.swift */,
 			);
 			path = NoteFlow;
 			sourceTree = "<group>";
@@ -384,6 +401,8 @@
 				AD54F5542105D622007A2114 /* LaunchScreen.storyboard in Resources */,
 				AD465849210AB972006F02BD /* Assets.xcassets in Resources */,
 				ADA04E98210C5284007853F6 /* abc.edu.gpx in Resources */,
+				AD62A0CC210D4E7D00B9A38D /* sample_js.txt in Resources */,
+				AD62A0C9210D47B600B9A38D /* sample.html in Resources */,
 				AD54F54F2105D621007A2114 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -489,9 +508,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				ADA04E9C210C69EF007853F6 /* MapFlag.swift in Sources */,
-				AD76006C2108592F003F7733 /* NoteViewController.swift in Sources */,
+				AD76006C2108592F003F7733 /* WebViewController.swift in Sources */,
 				AD760064210858BD003F7733 /* MasterViewController.swift in Sources */,
 				AD54F57B2105DB66007A2114 /* LoginViewController.swift in Sources */,
+				AD62A0C7210D448800B9A38D /* NoteViewController.swift in Sources */,
 				AD465845210AAAD4006F02BD /* ServiceCategory.swift in Sources */,
 				AD54F5782105DB03007A2114 /* SplashViewController.swift in Sources */,
 				AD46584B210ABEDF006F02BD /* SQLiteWorker.swift in Sources */,
@@ -563,6 +583,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -624,6 +645,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

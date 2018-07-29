@@ -1,4 +1,237 @@
 tag为1的网络请求Server返回的数据：1.0.0.234
-tag为2的网络请求Server返回的数据：{"Name":"使用者一","Phone":"13213215895","LoginContent":"account:yf;password:123"}
-tag为3的网络请求Server返回的数据：[{"name":"咖啡","imagePath":"https://scoresrv.file.core.windows.net/images/cafe.jpg?sv=2017-11-09&ss=f&srt=o&sp=rc&se=2018-08-10T16:28:14Z&st=2018-07-27T08:28:14Z&spr=https&sig=%2Bno1RiLzwoWCCabdrg10P0ezGkpRZ%2BV%2F6gmcTBOT0NA%3D","index":0},{"name":"甜點","imagePath":"https://scoresrv.file.core.windows.net/images/cupcake.jpg?sv=2017-11-09&ss=f&srt=o&sp=rc&se=2018-08-10T16:28:14Z&st=2018-07-27T08:28:14Z&spr=https&sig=%2Bno1RiLzwoWCCabdrg10P0ezGkpRZ%2BV%2F6gmcTBOT0NA%3D","index":1},{"name":"下午茶","imagePath":"https://scoresrv.file.core.windows.net/images/nestcake.jpg?sv=2017-11-09&ss=f&srt=o&sp=rc&se=2018-08-10T16:28:14Z&st=2018-07-27T08:28:14Z&spr=https&sig=%2Bno1RiLzwoWCCabdrg10P0ezGkpRZ%2BV%2F6gmcTBOT0NA%3D","index":2},{"name":"義大利麵","imagePath":"https://scoresrv.file.core.windows.net/images/noodle.jpg?sv=2017-11-09&ss=f&srt=o&sp=rc&se=2018-08-10T16:28:14Z&st=2018-07-27T08:28:14Z&spr=https&sig=%2Bno1RiLzwoWCCabdrg10P0ezGkpRZ%2BV%2F6gmcTBOT0NA%3D","index":3},{"name":"港式叉燒","imagePath":"https://scoresrv.file.core.windows.net/images/porkroast.jpg?sv=2017-11-09&ss=f&srt=o&sp=rc&se=2018-08-10T16:28:14Z&st=2018-07-27T08:28:14Z&spr=https&sig=%2Bno1RiLzwoWCCabdrg10P0ezGkpRZ%2BV%2F6gmcTBOT0NA%3D","index":4},{"name":"美式餐廳","imagePath":"https://scoresrv.file.core.windows.net/images/porkribs.jpg?sv=2017-11-09&ss=f&srt=o&sp=rc&se=2018-08-10T16:28:14Z&st=2018-07-27T08:28:14Z&spr=https&sig=%2Bno1RiLzwoWCCabdrg10P0ezGkpRZ%2BV%2F6gmcTBOT0NA%3D","index":5}]
-tag为4的网络请求Server返回的数据：[{"serviceIndex":0,"name":"Cafe00","location":{"address":"","latitude":0.0,"longitude":0.0},"index":0,"imagePath":""},{"serviceIndex":0,"name":"Cafe01","location":{"address":"","latitude":0.0,"longitude":0.0},"index":1,"imagePath":""},{"serviceIndex":0,"name":"Cafe02","location":{"address":"","latitude":0.0,"longitude":0.0},"index":2,"imagePath":""},{"serviceIndex":1,"name":"Dessert00","location":{"address":"","latitude":0.0,"longitude":0.0},"index":3,"imagePath":""},{"serviceIndex":1,"name":"Dessert01","location":{"address":"","latitude":0.0,"longitude":0.0},"index":4,"imagePath":""},{"serviceIndex":1,"name":"Dessert02","location":{"address":"","latitude":0.0,"longitude":0.0},"index":5,"imagePath":""},{"serviceIndex":1,"name":"Dessert03","location":{"address":"","latitude":0.0,"longitude":0.0},"index":6,"imagePath":""},{"serviceIndex":2,"name":"AfternoonTea00","location":{"address":"","latitude":0.0,"longitude":0.0},"index":7,"imagePath":""},{"serviceIndex":2,"name":"AfternoonTea01","location":{"address":"","latitude":0.0,"longitude":0.0},"index":8,"imagePath":""},{"serviceIndex":2,"name":"AfternoonTea02","location":{"address":"","latitude":0.0,"longitude":0.0},"index":9,"imagePath":""},{"serviceIndex":2,"name":"AfternoonTea03","location":{"address":"","latitude":0.0,"longitude":0.0},"index":10,"imagePath":""},{"serviceIndex":3,"name":"Italy00","location":{"address":"","latitude":0.0,"longitude":0.0},"index":11,"imagePath":""},{"serviceIndex":3,"name":"Italy01","location":{"address":"","latitude":0.0,"longitude":0.0},"index":12,"imagePath":""},{"serviceIndex":4,"name":"HK00","location":{"address":"","latitude":0.0,"longitude":0.0},"index":13,"imagePath":""},{"serviceIndex":4,"name":"HK01","location":{"address":"","latitude":0.0,"longitude":0.0},"index":14,"imagePath":""},{"serviceIndex":4,"name":"HK02","location":{"address":"","latitude":0.0,"longitude":0.0},"index":15,"imagePath":""},{"serviceIndex":5,"name":"US00","location":{"address":"","latitude":0.0,"longitude":0.0},"index":16,"imagePath":""}]
+
+tag为2的网络请求Server返回的数据：
+
+{
+    "Name": "使用者一", 
+    "Phone": "13213215895", 
+    "LoginContent": "account:yf;password:123"
+}
+
+tag为3的网络请求Server返回的数据：
+
+[
+    {
+        "name": "咖啡", 
+        "imagePath": "https://scoresrv.file.core.windows.net/images/cafe.jpg?sv=2017-11-09&ss=f&srt=o&sp=rc&se=2018-08-10T16:28:14Z&st=2018-07-27T08:28:14Z&spr=https&sig=+no1RiLzwoWCCabdrg10P0ezGkpRZ+V/6gmcTBOT0NA=", 
+        "index": 0
+    }, 
+    {
+        "name": "甜點", 
+        "imagePath": "https://scoresrv.file.core.windows.net/images/cupcake.jpg?sv=2017-11-09&ss=f&srt=o&sp=rc&se=2018-08-10T16:28:14Z&st=2018-07-27T08:28:14Z&spr=https&sig=+no1RiLzwoWCCabdrg10P0ezGkpRZ+V/6gmcTBOT0NA=", 
+        "index": 1
+    }, 
+    {
+        "name": "下午茶", 
+        "imagePath": "https://scoresrv.file.core.windows.net/images/nestcake.jpg?sv=2017-11-09&ss=f&srt=o&sp=rc&se=2018-08-10T16:28:14Z&st=2018-07-27T08:28:14Z&spr=https&sig=+no1RiLzwoWCCabdrg10P0ezGkpRZ+V/6gmcTBOT0NA=", 
+        "index": 2
+    }, 
+    {
+        "name": "義大利麵", 
+        "imagePath": "https://scoresrv.file.core.windows.net/images/noodle.jpg?sv=2017-11-09&ss=f&srt=o&sp=rc&se=2018-08-10T16:28:14Z&st=2018-07-27T08:28:14Z&spr=https&sig=+no1RiLzwoWCCabdrg10P0ezGkpRZ+V/6gmcTBOT0NA=", 
+        "index": 3
+    }, 
+    {
+        "name": "港式叉燒", 
+        "imagePath": "https://scoresrv.file.core.windows.net/images/porkroast.jpg?sv=2017-11-09&ss=f&srt=o&sp=rc&se=2018-08-10T16:28:14Z&st=2018-07-27T08:28:14Z&spr=https&sig=+no1RiLzwoWCCabdrg10P0ezGkpRZ+V/6gmcTBOT0NA=", 
+        "index": 4
+    }, 
+    {
+        "name": "美式餐廳", 
+        "imagePath": "https://scoresrv.file.core.windows.net/images/porkribs.jpg?sv=2017-11-09&ss=f&srt=o&sp=rc&se=2018-08-10T16:28:14Z&st=2018-07-27T08:28:14Z&spr=https&sig=+no1RiLzwoWCCabdrg10P0ezGkpRZ+V/6gmcTBOT0NA=", 
+        "index": 5
+    }
+]
+
+
+tag为4的网络请求Server返回的数据：
+
+[
+    {
+        "serviceIndex": 0, 
+        "name": "Cafe00", 
+        "location": {
+            "address": "", 
+            "latitude": 0, 
+            "longitude": 0
+        }, 
+        "index": 0, 
+        "imagePath": ""
+    }, 
+    {
+        "serviceIndex": 0, 
+        "name": "Cafe01", 
+        "location": {
+            "address": "", 
+            "latitude": 0, 
+            "longitude": 0
+        }, 
+        "index": 1, 
+        "imagePath": ""
+    }, 
+    {
+        "serviceIndex": 0, 
+        "name": "Cafe02", 
+        "location": {
+            "address": "", 
+            "latitude": 0, 
+            "longitude": 0
+        }, 
+        "index": 2, 
+        "imagePath": ""
+    }, 
+    {
+        "serviceIndex": 1, 
+        "name": "Dessert00", 
+        "location": {
+            "address": "", 
+            "latitude": 0, 
+            "longitude": 0
+        }, 
+        "index": 3, 
+        "imagePath": ""
+    }, 
+    {
+        "serviceIndex": 1, 
+        "name": "Dessert01", 
+        "location": {
+            "address": "", 
+            "latitude": 0, 
+            "longitude": 0
+        }, 
+        "index": 4, 
+        "imagePath": ""
+    }, 
+    {
+        "serviceIndex": 1, 
+        "name": "Dessert02", 
+        "location": {
+            "address": "", 
+            "latitude": 0, 
+            "longitude": 0
+        }, 
+        "index": 5, 
+        "imagePath": ""
+    }, 
+    {
+        "serviceIndex": 1, 
+        "name": "Dessert03", 
+        "location": {
+            "address": "", 
+            "latitude": 0, 
+            "longitude": 0
+        }, 
+        "index": 6, 
+        "imagePath": ""
+    }, 
+    {
+        "serviceIndex": 2, 
+        "name": "AfternoonTea00", 
+        "location": {
+            "address": "", 
+            "latitude": 0, 
+            "longitude": 0
+        }, 
+        "index": 7, 
+        "imagePath": ""
+    }, 
+    {
+        "serviceIndex": 2, 
+        "name": "AfternoonTea01", 
+        "location": {
+            "address": "", 
+            "latitude": 0, 
+            "longitude": 0
+        }, 
+        "index": 8, 
+        "imagePath": ""
+    }, 
+    {
+        "serviceIndex": 2, 
+        "name": "AfternoonTea02", 
+        "location": {
+            "address": "", 
+            "latitude": 0, 
+            "longitude": 0
+        }, 
+        "index": 9, 
+        "imagePath": ""
+    }, 
+    {
+        "serviceIndex": 2, 
+        "name": "AfternoonTea03", 
+        "location": {
+            "address": "", 
+            "latitude": 0, 
+            "longitude": 0
+        }, 
+        "index": 10, 
+        "imagePath": ""
+    }, 
+    {
+        "serviceIndex": 3, 
+        "name": "Italy00", 
+        "location": {
+            "address": "", 
+            "latitude": 0, 
+            "longitude": 0
+        }, 
+        "index": 11, 
+        "imagePath": ""
+    }, 
+    {
+        "serviceIndex": 3, 
+        "name": "Italy01", 
+        "location": {
+            "address": "", 
+            "latitude": 0, 
+            "longitude": 0
+        }, 
+        "index": 12, 
+        "imagePath": ""
+    }, 
+    {
+        "serviceIndex": 4, 
+        "name": "HK00", 
+        "location": {
+            "address": "", 
+            "latitude": 0, 
+            "longitude": 0
+        }, 
+        "index": 13, 
+        "imagePath": ""
+    }, 
+    {
+        "serviceIndex": 4, 
+        "name": "HK01", 
+        "location": {
+            "address": "", 
+            "latitude": 0, 
+            "longitude": 0
+        }, 
+        "index": 14, 
+        "imagePath": ""
+    }, 
+    {
+        "serviceIndex": 4, 
+        "name": "HK02", 
+        "location": {
+            "address": "", 
+            "latitude": 0, 
+            "longitude": 0
+        }, 
+        "index": 15, 
+        "imagePath": ""
+    }, 
+    {
+        "serviceIndex": 5, 
+        "name": "US00", 
+        "location": {
+            "address": "", 
+            "latitude": 0, 
+            "longitude": 0
+        }, 
+        "index": 16, 
+        "imagePath": ""
+    }
+]

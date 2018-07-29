@@ -1,0 +1,36 @@
+
+/* Class = "UITextField"; placeholder = "username"; ObjectID = "Nbn-Ew-5Vf"; */
+"Nbn-Ew-5Vf.placeholder" = "username";
+
+/* Class = "UITextField"; text = "yf"; ObjectID = "Nbn-Ew-5Vf"; */
+"Nbn-Ew-5Vf.text" = "yf";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Rkc-M5-Isa"; */
+"Rkc-M5-Isa.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "Photo"; ObjectID = "YIm-Pd-pcw"; */
+"YIm-Pd-pcw.normalTitle" = "Photo";
+
+/* Class = "UILabel"; text = "version"; ObjectID = "ZlE-Xl-LFk"; */
+"ZlE-Xl-LFk.text" = "version";
+
+/* Class = "UIButton"; normalTitle = "Login"; ObjectID = "c7a-tQ-XQW"; */
+"c7a-tQ-XQW.normalTitle" = "Login";
+
+/* Class = "UITextField"; placeholder = "password"; ObjectID = "fYb-bE-Ur6"; */
+"fYb-bE-Ur6.placeholder" = "password";
+
+/* Class = "UITextField"; text = "123"; ObjectID = "fYb-bE-Ur6"; */
+"fYb-bE-Ur6.text" = "123";
+
+/* Class = "UIBarButtonItem"; title = "Logout"; ObjectID = "iiP-9O-z7e"; */
+"iiP-9O-z7e.title" = "Logout";
+
+/* Class = "UIButton"; normalTitle = "Map"; ObjectID = "kjQ-rF-R8i"; */
+"kjQ-rF-R8i.normalTitle" = "Map";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "uGE-Ky-Xlg"; */
+"uGE-Ky-Xlg.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "Note"; ObjectID = "yoQ-dc-ptw"; */
+"yoQ-dc-ptw.normalTitle" = "Note";
