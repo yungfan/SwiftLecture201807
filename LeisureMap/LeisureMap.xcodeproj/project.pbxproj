@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0663307A3B6ADA3549A50F12 /* Pods_LeisureMap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1344B55F775C645322ACEBA0 /* Pods_LeisureMap.framework */; };
 		13E0B38A0EDF048A7A286867 /* Pods_LeisureMapUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3F57B9647FAA7BC0414FACE /* Pods_LeisureMapUITests.framework */; };
+		AD00DD86210D98AB0032938D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AD00DD88210D98AB0032938D /* InfoPlist.strings */; };
 		AD465845210AAAD4006F02BD /* ServiceCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD465844210AAAD4006F02BD /* ServiceCategory.swift */; };
 		AD465847210AAB68006F02BD /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD465846210AAB68006F02BD /* Store.swift */; };
 		AD465849210AB972006F02BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD465848210AB972006F02BD /* Assets.xcassets */; };
@@ -17,7 +18,6 @@
 		AD54F54A2105D621007A2114 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD54F5492105D621007A2114 /* AppDelegate.swift */; };
 		AD54F54C2105D621007A2114 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD54F54B2105D621007A2114 /* ViewController.swift */; };
 		AD54F54F2105D621007A2114 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD54F54D2105D621007A2114 /* Main.storyboard */; };
-		AD54F5542105D622007A2114 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD54F5522105D622007A2114 /* LaunchScreen.storyboard */; };
 		AD54F55F2105D622007A2114 /* LeisureMapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD54F55E2105D622007A2114 /* LeisureMapTests.swift */; };
 		AD54F56A2105D622007A2114 /* LeisureMapUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD54F5692105D622007A2114 /* LeisureMapUITests.swift */; };
 		AD54F5782105DB03007A2114 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD54F5772105DB03007A2114 /* SplashViewController.swift */; };
@@ -62,6 +62,10 @@
 		84086AB94A8DC546A8DD5497 /* Pods-LeisureMapUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LeisureMapUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LeisureMapUITests/Pods-LeisureMapUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		989F31757CBF9EE4C16FCBE2 /* Pods-LeisureMap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LeisureMap.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LeisureMap/Pods-LeisureMap.debug.xcconfig"; sourceTree = "<group>"; };
 		A3F57B9647FAA7BC0414FACE /* Pods_LeisureMapUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LeisureMapUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD00DD87210D98AB0032938D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		AD00DD8D210D9A190032938D /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		AD00DD8E210D9A290032938D /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		AD00DD8F210D9D2D0032938D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AD465844210AAAD4006F02BD /* ServiceCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceCategory.swift; sourceTree = "<group>"; };
 		AD465846210AAB68006F02BD /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		AD465848210AB972006F02BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -71,8 +75,6 @@
 		AD54F5492105D621007A2114 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AD54F54B2105D621007A2114 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		AD54F54E2105D621007A2114 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		AD54F5532105D622007A2114 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		AD54F5552105D622007A2114 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AD54F55A2105D622007A2114 /* LeisureMapTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LeisureMapTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD54F55E2105D622007A2114 /* LeisureMapTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeisureMapTests.swift; sourceTree = "<group>"; };
 		AD54F5602105D622007A2114 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -205,12 +207,12 @@
 				AD76006221085896003F7733 /* MasterDetail */,
 				AD54F5792105DB48007A2114 /* LoginFlow */,
 				AD54F5492105D621007A2114 /* AppDelegate.swift */,
+				AD00DD8F210D9D2D0032938D /* Info.plist */,
 				AD54F54B2105D621007A2114 /* ViewController.swift */,
 				AD54F54D2105D621007A2114 /* Main.storyboard */,
-				AD54F5522105D622007A2114 /* LaunchScreen.storyboard */,
 				AD465848210AB972006F02BD /* Assets.xcassets */,
-				AD54F5552105D622007A2114 /* Info.plist */,
 				AD54F5772105DB03007A2114 /* SplashViewController.swift */,
+				AD00DD88210D98AB0032938D /* InfoPlist.strings */,
 			);
 			path = LeisureMap;
 			sourceTree = "<group>";
@@ -378,8 +380,8 @@
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = AD54F53D2105D621007A2114;
 			productRefGroup = AD54F5472105D621007A2114 /* Products */;
@@ -398,8 +400,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AD54F5542105D622007A2114 /* LaunchScreen.storyboard in Resources */,
 				AD465849210AB972006F02BD /* Assets.xcassets in Resources */,
+				AD00DD86210D98AB0032938D /* InfoPlist.strings in Resources */,
 				ADA04E98210C5284007853F6 /* abc.edu.gpx in Resources */,
 				AD62A0CC210D4E7D00B9A38D /* sample_js.txt in Resources */,
 				AD62A0C9210D47B600B9A38D /* sample.html in Resources */,
@@ -560,20 +562,22 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		AD00DD88210D98AB0032938D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AD00DD87210D98AB0032938D /* en */,
+				AD00DD8E210D9A290032938D /* zh-Hans */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 		AD54F54D2105D621007A2114 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				AD54F54E2105D621007A2114 /* Base */,
+				AD00DD8D210D9A190032938D /* zh-Hans */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		AD54F5522105D622007A2114 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				AD54F5532105D622007A2114 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

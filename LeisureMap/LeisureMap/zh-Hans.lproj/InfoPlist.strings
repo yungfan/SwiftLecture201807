@@ -1,0 +1,15 @@
+/* 
+  InfoPlist.strings
+  LeisureMap
+
+  Created by stu1 on 2018/7/29.
+  Copyright © 2018年 YungFan. All rights reserved.
+*/
+"CFBundleDisplayName" = "玩吧" ;
+"CFBundleName" = "玩吧" ;
+"NSCameraUsageDescription" = "访问相机获取图片进行记录" ;
+"NSPhotoLibraryAddUsageDescription" = "访问相册获取图片进行记录" ;
+"NSLocationAlwaysUsageDescription" = "LeisureMap需要知道你的位置以提供更好的服务" ;
+"NSLocationUsageDescription" = "LeisureMap需要知道你的位置以提供更好的服务" ;
+"NSLocationAlwaysAndWhenInUseUsageDescription" = "LeisureMap需要知道你的位置以提供更好的服务" ;
+"NSLocationWhenInUseUsageDescription" = "LeisureMap需要知道你的位置以提供更好的服务" ;

@@ -27,6 +27,10 @@ class NoteViewController: UIViewController {
         
     }
 
+    @IBAction func btnCameraClicked(_ sender: Any) {
+        
+        camera()
+    }
     
     func camera() {
         if UIImagePickerController.isSourceTypeAvailable(.camera){

@@ -124,12 +124,22 @@
                                     <action selector="btnPhotoClicked:" destination="lNJ-0u-fqn" eventType="touchUpInside" id="I2e-LN-hz4"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tIY-Xl-Qam">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tIY-Xl-Qam">
                                 <rect key="frame" x="0.0" y="213.5" width="375" height="240"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="240" id="EFr-BB-1Y0"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qfk-Qk-qDu">
+                                <rect key="frame" x="153" y="160" width="69" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Camera">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnCameraClicked:" destination="lNJ-0u-fqn" eventType="touchUpInside" id="Uau-Ni-a6X"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" name="systemBlueColor" catalog="System" colorSpace="catalog"/>
                         <constraints>
@@ -137,6 +147,8 @@
                             <constraint firstItem="YIm-Pd-pcw" firstAttribute="centerX" secondItem="XLk-fH-Nkl" secondAttribute="centerX" id="O2O-EG-s8w"/>
                             <constraint firstItem="YIm-Pd-pcw" firstAttribute="top" secondItem="8ot-Ce-YQw" secondAttribute="top" constant="50" id="UZO-Xx-ddK"/>
                             <constraint firstItem="tIY-Xl-Qam" firstAttribute="centerY" secondItem="XLk-fH-Nkl" secondAttribute="centerY" id="ZGL-Sp-J9B"/>
+                            <constraint firstItem="Qfk-Qk-qDu" firstAttribute="centerX" secondItem="XLk-fH-Nkl" secondAttribute="centerX" id="i19-v8-uUd"/>
+                            <constraint firstItem="Qfk-Qk-qDu" firstAttribute="top" secondItem="YIm-Pd-pcw" secondAttribute="bottom" constant="10" id="m5k-xL-dCC"/>
                             <constraint firstItem="8ot-Ce-YQw" firstAttribute="trailing" secondItem="tIY-Xl-Qam" secondAttribute="trailing" id="pIw-lz-pAm"/>
                             <constraint firstItem="tIY-Xl-Qam" firstAttribute="leading" secondItem="8ot-Ce-YQw" secondAttribute="leading" id="rK6-OQ-CB0"/>
                         </constraints>
@@ -256,8 +268,8 @@
                                                         <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                                     </userDefinedRuntimeAttributes>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uGE-Ky-Xlg">
-                                                    <rect key="frame" x="24" y="94.5" width="42" height="20.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Service" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uGE-Ky-Xlg">
+                                                    <rect key="frame" x="16.5" y="94.5" width="57" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                     <nil key="highlightedColor"/>
@@ -296,7 +308,7 @@
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="L5w-jx-uI6">
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rkc-M5-Isa">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Store" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rkc-M5-Isa">
                                                     <rect key="frame" x="35" y="28" width="305" height="24"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                     <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>

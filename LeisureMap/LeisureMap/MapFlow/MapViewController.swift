@@ -75,7 +75,7 @@ class MapViewController: UIViewController {
         let gcjLat =   LocationTransform.wgs2gcj(wgsLat: 31.2916511800, wgsLng: 118.3623587000).gcjLat
         let gcjLng =   LocationTransform.wgs2gcj(wgsLat: 31.2916511800, wgsLng: 118.3623587000).gcjLng
     
-        flag = MapFlag(title: "iOS App by Swift", locationName: "商贸学院", discipline: "Apple", coordinate: CLLocationCoordinate2DMake(gcjLat,gcjLng), url: "https://www.apple.com/cn")
+        flag = MapFlag(title: "iOS App by Swift", locationName: "商贸学院", discipline: "Web", coordinate: CLLocationCoordinate2DMake(gcjLat,gcjLng), url: "https://www.apple.com/cn")
     
         self.mapView.addAnnotation(flag!)
        

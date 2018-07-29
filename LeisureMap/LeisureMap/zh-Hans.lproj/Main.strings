@@ -1,36 +1,39 @@
 
-/* Class = "UITextField"; placeholder = "用户名"; ObjectID = "Nbn-Ew-5Vf"; */
+/* Class = "UITextField"; placeholder = "username"; ObjectID = "Nbn-Ew-5Vf"; */
 "Nbn-Ew-5Vf.placeholder" = "用户名";
 
 /* Class = "UITextField"; text = "yf"; ObjectID = "Nbn-Ew-5Vf"; */
 "Nbn-Ew-5Vf.text" = "yf";
 
-/* Class = "UILabel"; text = "Label"; ObjectID = "Rkc-M5-Isa"; */
-"Rkc-M5-Isa.text" = "Label";
+/* Class = "UIButton"; normalTitle = "Camera"; ObjectID = "Qfk-Qk-qDu"; */
+"Qfk-Qk-qDu.normalTitle" = "相机";
+
+/* Class = "UILabel"; text = "Store"; ObjectID = "Rkc-M5-Isa"; */
+"Rkc-M5-Isa.text" = "商城";
 
 /* Class = "UIButton"; normalTitle = "Photo"; ObjectID = "YIm-Pd-pcw"; */
-"YIm-Pd-pcw.normalTitle" = "Photo";
+"YIm-Pd-pcw.normalTitle" = "图片";
 
 /* Class = "UILabel"; text = "version"; ObjectID = "ZlE-Xl-LFk"; */
-"ZlE-Xl-LFk.text" = "version";
+"ZlE-Xl-LFk.text" = "版本";
 
 /* Class = "UIButton"; normalTitle = "Login"; ObjectID = "c7a-tQ-XQW"; */
-"c7a-tQ-XQW.normalTitle" = "Login";
+"c7a-tQ-XQW.normalTitle" = "登录";
 
-/* Class = "UITextField"; placeholder = "密码"; ObjectID = "fYb-bE-Ur6"; */
+/* Class = "UITextField"; placeholder = "password"; ObjectID = "fYb-bE-Ur6"; */
 "fYb-bE-Ur6.placeholder" = "密码";
 
 /* Class = "UITextField"; text = "123"; ObjectID = "fYb-bE-Ur6"; */
 "fYb-bE-Ur6.text" = "123";
 
 /* Class = "UIBarButtonItem"; title = "Logout"; ObjectID = "iiP-9O-z7e"; */
-"iiP-9O-z7e.title" = "Logout";
+"iiP-9O-z7e.title" = "登出";
 
 /* Class = "UIButton"; normalTitle = "Map"; ObjectID = "kjQ-rF-R8i"; */
-"kjQ-rF-R8i.normalTitle" = "Map";
+"kjQ-rF-R8i.normalTitle" = "地图";
 
-/* Class = "UILabel"; text = "Label"; ObjectID = "uGE-Ky-Xlg"; */
-"uGE-Ky-Xlg.text" = "Label";
+/* Class = "UILabel"; text = "Service"; ObjectID = "uGE-Ky-Xlg"; */
+"uGE-Ky-Xlg.text" = "服务";
 
 /* Class = "UIButton"; normalTitle = "Note"; ObjectID = "yoQ-dc-ptw"; */
-"yoQ-dc-ptw.normalTitle" = "Note";
+"yoQ-dc-ptw.normalTitle" = "点评";
