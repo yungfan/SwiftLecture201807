@@ -16,13 +16,13 @@ class StoreCellView: UITableViewCell {
     
     func updateContent(store: Store) -> Void {
         
-        self.lbName.text = store.Name
+        self.lbName.text = store.name
         
-        let imagePath = URL(string: store.ImagePath!)
+        let imagePath = URL(string: store.imagePath!)
         
         let bgPlaceholder = UIImage(named: "bgPlaceholder")
         
-        self.bgImageView.kf.setImage(with: imagePath, placeholder: bgPlaceholder)
+        self.bgImageView.sd_setImage(with: imagePath, placeholderImage: bgPlaceholder)
     }
     
 

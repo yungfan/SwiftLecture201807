@@ -7,8 +7,6 @@
 //
 
 import UIKit
-import SwiftyJSON
-import Kingfisher
 
 class MasterViewController: UIViewController {
     
@@ -70,45 +68,20 @@ class MasterViewController: UIViewController {
         
         let content = self.fileWorker?.readFromFile(fileName: storeFileName, tag: 4)
         
-        do{
-        
-            if let dataFromString = content?.data(using: .utf8, allowLossyConversion: false) {
-
-                let json = try JSON(data: dataFromString)
-
-                for (_, subJSON) : (String, JSON) in json {
-
-                    let serviceIndex :Int = subJSON["serviceIndex"].intValue
-                    let name :String = subJSON["name"].stringValue
-                    let location :JSON = subJSON["location"]
-                    let imagePath :String = subJSON["imagePath"].stringValue
-                    let index :Int = subJSON["index"].intValue
-
-                    let address :String = location["address"].stringValue
-                    let latitude :Double = location["latitude"].doubleValue
-                    let longitude :Double = location["longitude"].doubleValue
-
-                    let l = LocationDesc(address: address, latitude: latitude, longitude: longitude)
-
-                    let s = Store(serviceIndex: serviceIndex, name: name, location: l, imagePath: imagePath, index: index)
-                    
-                    self.stores.append(s)
-
-                }
-            }
+        if let dataFromString = content?.data(using: .utf8, allowLossyConversion: false) {
+            
+            
+            let decoder = JSONDecoder()
+            
+            self.stores = try! decoder.decode([Store].self, from: dataFromString)
             
             //默认显示索引为0的那组数据
             self.displayStores = self.stores.filter({ (store:Store) -> Bool in
                 
-                return store.ServiceIndex == 0
+                return store.serviceIndex == 0
                 
             })
-
-        }
-
-        catch{
-
-            print("\(error)")
+            
         }
     
     }
@@ -195,7 +168,7 @@ extension MasterViewController: UICollectionViewDataSource, UICollectionViewDele
         self.displayStores = self.stores.filter({ (store:Store) -> Bool in
             
             //左边的0-5  右边Index从1-6
-            return store.ServiceIndex == self.selectedCategory!.Index
+            return store.serviceIndex == self.selectedCategory!.index
             
         })
         

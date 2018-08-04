@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import SwiftyJSON
 
 class LoginViewController: UIViewController {
 
@@ -174,7 +173,7 @@ extension LoginViewController: UITextFieldDelegate, AsyncResponseDelegate, FileW
     }
     
     //MARK: - AsyncResponseDelegate
-    func receivedResponse(_ sender: AsyncRequestWorker, responseString: String, tag: Int) {
+    func receivedResponse(_ sender: AsyncRequestWorker, responseData: Data, tag: Int) {
         
         switch tag {
             
@@ -186,41 +185,20 @@ extension LoginViewController: UITextFieldDelegate, AsyncResponseDelegate, FileW
             //category
             case 3:
                 
+                //利用JSONDecoder进行JSON到模型的转换
+                let decoder = JSONDecoder()
                 
-                //解析JSON插入数据库
-                do{
-                    
-                    if let dataFromString = responseString.data(using: .utf8, allowLossyConversion: false) {
-                        
-                        let json = try JSON(data: dataFromString)
-                        
-                        //初始化数据库工具类并完成创表等动作
-                        let sqliteWorker = SQLiteWorker()
-                        sqliteWorker.createDatabase()
-                        sqliteWorker.clearAll()
-                        
-                        //遍历JSON的数组
-                        for (_, subJSON) : (String, JSON) in json {
-                            
-                            //取出数组中字典的Value
-                            let index :Int = subJSON["index"].intValue
-                            let name :String = subJSON["name"].stringValue
-                            let imagePath :String = subJSON["imagePath"].stringValue
-                            
-                            //插入数据库
-                            sqliteWorker.insertData(_id:index, _name: name, _imagepath: imagePath)
-                        }
-      
-                    }
-
+                let serviceCategories = try! decoder.decode([ServiceCategory].self, from: responseData)
+                
+                //初始化数据库工具类并完成创表等动作
+                let sqliteWorker = SQLiteWorker()
+                sqliteWorker.createDatabase()
+                sqliteWorker.clearAll()
+                
+                for serviceCategory in serviceCategories {
+                    //插入数据库
+                    sqliteWorker.insertData(_id:serviceCategory.index, _name: serviceCategory.name, _imagepath: serviceCategory.imagePath)
                 }
-                
-                catch{
-                    
-                    print("\(error)")
-                }
-                
-               
                 
                 //获取Category后获取Store
                 getStore()
@@ -228,7 +206,9 @@ extension LoginViewController: UITextFieldDelegate, AsyncResponseDelegate, FileW
             //store
             case 4:
                 
-                self.fileWorker?.writeToFile(content: responseString, fileName: storeFileName, tag: tag)
+                let responseString = String(data: responseData, encoding: String.Encoding.utf8)
+                
+                self.fileWorker?.writeToFile(content: responseString!, fileName: storeFileName, tag: tag)
             
    
             default:

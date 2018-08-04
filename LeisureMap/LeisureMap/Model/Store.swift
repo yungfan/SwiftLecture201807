@@ -8,49 +8,49 @@
 
 import UIKit
 
-class Store {
+struct Store: Codable{
     
-    var ServiceIndex: Int = 0
+    var serviceIndex: Int = 0 //服务索引
     
-    var Name: String?
+    var name: String? //名称
     
-    var Location: LocationDesc?
+    var location: LocationDesc? //地理资讯
     
-    var Index: Int = 0
+    var index: Int = 0 //索引
     
-    var ImagePath: String?
+    var imagePath: String?  //图片
     
     init(serviceIndex: Int, name: String, location:LocationDesc, imagePath:String, index:Int) {
         
-        ServiceIndex = serviceIndex
+        self.serviceIndex = serviceIndex
         
-        Location = location
+        self.location = location
         
-        Name = name
+        self.name = name
         
-        ImagePath = imagePath
+        self.imagePath = imagePath
         
-        Index = index
+        self.index = index
         
     }
  
 }
 
-class LocationDesc{
+struct LocationDesc :Codable{
     
-    var Address: String?  //地址
+    var address: String?  //地址
     
-    var Latitude: Double? //纬度
+    var latitude: Double? //纬度
     
-    var Longitude: Double?  //经度
+    var longitude: Double?  //经度
     
     init(address: String, latitude:Double, longitude:Double) {
         
-        Address = address
+        self.address = address
         
-        Latitude = latitude
+        self.latitude = latitude
         
-        Longitude = longitude
+        self.longitude = longitude
         
     }
     

@@ -8,22 +8,22 @@
 
 import UIKit
 
-class ServiceCategory {
+struct ServiceCategory: Codable {
     
-    var Name: String?
+    var name: String //类别名称
     
-    var ImagePath: String?
+    var imagePath: String //图片
         
-    var Index: Int = 0
-    
+    var index: Int = 0 //索引
+
     
     init(name: String, imagePath:String, index:Int) {
       
-        Name = name
+        self.name = name
         
-        ImagePath = imagePath
+        self.imagePath = imagePath
         
-        Index = index
+        self.index = index
         
     }
     

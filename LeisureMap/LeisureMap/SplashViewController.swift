@@ -64,9 +64,11 @@ class SplashViewController: UIViewController {
 extension SplashViewController: AsyncResponseDelegate{
     
     // MARK: - 从服务器获取信息
-    func receivedResponse(_ sender: AsyncRequestWorker, responseString: String, tag: Int) {
+    func receivedResponse(_ sender: AsyncRequestWorker, responseData: Data, tag: Int) {
         
-        self.saveInfo(obj: responseString)
+        let responseString = String(data: responseData, encoding: String.Encoding.utf8)
+        
+        self.saveInfo(obj: responseString!)
         
         //网络请求会自动开启一个新线程，而iOS中更新UI的操作必须在主线程，所以回到主线程去更新Label的文本和跳转
         DispatchQueue.main.async {

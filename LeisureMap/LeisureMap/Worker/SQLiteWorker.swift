@@ -106,7 +106,7 @@ struct SQLiteWorker {
         }
         
         //排序
-        responseArray.sort(by: { $0.Index < $1.Index })
+        responseArray.sort(by: { $0.index < $1.index })
         
         return responseArray
     }
@@ -145,7 +145,7 @@ struct SQLiteWorker {
         
         for category in categories{
             
-            indexes.append(category.Index)
+            indexes.append(category.index)
         }
         
         for index in indexes{

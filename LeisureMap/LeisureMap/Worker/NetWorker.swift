@@ -12,7 +12,7 @@ import Foundation
 //MARK: - 定义协议
 protocol AsyncResponseDelegate{
     
-    func receivedResponse(_ sender:AsyncRequestWorker, responseString:String, tag:Int)
+    func receivedResponse(_ sender:AsyncRequestWorker, responseData:Data, tag:Int)
     
 }
 
@@ -52,7 +52,7 @@ class AsyncRequestWorker {
                     print("tag为\(tag)的网络请求Server返回的数据：\(responseResult!)")
                
                     //将返回的数据交给代理去完成，至于谁是代理，就看谁实现了AsyncResponseDelegate协议
-                    self.responseDelegate?.receivedResponse(self, responseString: responseResult!, tag: tag)
+                    self.responseDelegate?.receivedResponse(self, responseData: data!, tag: tag)
                 }
                 
                 

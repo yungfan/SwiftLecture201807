@@ -16,8 +16,9 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.title = selectedStore?.Name
+        self.title = selectedStore?.name
         
+        print(selectedStore!)
        
     }
     

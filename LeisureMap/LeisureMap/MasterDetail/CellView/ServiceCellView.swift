@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class ServiceCellView: UICollectionViewCell {
     
@@ -16,13 +17,13 @@ class ServiceCellView: UICollectionViewCell {
     
     func updateContent(service: ServiceCategory) -> Void {
         
-        self.lbName.text = service.Name
+        self.lbName.text = service.name
         
-        let imagePath = URL(string: service.ImagePath!)
+        let imagePath = URL(string: service.imagePath)
         
         let placeholder = UIImage(named: "placeholder")
         
-        self.bgImageView.kf.setImage(with: imagePath, placeholder: placeholder)
+        self.bgImageView.sd_setImage(with: imagePath, placeholderImage: placeholder)
         
 
     }

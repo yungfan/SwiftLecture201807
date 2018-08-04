@@ -1,26 +1,24 @@
 PODS:
-  - Kingfisher (4.8.1)
+  - SDWebImage (5.0.0-beta2):
+    - SDWebImage/Core (= 5.0.0-beta2)
+  - SDWebImage/Core (5.0.0-beta2)
   - SQLite.swift (0.11.5):
     - SQLite.swift/standard (= 0.11.5)
   - SQLite.swift/standard (0.11.5)
-  - SwiftyJSON (4.1.0)
 
 DEPENDENCIES:
-  - Kingfisher (~> 4.0)
+  - SDWebImage (~> 5.0.0-beta2)
   - SQLite.swift (~> 0.11.5)
-  - SwiftyJSON (~> 4.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
-    - Kingfisher
+    - SDWebImage
     - SQLite.swift
-    - SwiftyJSON
 
 SPEC CHECKSUMS:
-  Kingfisher: 868c1149679a7ab6869be118faa9b5aed154aaf0
+  SDWebImage: 8e4aaf5805e954ad426702adf5a8c012a7f581d1
   SQLite.swift: 6e5356850bb1791459f8c16d6ee9195b28714a2e
-  SwiftyJSON: c29297daf073d2aa016295d5809cdd68045c39b3
 
-PODFILE CHECKSUM: e1851c17e82b7b74e817736ffb85682e08fbcf4b
+PODFILE CHECKSUM: dc6d70bb62e9189aa1fd8fa7a9b82817340fa559
 
 COCOAPODS: 1.5.3
