@@ -70,7 +70,7 @@ class MasterViewController: UIViewController {
         
         if let dataFromString = content?.data(using: .utf8, allowLossyConversion: false) {
             
-            
+            //利用JSONDecoder直接转换成数组
             let decoder = JSONDecoder()
             
             self.stores = try! decoder.decode([Store].self, from: dataFromString)

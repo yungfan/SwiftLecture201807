@@ -187,7 +187,7 @@ extension LoginViewController: UITextFieldDelegate, AsyncResponseDelegate, FileW
                 
                 //利用JSONDecoder进行JSON到模型的转换
                 let decoder = JSONDecoder()
-                
+                //直接转成数组对象
                 let serviceCategories = try! decoder.decode([ServiceCategory].self, from: responseData)
                 
                 //初始化数据库工具类并完成创表等动作
@@ -195,8 +195,9 @@ extension LoginViewController: UITextFieldDelegate, AsyncResponseDelegate, FileW
                 sqliteWorker.createDatabase()
                 sqliteWorker.clearAll()
                 
+                //循环插入数据库
                 for serviceCategory in serviceCategories {
-                    //插入数据库
+                    
                     sqliteWorker.insertData(_id:serviceCategory.index, _name: serviceCategory.name, _imagepath: serviceCategory.imagePath)
                 }
                 

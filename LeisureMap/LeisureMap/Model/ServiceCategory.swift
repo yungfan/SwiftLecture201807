@@ -8,6 +8,7 @@
 
 import UIKit
 
+// 实现Codable协议 属性与JSON对应
 struct ServiceCategory: Codable {
     
     var name: String //类别名称
