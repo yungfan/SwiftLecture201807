@@ -73,7 +73,12 @@ class MasterViewController: UIViewController {
             //利用JSONDecoder直接转换成数组
             let decoder = JSONDecoder()
             
-            self.stores = try! decoder.decode([Store].self, from: dataFromString)
+            guard let stores = try? decoder.decode([Store].self, from: dataFromString) else{
+                
+                return
+            }
+    
+            self.stores = stores
             
             //默认显示索引为0的那组数据
             self.displayStores = self.stores.filter({ (store:Store) -> Bool in

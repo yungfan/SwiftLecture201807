@@ -29,7 +29,7 @@ class SplashViewController: UIViewController {
         self.appVersion = "" + (Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String)!
         
         //网络请求的url
-        let url = "https://score.azurewebsites.net/api/version/\(self.appVersion!)"
+        let url = baseURL + "version/\(self.appVersion!)"
         
         //让网络工具类去完成请求
         self.requestWorker?.getResponse(from: url, tag: 1)
@@ -64,9 +64,14 @@ class SplashViewController: UIViewController {
 extension SplashViewController: AsyncResponseDelegate{
     
     // MARK: - 从服务器获取信息
-    func receivedResponse(_ sender: AsyncRequestWorker, responseData: Data, tag: Int) {
+    func receivedResponse(_ sender: AsyncRequestWorker, responseData: Data?, tag: Int) {
         
-        let responseString = String(data: responseData, encoding: String.Encoding.utf8)
+        guard let data = responseData else{
+            
+            return
+        }
+        
+        let responseString = String(data: data, encoding: String.Encoding.utf8)
         
         self.saveInfo(obj: responseString!)
         

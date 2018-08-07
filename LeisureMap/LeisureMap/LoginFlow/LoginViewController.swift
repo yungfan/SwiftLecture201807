@@ -50,26 +50,35 @@ class LoginViewController: UIViewController {
         
         self.view .endEditing(true)
         
-        //获取用户输入的信息
-        let account = self.txtAccount.text!
-        
-        let password = self.txtPassword.text!
-        
-        if account.count > 0, password.count > 0{
+        //超过10分钟才再次请求网络 避免重复进行网络请求、数据库读写
+        if afterTimes("login", s: 10*60) {
+            //获取用户输入的信息
+            let account = self.txtAccount.text!
             
-            let url = "https://score.azurewebsites.net/api/login/\(account)/\(password)"
+            let password = self.txtPassword.text!
             
-            //让网络工具类去完成请求
-            self.requestWorker?.getResponse(from: url, tag: 2)
-        
+            if account.count > 0, password.count > 0{
+                
+                let url = baseURL + "login/\(account)/\(password)"
+                
+                //让网络工具类去完成请求
+                self.requestWorker?.getResponse(from: url, tag: 2)
+                
+            }
         }
+        
+        else{
+        
+            self.performSegue(withIdentifier:"moveToMasterViewSegue", sender: self)
+        }
+       
 
     }
     
     //MARK: -  获取Category数据
     fileprivate func getCategory(){
         
-        let url = "https://score.azurewebsites.net/api/servicecategory"
+        let url = baseURL + "servicecategory"
         
         self.requestWorker?.getResponse(from: url, tag: 3)
         
@@ -78,7 +87,7 @@ class LoginViewController: UIViewController {
     //MARK: -  获取Store数据
     fileprivate func getStore(){
 
-        let url = "https://score.azurewebsites.net/api/store"
+        let url = baseURL + "store"
         
         self.requestWorker?.getResponse(from: url, tag: 4)
         
@@ -173,7 +182,12 @@ extension LoginViewController: UITextFieldDelegate, AsyncResponseDelegate, FileW
     }
     
     //MARK: - AsyncResponseDelegate
-    func receivedResponse(_ sender: AsyncRequestWorker, responseData: Data, tag: Int) {
+    func receivedResponse(_ sender: AsyncRequestWorker, responseData: Data? , tag: Int) {
+        
+        guard let data = responseData else{
+            
+            return
+        }
         
         switch tag {
             
@@ -188,17 +202,19 @@ extension LoginViewController: UITextFieldDelegate, AsyncResponseDelegate, FileW
                 //利用JSONDecoder进行JSON到模型的转换
                 let decoder = JSONDecoder()
                 //直接转成数组对象
-                let serviceCategories = try! decoder.decode([ServiceCategory].self, from: responseData)
+                guard let serviceCategories = try? decoder.decode([ServiceCategory].self, from: data) else{
+
+                    return
+                }
                 
                 //初始化数据库工具类并完成创表等动作
                 let sqliteWorker = SQLiteWorker()
-                sqliteWorker.createDatabase()
-                sqliteWorker.clearAll()
-                
+                sqliteWorker.createdTable()
+
                 //循环插入数据库
                 for serviceCategory in serviceCategories {
                     
-                    sqliteWorker.insertData(_id:serviceCategory.index, _name: serviceCategory.name, _imagepath: serviceCategory.imagePath)
+                    sqliteWorker.insertData(_index:serviceCategory.index, _name: serviceCategory.name, _imagepath: serviceCategory.imagePath)
                 }
                 
                 //获取Category后获取Store
@@ -207,7 +223,7 @@ extension LoginViewController: UITextFieldDelegate, AsyncResponseDelegate, FileW
             //store
             case 4:
                 
-                let responseString = String(data: responseData, encoding: String.Encoding.utf8)
+                let responseString = String(data: data, encoding: String.Encoding.utf8)
                 
                 self.fileWorker?.writeToFile(content: responseString!, fileName: storeFileName, tag: tag)
             

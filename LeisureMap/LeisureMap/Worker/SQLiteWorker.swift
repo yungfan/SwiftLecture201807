@@ -2,8 +2,8 @@
 //  SQLiteWorker.swift
 //  LeisureMap
 //
-//  Created by 房懷安 on 2018/7/25.
-//  Copyright © 2018年 房懷安. All rights reserved.
+//  Created by 杨帆 on 2018/8/7.
+//  Copyright © 2018年 YungFan. All rights reserved.
 //
 
 import Foundation
@@ -16,83 +16,75 @@ struct SQLiteWorker {
     private var db: Connection!
     private let categories = Table("servicecategory") //表名
     private let id = Expression<Int>("id") //id
+    private let index = Expression<Int>("index") //index
     private let name = Expression<String>("name") //name
     private let imagepath = Expression<String>("imagepath") //imagePath
     
-     //MARK: - 构造函数
+    //MARK: - 构造函数
     init() {
         
-        let sqlFilePath = NSHomeDirectory() + "/Documents/db.sqlite3"
-        
         do {
-            
             db = try Connection(sqlFilePath)
             print("与数据库建立连接成功")
             
         } catch { print("与数据库建立连接 失败：\(error)") }
         
-        
-        do {
-            
-            let count = try db.scalar(categories.count)
-            print("init count:\(count)")
-            
-        } catch { print(error) }
     }
-    
-    
-     //MARK: - 创建表格
-    func createDatabase()  {
-        createdTable()
-    }
-    
-    private func createdTable()  {
-        
-        do{
-            
-            let count = try db.scalar(categories.count)
-            
-            if count > 0 {
-                try db.run(categories.drop())
-            }
-        } catch { print(error) }
-        
-        do {
 
+    //MARK: - 创建表格，表若存在不会再次创建，直接进入catch
+    func createdTable()  {
+        
+        do {
+            
             try db.run(categories.create { t in
                 t.column(id, primaryKey: true)
+                t.column(index)
                 t.column(name)
                 t.column(imagepath)
             })
             
             print("创表成功")
             
-        } catch { print("创表成功\(error)") }
+        } catch { print("创表失败\(error)")  }
         
-        do {
-            
-            let count = try db.scalar(categories.count)
-            
-            print("createdTable count:\(count)")
-            
-        } catch { print(error) }
-        
-        
+        self.clearData()
     }
     
-     //MARK: - 增加数据
-    func insertData(_id:Int, _name: String, _imagepath: String){
+    //MARK: - 删除表中的数据
+    func clearData(){
+        
+        do{
+            //统计数据行数 SELECT count(*) FROM "tableName"
+            let count = try db.scalar(categories.count)
+            
+            if count > 0 {
+                
+                //try db.run(categories.drop())
+                
+                self.clearAll()
+                
+                print("清空已有数据")
+                
+            }
+        } catch { print("(error)") }
+
+    }
+    
+    //MARK: - 增加数据
+    func insertData(_index: Int, _name: String, _imagepath: String){
         
         do {
             
-            let insert = categories.insert(id <- _id,name <- _name, imagepath <- _imagepath)
+            let insert = categories.insert(index <- _index,name <- _name, imagepath <- _imagepath)
             
             try db.run(insert)
             
-        } catch { print(error) }
+            print("增加数据成功")
+            
+        } catch { print("insertData错误\(error)")  }
     }
     
-     //MARK: - 查询数据
+    //MARK: - 查询数据
     func readData() -> [ServiceCategory] {
         
         //将查询的结果保存到数组备用
@@ -100,10 +92,12 @@ struct SQLiteWorker {
         
         for category in try! db.prepare(categories) {
             
-            let serviceCategory = ServiceCategory(name: category[name], imagePath: category[imagepath], index: category[id])
+            let serviceCategory = ServiceCategory(name: category[name], imagePath: category[imagepath], index: category[index])
             
             responseArray.append(serviceCategory)
         }
+        
+        print("读取数据成功")
         
         //排序
         responseArray.sort(by: { $0.index < $1.index })
@@ -111,32 +105,36 @@ struct SQLiteWorker {
         return responseArray
     }
     
-     //MARK: - 更新数据
-    func updateData(serviceId: Int, old_name: String, new_name: String) {
+    //MARK: - 更新数据
+    func updateData(serviceIndex: Int, old_name: String, new_name: String) {
         
-        let currcategories = categories.filter(id == serviceId)
+        let currcategories = categories.filter(index == serviceIndex)
         
         do {
             
             try db.run(currcategories.update(name <- name.replace(old_name, with: new_name)))
             
-        } catch { print(error) }
+        } catch { print("updateData错误\(error)")  }
+        
+        print("更新数据成功")
         
     }
     
-     //MARK: - 根据ID删除数据
+    //MARK: - 根据Index删除数据
     func delData(currcategoryIndex: Int) {
         
-        let currcategories = categories.filter(id == currcategoryIndex)
+        let currcategories = categories.filter(index == currcategoryIndex)
         
         do {
             
             try db.run(currcategories.delete())
             
-        } catch { print(error) }
+        } catch { print("delData错误\(error)")  }
+        
+        print("删除数据成功")
     }
     
-     //MARK: - 删除所有数据
+    //MARK: - 删除所有数据
     func clearAll()  {
         
         let categories = readData()
@@ -155,4 +153,5 @@ struct SQLiteWorker {
         
     }
 }
+
 

@@ -9,11 +9,12 @@
 /* Begin PBXBuildFile section */
 		0663307A3B6ADA3549A50F12 /* Pods_LeisureMap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1344B55F775C645322ACEBA0 /* Pods_LeisureMap.framework */; };
 		13E0B38A0EDF048A7A286867 /* Pods_LeisureMapUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3F57B9647FAA7BC0414FACE /* Pods_LeisureMapUITests.framework */; };
+		3C941B0B21191D990076F01C /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C941B0A21191D990076F01C /* Const.swift */; };
+		3C941B0D21191FD10076F01C /* SQLiteWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C941B0C21191FD10076F01C /* SQLiteWorker.swift */; };
 		AD00DD86210D98AB0032938D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AD00DD88210D98AB0032938D /* InfoPlist.strings */; };
 		AD465845210AAAD4006F02BD /* ServiceCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD465844210AAAD4006F02BD /* ServiceCategory.swift */; };
 		AD465847210AAB68006F02BD /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD465846210AAB68006F02BD /* Store.swift */; };
 		AD465849210AB972006F02BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD465848210AB972006F02BD /* Assets.xcassets */; };
-		AD46584B210ABEDF006F02BD /* SQLiteWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD46584A210ABEDF006F02BD /* SQLiteWorker.swift */; };
 		AD465850210AFFB2006F02BD /* ServiceCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD46584F210AFFB2006F02BD /* ServiceCellView.swift */; };
 		AD54F54A2105D621007A2114 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD54F5492105D621007A2114 /* AppDelegate.swift */; };
 		AD54F54C2105D621007A2114 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD54F54B2105D621007A2114 /* ViewController.swift */; };
@@ -59,6 +60,8 @@
 		1344B55F775C645322ACEBA0 /* Pods_LeisureMap.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LeisureMap.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		19683EEEF9DE661FF2E19D77 /* Pods-LeisureMapTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LeisureMapTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LeisureMapTests/Pods-LeisureMapTests.release.xcconfig"; sourceTree = "<group>"; };
 		2A2BEDF9EB32AAD99293B038 /* Pods_LeisureMapTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LeisureMapTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C941B0A21191D990076F01C /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
+		3C941B0C21191FD10076F01C /* SQLiteWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLiteWorker.swift; sourceTree = "<group>"; };
 		84086AB94A8DC546A8DD5497 /* Pods-LeisureMapUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LeisureMapUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LeisureMapUITests/Pods-LeisureMapUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		989F31757CBF9EE4C16FCBE2 /* Pods-LeisureMap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LeisureMap.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LeisureMap/Pods-LeisureMap.debug.xcconfig"; sourceTree = "<group>"; };
 		A3F57B9647FAA7BC0414FACE /* Pods_LeisureMapUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LeisureMapUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -69,7 +72,6 @@
 		AD465844210AAAD4006F02BD /* ServiceCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceCategory.swift; sourceTree = "<group>"; };
 		AD465846210AAB68006F02BD /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		AD465848210AB972006F02BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		AD46584A210ABEDF006F02BD /* SQLiteWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SQLiteWorker.swift; sourceTree = "<group>"; };
 		AD46584F210AFFB2006F02BD /* ServiceCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceCellView.swift; sourceTree = "<group>"; };
 		AD54F5462105D621007A2114 /* LeisureMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LeisureMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD54F5492105D621007A2114 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -249,6 +251,7 @@
 				AD62A0CB210D4E7D00B9A38D /* sample_js.txt */,
 				AD62A0C8210D47B600B9A38D /* sample.html */,
 				ADA04E97210C5284007853F6 /* abc.edu.gpx */,
+				3C941B0A21191D990076F01C /* Const.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -285,9 +288,9 @@
 		ADD80E522109615200A7DBEB /* Worker */ = {
 			isa = PBXGroup;
 			children = (
-				AD46584A210ABEDF006F02BD /* SQLiteWorker.swift */,
 				ADD80E532109618400A7DBEB /* NetWorker.swift */,
 				ADAE437C2109CF6B0040AABD /* FileWorker.swift */,
+				3C941B0C21191FD10076F01C /* SQLiteWorker.swift */,
 			);
 			path = Worker;
 			sourceTree = "<group>";
@@ -508,13 +511,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				ADA04E9C210C69EF007853F6 /* MapFlag.swift in Sources */,
+				3C941B0D21191FD10076F01C /* SQLiteWorker.swift in Sources */,
+				3C941B0B21191D990076F01C /* Const.swift in Sources */,
 				AD76006C2108592F003F7733 /* WebViewController.swift in Sources */,
 				AD760064210858BD003F7733 /* MasterViewController.swift in Sources */,
 				AD54F57B2105DB66007A2114 /* LoginViewController.swift in Sources */,
 				AD62A0C7210D448800B9A38D /* NoteViewController.swift in Sources */,
 				AD465845210AAAD4006F02BD /* ServiceCategory.swift in Sources */,
 				AD54F5782105DB03007A2114 /* SplashViewController.swift in Sources */,
-				AD46584B210ABEDF006F02BD /* SQLiteWorker.swift in Sources */,
 				AD760066210858D2003F7733 /* DetailViewController.swift in Sources */,
 				ADA04E9A210C63D2007853F6 /* LocationTransform.swift in Sources */,
 				AD54F54C2105D621007A2114 /* ViewController.swift in Sources */,
@@ -709,7 +713,10 @@
 				DEVELOPMENT_TEAM = QF8H8R2NAV;
 				INFOPLIST_FILE = LeisureMap/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = cn.edu.abc.LeisureMap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -727,7 +734,10 @@
 				DEVELOPMENT_TEAM = QF8H8R2NAV;
 				INFOPLIST_FILE = LeisureMap/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = cn.edu.abc.LeisureMap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -744,7 +754,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z55FN6W3PH;
 				INFOPLIST_FILE = LeisureMapTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = cn.edu.abc.LeisureMapTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -762,7 +776,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z55FN6W3PH;
 				INFOPLIST_FILE = LeisureMapTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = cn.edu.abc.LeisureMapTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -779,7 +797,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z55FN6W3PH;
 				INFOPLIST_FILE = LeisureMapUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = cn.edu.abc.LeisureMapUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -796,7 +818,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z55FN6W3PH;
 				INFOPLIST_FILE = LeisureMapUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = cn.edu.abc.LeisureMapUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;

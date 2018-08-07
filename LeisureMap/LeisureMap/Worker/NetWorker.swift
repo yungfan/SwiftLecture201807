@@ -12,7 +12,7 @@ import Foundation
 //MARK: - 定义协议
 protocol AsyncResponseDelegate{
     
-    func receivedResponse(_ sender:AsyncRequestWorker, responseData:Data, tag:Int)
+    func receivedResponse(_ sender:AsyncRequestWorker, responseData:Data?, tag:Int)
     
 }
 
