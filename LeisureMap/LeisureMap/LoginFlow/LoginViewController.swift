@@ -109,6 +109,14 @@ class LoginViewController: UIViewController {
     }
     
     
+//    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+//        self.dismiss(animated: true, completion: nil)
+//    }
+    
+    deinit {
+        print("LoginViewController deinit")
+    }
+    
 }
 
 extension LoginViewController: UITextFieldDelegate, AsyncResponseDelegate, FileWorkerDelegate{

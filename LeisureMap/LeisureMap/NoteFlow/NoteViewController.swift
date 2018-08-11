@@ -13,6 +13,7 @@ class NoteViewController: UIViewController {
     
     @IBOutlet weak var storeImage: UIImageView!
     
+    //MARK: - UIViewController LifeCircle
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -50,6 +51,11 @@ class NoteViewController: UIViewController {
             myPickerController.sourceType = .photoLibrary
             self.present(myPickerController, animated: true, completion: nil)
         }
+    }
+    
+    
+    deinit {
+        print("NoteViewController deinit")
     }
 }
 

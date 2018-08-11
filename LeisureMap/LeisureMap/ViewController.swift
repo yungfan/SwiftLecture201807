@@ -14,4 +14,5 @@
 //  6.针对StoryBoard中的每个界面开始具体的界面设计和功能开发
 //  7.StoryBoard国际化（会自动识别需要国际化的文本，直接修改即可，但是每次界面进行了修改，需要删除老的重新设置）如何让App的名字国际化 ？需要在Info.plist中添加一对Key、Type和Value
 //  8.Tests与UITest
+//  9.Bug修复与内存泄漏处理
 

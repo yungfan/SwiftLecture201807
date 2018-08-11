@@ -10,7 +10,7 @@ import Foundation
 
 
 //MARK: - 定义协议
-protocol FileWorkerDelegate{
+protocol FileWorkerDelegate: class{
     
     func filewWorkWriteCompleted(_ sender:FileWorker, fileName:String, tag:Int)
     
@@ -37,7 +37,7 @@ extension FileWorkerDelegate{
 //MARK: - 文件工具类
 class FileWorker {
     
-    var fileWorkDelegate: FileWorkerDelegate?
+    weak var fileWorkDelegate: FileWorkerDelegate?
     
     func writeToFile(content:String, fileName:String, tag:Int) {
         

@@ -104,6 +104,11 @@ class MapViewController: UIViewController {
         
     }
 
+    
+    
+    deinit {
+        print("MapViewController deinit")
+    }
 }
 
 

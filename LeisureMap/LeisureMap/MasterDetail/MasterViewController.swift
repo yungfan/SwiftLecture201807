@@ -103,6 +103,11 @@ class MasterViewController: UIViewController {
         //重新加载UICollectionView
         self.serveceCollectionView.reloadData()
     }
+    
+    
+    deinit {
+        print("MasterViewController deinit")
+    }
 
 }
 

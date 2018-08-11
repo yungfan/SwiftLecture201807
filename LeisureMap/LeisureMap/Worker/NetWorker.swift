@@ -10,7 +10,7 @@ import Foundation
 
 
 //MARK: - 定义协议
-protocol AsyncResponseDelegate{
+protocol AsyncResponseDelegate: class{
     
     func receivedResponse(_ sender:AsyncRequestWorker, responseData:Data?, tag:Int)
     
@@ -19,7 +19,12 @@ protocol AsyncResponseDelegate{
 //MARK: - 网络工具类
 class AsyncRequestWorker {
     
-    var responseDelegate: AsyncResponseDelegate?
+    //weak或unowned 修饰代理时 会一个协议报错
+    
+    //解决办法1、可以将代理加上@objc的前缀，表示boject-c类型的协议而且好处是，协议中的方法不一定全部都要实现
+    //解决办法2、直接在协议名后写：class
+    
+    weak var responseDelegate: AsyncResponseDelegate?
     
     //MARK: - 网络请求
     //from：网络请求的地址

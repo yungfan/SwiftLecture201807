@@ -58,6 +58,10 @@ class SplashViewController: UIViewController {
     }
     
     
+    deinit {
+        print("SplashViewController deinit")
+    }
+    
 }
 
 

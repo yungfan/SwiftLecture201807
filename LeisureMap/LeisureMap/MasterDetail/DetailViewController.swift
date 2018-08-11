@@ -58,5 +58,9 @@ class DetailViewController: UIViewController {
         
     }
     
+    
+    deinit {
+        print("DetailViewController deinit")
+    }
 
 }

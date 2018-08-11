@@ -15,6 +15,9 @@ class WebViewController: UIViewController {
     
     var selectedFlag: MapFlag?
     
+    var userContentController = WKUserContentController()
+    
+    //MARK: - UIViewController LifeCircle
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -28,7 +31,7 @@ class WebViewController: UIViewController {
     
         if let url = Bundle.main.url(forResource: "sample_js", withExtension: "txt") {
             
-            let contentViewController = WKUserContentController()
+            
             
             let data = try! Data(contentsOf: url)
             
@@ -38,9 +41,9 @@ class WebViewController: UIViewController {
             
             let userScript = WKUserScript(source: jScript!, injectionTime: WKUserScriptInjectionTime.atDocumentEnd, forMainFrameOnly: true)
             
-            contentViewController.addUserScript(userScript)
+            userContentController.addUserScript(userScript)
             
-            contentViewController.add(self, name:"callbackHandler")
+            userContentController.add(self, name:"callbackHandler")
             
             let preferences =  WKPreferences()
             
@@ -48,9 +51,11 @@ class WebViewController: UIViewController {
             
             let configuration = WKWebViewConfiguration()
             
+            configuration.selectionGranularity = WKSelectionGranularity.character
+            
             configuration.preferences = preferences
             
-            configuration.userContentController = contentViewController
+            configuration.userContentController = userContentController
             
             flagWKWebView = WKWebView(frame: self.view.bounds, configuration: configuration)
             
@@ -72,6 +77,20 @@ class WebViewController: UIViewController {
       
     }
     
+   
+  
+    //移除操作，防止内存泄漏
+    override func viewWillDisappear(_ animated: Bool) {
+        
+        super.viewWillDisappear(animated)
+        
+        userContentController.removeScriptMessageHandler(forName: "callbackHandler")
+    }
+    
+    deinit {
+        
+        print("WebViewController deinit")
+    }
 }
 
 extension WebViewController: WKUIDelegate {
