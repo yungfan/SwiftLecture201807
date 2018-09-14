@@ -42,7 +42,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-   
+    
     //1.设置显示UI的细节
     self.title = @"Main";
     
@@ -66,33 +66,34 @@
         self.services = services;
         
         //刚进来选中的索引为0的数据
-        self.selectedService = services.firstObject;
+        //self.selectedService = services.firstObject;
         
         [self.serviceCollectionView reloadData];
         
-        //3.获取TableView的数据源数据
-        self.selectedStores = [NSMutableArray array];
-        
-        [YFStore getStore:^(NSArray * stores) {
-            
-            self.stores = stores;
-            
-            //刚进来显示索引为0的数据
-            for (YFStore *store in stores) {
-                
-                if (store.serviceIndex == self.services.firstObject.index) {
-                    
-                    [self.selectedStores addObject:store];
-                    
-                    [self.storeTableView reloadData];
-                }
-                
-            }
-        }];
-        
     }];
     
-   
+    //3.获取TableView的数据源数据
+    [YFStore getStore:^(NSArray * stores) {
+        
+        self.stores = stores;
+        
+        /*//刚进来显示索引为0的数据
+         for (YFStore *store in stores) {
+         
+         if (store.serviceIndex == self.services.firstObject.index) {
+         
+         if(!self.selectedStores){
+         
+         self.selectedStores = [NSMutableArray array];
+         }
+         
+         [self.selectedStores addObject:store];
+         
+         [self.storeTableView reloadData];
+         }
+         
+         }*/
+    }];
     
 }
 
@@ -106,11 +107,11 @@
 
 
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
-   
+    
     YFServiceCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"serviceCell" forIndexPath:indexPath];
-   
+    
     YFService *service = [self.services objectAtIndex:indexPath.row];
-
+    
     cell.service = service;
     
     return cell;
@@ -124,7 +125,16 @@
     
     self.selectedService = service;
     
-    [self.selectedStores removeAllObjects];
+    if(!self.selectedStores){
+        
+        self.selectedStores = [NSMutableArray array];
+    }
+    
+    else{
+        
+        [self.selectedStores removeAllObjects];
+        
+    }
     
     //2.点击的菜单对应的数据
     for (YFStore *store in self.stores) {
@@ -133,7 +143,7 @@
             
             [self.selectedStores addObject:store];
             
-             //3.刷新列表数据
+            //3.刷新列表数据
             [self.storeTableView reloadData];
         }
         
@@ -163,6 +173,18 @@
     
     SDImageCache* cache = [SDImageCache sharedImageCache];
     
+    //    if (CGSizeEqualToSize([cache imageFromDiskCacheForKey:key].size, CGSizeZero)) {
+    //
+    //        cell.imageView.image = [UIImage imageNamed:@"food"];
+    //
+    //    }
+    //
+    //    else{
+    //
+    //        cell.imageView.image = [cache imageFromDiskCacheForKey:key];
+    //
+    //    }
+    
     cell.imageView.image = [cache imageFromDiskCacheForKey:key];
     
     cell.textLabel.text = store.name;
@@ -181,7 +203,7 @@
 - (IBAction)logout:(id)sender {
     
     [self dismissViewControllerAnimated:YES completion:nil];
-
+    
 }
 
 -(void)dealloc{

@@ -35,14 +35,19 @@
         
         return;
     }
+    
+    [SVProgressHUD showWithStatus:@"正在登录..."];
 
     //2.发送网络请求进行验证
     [YFLogin isValidUser:_txtUname.text andPwd:_txtPwd.text withCallback:^(BOOL isValid) {
         
         if (isValid) {
             
+            [SVProgressHUD dismiss];
             //3.跳转到下个界面
             [self performSegueWithIdentifier:@"LoginMoveToMain" sender:nil];
+            
+            
         }
         
     }];

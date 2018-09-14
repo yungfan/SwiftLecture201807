@@ -15,6 +15,8 @@
     [super awakeFromNib];
     
     self.textLabel.textColor = [UIColor grayColor];
+    
+    self.textLabel.font = [UIFont systemFontOfSize:16];
    
 }
 
@@ -23,8 +25,6 @@
     [super layoutSubviews];
 
     self.imageView.frame =CGRectMake(15, 20, 60, 60);
-    
-    self.imageView.contentMode =UIViewContentModeScaleAspectFill;
     
     //UIEdgeInsetsMake(CGFloat top, CGFloat left, CGFloat bottom, CGFloat right)
     [self setSeparatorInset:UIEdgeInsetsMake(0, 10, [UIScreen mainScreen].bounds.size.width, 1)];

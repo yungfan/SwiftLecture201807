@@ -20,6 +20,8 @@
     //AFNetworking 发送get请求获取数据
     NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
     
+    //configuration.requestCachePolicy = NSURLRequestReturnCacheDataElseLoad;
+    
     AFHTTPSessionManager *manager = [[AFHTTPSessionManager alloc] initWithSessionConfiguration:configuration];
     
     [manager GET:url parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {

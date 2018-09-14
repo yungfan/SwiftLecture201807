@@ -16,9 +16,11 @@
     
     //请求的url
     NSString *url = [NSString stringWithFormat:@"https://score.azurewebsites.net/api/store"];
-    
+
     //AFNetworking 发送get请求获取数据
     NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
+    
+    //configuration.requestCachePolicy = NSURLRequestReturnCacheDataElseLoad;
     
     AFHTTPSessionManager *manager = [[AFHTTPSessionManager alloc] initWithSessionConfiguration:configuration];
     
