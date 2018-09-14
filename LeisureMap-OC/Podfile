@@ -1,0 +1,23 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'LeisureMap-OC' do
+  # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
+  # use_frameworks!
+pod 'AFNetworking', '~> 3.2.1'
+pod 'SDWebImage', '~> 5.0.0-beta3'
+pod 'SVProgressHUD'
+pod 'MJExtension', '~> 3.0.15.1'
+  # Pods for LeisureMap-OC
+
+  target 'LeisureMap-OCTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'LeisureMap-OCUITests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end

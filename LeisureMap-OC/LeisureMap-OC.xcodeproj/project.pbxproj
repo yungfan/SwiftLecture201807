@@ -1,0 +1,849 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1EC3402AB2528FEBCFD84448 /* libPods-LeisureMap-OC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 59B786948A989BF925D3FAD1 /* libPods-LeisureMap-OC.a */; };
+		3F1D6B0C2145F11D00EF21B4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F1D6B0B2145F11D00EF21B4 /* AppDelegate.m */; };
+		3F1D6B122145F11D00EF21B4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F1D6B102145F11D00EF21B4 /* Main.storyboard */; };
+		3F1D6B142145F11E00EF21B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F1D6B132145F11E00EF21B4 /* Assets.xcassets */; };
+		3F1D6B1A2145F11E00EF21B4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F1D6B192145F11E00EF21B4 /* main.m */; };
+		3F1D6B242145F11E00EF21B4 /* LeisureMap_OCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F1D6B232145F11E00EF21B4 /* LeisureMap_OCTests.m */; };
+		3F1D6B2F2145F11E00EF21B4 /* LeisureMap_OCUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F1D6B2E2145F11E00EF21B4 /* LeisureMap_OCUITests.m */; };
+		3F4B640D21475FD500F44C6C /* YFMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F4B640C21475FD500F44C6C /* YFMainViewController.m */; };
+		3F4BCA4E2149FE9300F81814 /* YFStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F4BCA4D2149FE9300F81814 /* YFStore.m */; };
+		3F4BCA512149FEF800F81814 /* YFLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F4BCA502149FEF800F81814 /* YFLocation.m */; };
+		3F5EF919214A400900EBD6F0 /* YFStoreTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F5EF918214A400900EBD6F0 /* YFStoreTableViewCell.m */; };
+		3F81358421461CE900C8556F /* YFLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F81358321461CE900C8556F /* YFLoginViewController.m */; };
+		3F8AB89021476DDF003772C9 /* YFService.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F8AB88F21476DDF003772C9 /* YFService.m */; };
+		3F8AB89421479C1C003772C9 /* YFServiceCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F8AB89321479C1C003772C9 /* YFServiceCollectionViewCell.m */; };
+		3F8AB8982147ACED003772C9 /* YFLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F8AB8972147ACED003772C9 /* YFLogin.m */; };
+		3FB3D3B5214613AA0040F8AA /* YFSplashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FB3D3B4214613AA0040F8AA /* YFSplashViewController.m */; };
+		51FFF797B648E88013BF6AE3 /* libPods-LeisureMap-OCUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D5EEA7BDCD3F0C1249E0230D /* libPods-LeisureMap-OCUITests.a */; };
+		9EA57B0D2AAE07836391782B /* libPods-LeisureMap-OCTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CA589BE08C119D1DF48B7FD6 /* libPods-LeisureMap-OCTests.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3F1D6B202145F11E00EF21B4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3F1D6AFF2145F11D00EF21B4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3F1D6B062145F11D00EF21B4;
+			remoteInfo = "LeisureMap-OC";
+		};
+		3F1D6B2B2145F11E00EF21B4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3F1D6AFF2145F11D00EF21B4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3F1D6B062145F11D00EF21B4;
+			remoteInfo = "LeisureMap-OC";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3F1D6B072145F11D00EF21B4 /* LeisureMap-OC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LeisureMap-OC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F1D6B0A2145F11D00EF21B4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		3F1D6B0B2145F11D00EF21B4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		3F1D6B112145F11D00EF21B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3F1D6B132145F11E00EF21B4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3F1D6B182145F11E00EF21B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F1D6B192145F11E00EF21B4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3F1D6B1F2145F11E00EF21B4 /* LeisureMap-OCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "LeisureMap-OCTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F1D6B232145F11E00EF21B4 /* LeisureMap_OCTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LeisureMap_OCTests.m; sourceTree = "<group>"; };
+		3F1D6B252145F11E00EF21B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F1D6B2A2145F11E00EF21B4 /* LeisureMap-OCUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "LeisureMap-OCUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F1D6B2E2145F11E00EF21B4 /* LeisureMap_OCUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LeisureMap_OCUITests.m; sourceTree = "<group>"; };
+		3F1D6B302145F11E00EF21B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F4B640B21475FD500F44C6C /* YFMainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YFMainViewController.h; sourceTree = "<group>"; };
+		3F4B640C21475FD500F44C6C /* YFMainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YFMainViewController.m; sourceTree = "<group>"; };
+		3F4BCA4C2149FE9300F81814 /* YFStore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YFStore.h; sourceTree = "<group>"; };
+		3F4BCA4D2149FE9300F81814 /* YFStore.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YFStore.m; sourceTree = "<group>"; };
+		3F4BCA4F2149FEF800F81814 /* YFLocation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YFLocation.h; sourceTree = "<group>"; };
+		3F4BCA502149FEF800F81814 /* YFLocation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YFLocation.m; sourceTree = "<group>"; };
+		3F5EF917214A400900EBD6F0 /* YFStoreTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YFStoreTableViewCell.h; sourceTree = "<group>"; };
+		3F5EF918214A400900EBD6F0 /* YFStoreTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YFStoreTableViewCell.m; sourceTree = "<group>"; };
+		3F81358221461CE900C8556F /* YFLoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YFLoginViewController.h; sourceTree = "<group>"; };
+		3F81358321461CE900C8556F /* YFLoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YFLoginViewController.m; sourceTree = "<group>"; };
+		3F8AB88E21476DDF003772C9 /* YFService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YFService.h; sourceTree = "<group>"; };
+		3F8AB88F21476DDF003772C9 /* YFService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YFService.m; sourceTree = "<group>"; };
+		3F8AB89221479C1C003772C9 /* YFServiceCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YFServiceCollectionViewCell.h; sourceTree = "<group>"; };
+		3F8AB89321479C1C003772C9 /* YFServiceCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YFServiceCollectionViewCell.m; sourceTree = "<group>"; };
+		3F8AB8962147ACED003772C9 /* YFLogin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YFLogin.h; sourceTree = "<group>"; };
+		3F8AB8972147ACED003772C9 /* YFLogin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YFLogin.m; sourceTree = "<group>"; };
+		3FB3D3B3214613AA0040F8AA /* YFSplashViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YFSplashViewController.h; sourceTree = "<group>"; };
+		3FB3D3B4214613AA0040F8AA /* YFSplashViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YFSplashViewController.m; sourceTree = "<group>"; };
+		414F7DE1E1FC2187475B483F /* Pods-LeisureMap-OC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LeisureMap-OC.release.xcconfig"; path = "Pods/Target Support Files/Pods-LeisureMap-OC/Pods-LeisureMap-OC.release.xcconfig"; sourceTree = "<group>"; };
+		4AC189403AF7F7F22239C7E9 /* Pods-LeisureMap-OCTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LeisureMap-OCTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LeisureMap-OCTests/Pods-LeisureMap-OCTests.release.xcconfig"; sourceTree = "<group>"; };
+		5924E7671F7807B383AE488D /* Pods-LeisureMap-OCUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LeisureMap-OCUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LeisureMap-OCUITests/Pods-LeisureMap-OCUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		59B786948A989BF925D3FAD1 /* libPods-LeisureMap-OC.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LeisureMap-OC.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		96FA57065FF331D039E8AEE7 /* Pods-LeisureMap-OCTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LeisureMap-OCTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LeisureMap-OCTests/Pods-LeisureMap-OCTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C61B5DE4F9EB89B8DB79EC4C /* Pods-LeisureMap-OC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LeisureMap-OC.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LeisureMap-OC/Pods-LeisureMap-OC.debug.xcconfig"; sourceTree = "<group>"; };
+		CA589BE08C119D1DF48B7FD6 /* libPods-LeisureMap-OCTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LeisureMap-OCTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D5EEA7BDCD3F0C1249E0230D /* libPods-LeisureMap-OCUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LeisureMap-OCUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD338CD535110413CB7D07E6 /* Pods-LeisureMap-OCUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LeisureMap-OCUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LeisureMap-OCUITests/Pods-LeisureMap-OCUITests.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3F1D6B042145F11D00EF21B4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1EC3402AB2528FEBCFD84448 /* libPods-LeisureMap-OC.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3F1D6B1C2145F11E00EF21B4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9EA57B0D2AAE07836391782B /* libPods-LeisureMap-OCTests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3F1D6B272145F11E00EF21B4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				51FFF797B648E88013BF6AE3 /* libPods-LeisureMap-OCUITests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3F1D6AFE2145F11D00EF21B4 = {
+			isa = PBXGroup;
+			children = (
+				3F1D6B092145F11D00EF21B4 /* LeisureMap-OC */,
+				3F1D6B222145F11E00EF21B4 /* LeisureMap-OCTests */,
+				3F1D6B2D2145F11E00EF21B4 /* LeisureMap-OCUITests */,
+				3F1D6B082145F11D00EF21B4 /* Products */,
+				B716EBCA271855A84380A979 /* Pods */,
+				F69BDC3F7E38E4EAE6838722 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		3F1D6B082145F11D00EF21B4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3F1D6B072145F11D00EF21B4 /* LeisureMap-OC.app */,
+				3F1D6B1F2145F11E00EF21B4 /* LeisureMap-OCTests.xctest */,
+				3F1D6B2A2145F11E00EF21B4 /* LeisureMap-OCUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3F1D6B092145F11D00EF21B4 /* LeisureMap-OC */ = {
+			isa = PBXGroup;
+			children = (
+				3F1D6B3F2145F41C00EF21B4 /* Classes */,
+			);
+			path = "LeisureMap-OC";
+			sourceTree = "<group>";
+		};
+		3F1D6B222145F11E00EF21B4 /* LeisureMap-OCTests */ = {
+			isa = PBXGroup;
+			children = (
+				3F1D6B232145F11E00EF21B4 /* LeisureMap_OCTests.m */,
+				3F1D6B252145F11E00EF21B4 /* Info.plist */,
+			);
+			path = "LeisureMap-OCTests";
+			sourceTree = "<group>";
+		};
+		3F1D6B2D2145F11E00EF21B4 /* LeisureMap-OCUITests */ = {
+			isa = PBXGroup;
+			children = (
+				3F1D6B2E2145F11E00EF21B4 /* LeisureMap_OCUITests.m */,
+				3F1D6B302145F11E00EF21B4 /* Info.plist */,
+			);
+			path = "LeisureMap-OCUITests";
+			sourceTree = "<group>";
+		};
+		3F1D6B3F2145F41C00EF21B4 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				3F1D6B452145F4AB00EF21B4 /* Other */,
+				3F1D6B442145F49800EF21B4 /* Note */,
+				3F1D6B432145F48C00EF21B4 /* Map */,
+				3F1D6B422145F47B00EF21B4 /* Main */,
+				3F1D6B412145F45300EF21B4 /* Login */,
+				3F1D6B402145F44300EF21B4 /* Splash */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		3F1D6B402145F44300EF21B4 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				3FB3D3B3214613AA0040F8AA /* YFSplashViewController.h */,
+				3FB3D3B4214613AA0040F8AA /* YFSplashViewController.m */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		3F1D6B412145F45300EF21B4 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				3F4BCA52214A08A000F81814 /* Controller */,
+				3F8AB8952147ACD6003772C9 /* Model */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		3F1D6B422145F47B00EF21B4 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				3F4BCA53214A08AF00F81814 /* Controller */,
+				3F8AB89121479BEE003772C9 /* View */,
+				3F8AB88D21476DC5003772C9 /* Model */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		3F1D6B432145F48C00EF21B4 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		3F1D6B442145F49800EF21B4 /* Note */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Note;
+			sourceTree = "<group>";
+		};
+		3F1D6B452145F4AB00EF21B4 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				3F1D6B132145F11E00EF21B4 /* Assets.xcassets */,
+				3F1D6B102145F11D00EF21B4 /* Main.storyboard */,
+				3F1D6B182145F11E00EF21B4 /* Info.plist */,
+				3F1D6B192145F11E00EF21B4 /* main.m */,
+				3F1D6B0A2145F11D00EF21B4 /* AppDelegate.h */,
+				3F1D6B0B2145F11D00EF21B4 /* AppDelegate.m */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		3F4BCA52214A08A000F81814 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3F81358221461CE900C8556F /* YFLoginViewController.h */,
+				3F81358321461CE900C8556F /* YFLoginViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		3F4BCA53214A08AF00F81814 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3F4B640B21475FD500F44C6C /* YFMainViewController.h */,
+				3F4B640C21475FD500F44C6C /* YFMainViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		3F8AB88D21476DC5003772C9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3F8AB88E21476DDF003772C9 /* YFService.h */,
+				3F8AB88F21476DDF003772C9 /* YFService.m */,
+				3F4BCA4C2149FE9300F81814 /* YFStore.h */,
+				3F4BCA4D2149FE9300F81814 /* YFStore.m */,
+				3F4BCA4F2149FEF800F81814 /* YFLocation.h */,
+				3F4BCA502149FEF800F81814 /* YFLocation.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3F8AB89121479BEE003772C9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3F8AB89221479C1C003772C9 /* YFServiceCollectionViewCell.h */,
+				3F8AB89321479C1C003772C9 /* YFServiceCollectionViewCell.m */,
+				3F5EF917214A400900EBD6F0 /* YFStoreTableViewCell.h */,
+				3F5EF918214A400900EBD6F0 /* YFStoreTableViewCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3F8AB8952147ACD6003772C9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3F8AB8962147ACED003772C9 /* YFLogin.h */,
+				3F8AB8972147ACED003772C9 /* YFLogin.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B716EBCA271855A84380A979 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C61B5DE4F9EB89B8DB79EC4C /* Pods-LeisureMap-OC.debug.xcconfig */,
+				414F7DE1E1FC2187475B483F /* Pods-LeisureMap-OC.release.xcconfig */,
+				96FA57065FF331D039E8AEE7 /* Pods-LeisureMap-OCTests.debug.xcconfig */,
+				4AC189403AF7F7F22239C7E9 /* Pods-LeisureMap-OCTests.release.xcconfig */,
+				5924E7671F7807B383AE488D /* Pods-LeisureMap-OCUITests.debug.xcconfig */,
+				DD338CD535110413CB7D07E6 /* Pods-LeisureMap-OCUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F69BDC3F7E38E4EAE6838722 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				59B786948A989BF925D3FAD1 /* libPods-LeisureMap-OC.a */,
+				CA589BE08C119D1DF48B7FD6 /* libPods-LeisureMap-OCTests.a */,
+				D5EEA7BDCD3F0C1249E0230D /* libPods-LeisureMap-OCUITests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3F1D6B062145F11D00EF21B4 /* LeisureMap-OC */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3F1D6B332145F11E00EF21B4 /* Build configuration list for PBXNativeTarget "LeisureMap-OC" */;
+			buildPhases = (
+				7495A53656B6A1977A6B7341 /* [CP] Check Pods Manifest.lock */,
+				3F1D6B032145F11D00EF21B4 /* Sources */,
+				3F1D6B042145F11D00EF21B4 /* Frameworks */,
+				3F1D6B052145F11D00EF21B4 /* Resources */,
+				46C341CDD7176AB46CB1628F /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "LeisureMap-OC";
+			productName = "LeisureMap-OC";
+			productReference = 3F1D6B072145F11D00EF21B4 /* LeisureMap-OC.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3F1D6B1E2145F11E00EF21B4 /* LeisureMap-OCTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3F1D6B362145F11E00EF21B4 /* Build configuration list for PBXNativeTarget "LeisureMap-OCTests" */;
+			buildPhases = (
+				3A55CD060E315508DF26EB40 /* [CP] Check Pods Manifest.lock */,
+				3F1D6B1B2145F11E00EF21B4 /* Sources */,
+				3F1D6B1C2145F11E00EF21B4 /* Frameworks */,
+				3F1D6B1D2145F11E00EF21B4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3F1D6B212145F11E00EF21B4 /* PBXTargetDependency */,
+			);
+			name = "LeisureMap-OCTests";
+			productName = "LeisureMap-OCTests";
+			productReference = 3F1D6B1F2145F11E00EF21B4 /* LeisureMap-OCTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3F1D6B292145F11E00EF21B4 /* LeisureMap-OCUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3F1D6B392145F11E00EF21B4 /* Build configuration list for PBXNativeTarget "LeisureMap-OCUITests" */;
+			buildPhases = (
+				65EC23FB9F0CA9BF45510265 /* [CP] Check Pods Manifest.lock */,
+				3F1D6B262145F11E00EF21B4 /* Sources */,
+				3F1D6B272145F11E00EF21B4 /* Frameworks */,
+				3F1D6B282145F11E00EF21B4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3F1D6B2C2145F11E00EF21B4 /* PBXTargetDependency */,
+			);
+			name = "LeisureMap-OCUITests";
+			productName = "LeisureMap-OCUITests";
+			productReference = 3F1D6B2A2145F11E00EF21B4 /* LeisureMap-OCUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3F1D6AFF2145F11D00EF21B4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = YF;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = abc;
+				TargetAttributes = {
+					3F1D6B062145F11D00EF21B4 = {
+						CreatedOnToolsVersion = 9.4;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 0;
+							};
+						};
+					};
+					3F1D6B1E2145F11E00EF21B4 = {
+						CreatedOnToolsVersion = 9.4;
+						TestTargetID = 3F1D6B062145F11D00EF21B4;
+					};
+					3F1D6B292145F11E00EF21B4 = {
+						CreatedOnToolsVersion = 9.4;
+						TestTargetID = 3F1D6B062145F11D00EF21B4;
+					};
+				};
+			};
+			buildConfigurationList = 3F1D6B022145F11D00EF21B4 /* Build configuration list for PBXProject "LeisureMap-OC" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3F1D6AFE2145F11D00EF21B4;
+			productRefGroup = 3F1D6B082145F11D00EF21B4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3F1D6B062145F11D00EF21B4 /* LeisureMap-OC */,
+				3F1D6B1E2145F11E00EF21B4 /* LeisureMap-OCTests */,
+				3F1D6B292145F11E00EF21B4 /* LeisureMap-OCUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3F1D6B052145F11D00EF21B4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F1D6B142145F11E00EF21B4 /* Assets.xcassets in Resources */,
+				3F1D6B122145F11D00EF21B4 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3F1D6B1D2145F11E00EF21B4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3F1D6B282145F11E00EF21B4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3A55CD060E315508DF26EB40 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LeisureMap-OCTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		46C341CDD7176AB46CB1628F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-LeisureMap-OC/Pods-LeisureMap-OC-resources.sh",
+				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SVProgressHUD.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LeisureMap-OC/Pods-LeisureMap-OC-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		65EC23FB9F0CA9BF45510265 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LeisureMap-OCUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7495A53656B6A1977A6B7341 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LeisureMap-OC-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3F1D6B032145F11D00EF21B4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3FB3D3B5214613AA0040F8AA /* YFSplashViewController.m in Sources */,
+				3F4B640D21475FD500F44C6C /* YFMainViewController.m in Sources */,
+				3F81358421461CE900C8556F /* YFLoginViewController.m in Sources */,
+				3F5EF919214A400900EBD6F0 /* YFStoreTableViewCell.m in Sources */,
+				3F1D6B1A2145F11E00EF21B4 /* main.m in Sources */,
+				3F8AB8982147ACED003772C9 /* YFLogin.m in Sources */,
+				3F4BCA512149FEF800F81814 /* YFLocation.m in Sources */,
+				3F4BCA4E2149FE9300F81814 /* YFStore.m in Sources */,
+				3F8AB89021476DDF003772C9 /* YFService.m in Sources */,
+				3F1D6B0C2145F11D00EF21B4 /* AppDelegate.m in Sources */,
+				3F8AB89421479C1C003772C9 /* YFServiceCollectionViewCell.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3F1D6B1B2145F11E00EF21B4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F1D6B242145F11E00EF21B4 /* LeisureMap_OCTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3F1D6B262145F11E00EF21B4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F1D6B2F2145F11E00EF21B4 /* LeisureMap_OCUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3F1D6B212145F11E00EF21B4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3F1D6B062145F11D00EF21B4 /* LeisureMap-OC */;
+			targetProxy = 3F1D6B202145F11E00EF21B4 /* PBXContainerItemProxy */;
+		};
+		3F1D6B2C2145F11E00EF21B4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3F1D6B062145F11D00EF21B4 /* LeisureMap-OC */;
+			targetProxy = 3F1D6B2B2145F11E00EF21B4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3F1D6B102145F11D00EF21B4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3F1D6B112145F11D00EF21B4 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3F1D6B312145F11E00EF21B4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		3F1D6B322145F11E00EF21B4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3F1D6B342145F11E00EF21B4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C61B5DE4F9EB89B8DB79EC4C /* Pods-LeisureMap-OC.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Z55FN6W3PH;
+				INFOPLIST_FILE = "LeisureMap-OC/Classes/Other/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "cn.edu.abc.LeisureMap-OC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		3F1D6B352145F11E00EF21B4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 414F7DE1E1FC2187475B483F /* Pods-LeisureMap-OC.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Z55FN6W3PH;
+				INFOPLIST_FILE = "LeisureMap-OC/Classes/Other/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "cn.edu.abc.LeisureMap-OC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		3F1D6B372145F11E00EF21B4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 96FA57065FF331D039E8AEE7 /* Pods-LeisureMap-OCTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Z55FN6W3PH;
+				INFOPLIST_FILE = "LeisureMap-OCTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "cn.edu.abc.LeisureMap-OCTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LeisureMap-OC.app/LeisureMap-OC";
+			};
+			name = Debug;
+		};
+		3F1D6B382145F11E00EF21B4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4AC189403AF7F7F22239C7E9 /* Pods-LeisureMap-OCTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Z55FN6W3PH;
+				INFOPLIST_FILE = "LeisureMap-OCTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "cn.edu.abc.LeisureMap-OCTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LeisureMap-OC.app/LeisureMap-OC";
+			};
+			name = Release;
+		};
+		3F1D6B3A2145F11E00EF21B4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5924E7671F7807B383AE488D /* Pods-LeisureMap-OCUITests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Z55FN6W3PH;
+				INFOPLIST_FILE = "LeisureMap-OCUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "cn.edu.abc.LeisureMap-OCUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "LeisureMap-OC";
+			};
+			name = Debug;
+		};
+		3F1D6B3B2145F11E00EF21B4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DD338CD535110413CB7D07E6 /* Pods-LeisureMap-OCUITests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Z55FN6W3PH;
+				INFOPLIST_FILE = "LeisureMap-OCUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "cn.edu.abc.LeisureMap-OCUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "LeisureMap-OC";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3F1D6B022145F11D00EF21B4 /* Build configuration list for PBXProject "LeisureMap-OC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3F1D6B312145F11E00EF21B4 /* Debug */,
+				3F1D6B322145F11E00EF21B4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3F1D6B332145F11E00EF21B4 /* Build configuration list for PBXNativeTarget "LeisureMap-OC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3F1D6B342145F11E00EF21B4 /* Debug */,
+				3F1D6B352145F11E00EF21B4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3F1D6B362145F11E00EF21B4 /* Build configuration list for PBXNativeTarget "LeisureMap-OCTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3F1D6B372145F11E00EF21B4 /* Debug */,
+				3F1D6B382145F11E00EF21B4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3F1D6B392145F11E00EF21B4 /* Build configuration list for PBXNativeTarget "LeisureMap-OCUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3F1D6B3A2145F11E00EF21B4 /* Debug */,
+				3F1D6B3B2145F11E00EF21B4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3F1D6AFF2145F11D00EF21B4 /* Project object */;
+}
