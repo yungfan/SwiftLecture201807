@@ -14,6 +14,9 @@
 #import <SDWebImage.h>
 
 
+#define YFColorFromHex(s) [UIColor colorWithRed:(((s & 0xFF0000) >> 16))/255.0 green:(((s &0xFF00) >>8))/255.0 blue:((s &0xFF))/255.0 alpha:1.0]
+
+
 @interface YFMainViewController ()<UICollectionViewDataSource, UICollectionViewDelegate, UITableViewDataSource, UITableViewDelegate>
 
 //上面的宫格菜单
@@ -149,6 +152,35 @@
         
     }
 }
+
+
+//当cell高亮时返回是否高亮
+- (BOOL)collectionView:(UICollectionView *)collectionView shouldHighlightItemAtIndexPath:(NSIndexPath *)indexPath{
+    
+    return YES;
+}
+
+- (void)collectionView:(UICollectionView *)colView didHighlightItemAtIndexPath:(NSIndexPath *)indexPath{
+    
+    UICollectionViewCell* cell = [colView cellForItemAtIndexPath:indexPath];
+    //设置(Highlight)高亮下的颜色
+    [cell setBackgroundColor:YFColorFromHex(0xf2f2f2)];
+}
+
+- (void)collectionView:(UICollectionView *)colView  didUnhighlightItemAtIndexPath:(NSIndexPath *)indexPath{
+    
+    UICollectionViewCell* cell = [colView cellForItemAtIndexPath:indexPath];
+    //设置(Nomal)正常状态下的颜色
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        
+         [cell setBackgroundColor:[UIColor whiteColor]];
+        
+    });
+   
+}
+
+
 
 
 #pragma mark - UITableViewDataSource, UITableViewDelegate

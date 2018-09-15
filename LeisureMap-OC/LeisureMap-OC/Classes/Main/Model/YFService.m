@@ -7,7 +7,7 @@
 //
 
 #import "YFService.h"
-#import <AFNetworking.h>
+#import "YFNetTools.h"
 #import <MJExtension.h>
 
 @implementation YFService
@@ -17,20 +17,11 @@
     //请求的url
     NSString *url = [NSString stringWithFormat:@"https://score.azurewebsites.net/api/servicecategory"];
     
-    //AFNetworking 发送get请求获取数据
-    NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
-    
-    //configuration.requestCachePolicy = NSURLRequestReturnCacheDataElseLoad;
-    
-    AFHTTPSessionManager *manager = [[AFHTTPSessionManager alloc] initWithSessionConfiguration:configuration];
-    
-    [manager GET:url parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
+    [[YFNetTools sharedTool]  requestWithURLString:url parameters:nil method:GET success:^(id  _Nullable responseObject) {
         
-    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+         callback([YFService mj_objectArrayWithKeyValuesArray:responseObject]);
         
-        callback([YFService mj_objectArrayWithKeyValuesArray:responseObject]);
-        
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+    } failure:^(NSError * _Nonnull error) {
         
         NSLog(@"%@", error);
         

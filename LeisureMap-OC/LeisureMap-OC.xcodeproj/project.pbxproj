@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1EC3402AB2528FEBCFD84448 /* libPods-LeisureMap-OC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 59B786948A989BF925D3FAD1 /* libPods-LeisureMap-OC.a */; };
+		3C700E9D214CAD6400B0EFC7 /* YFNetTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C700E9C214CAD6400B0EFC7 /* YFNetTools.m */; };
 		3F1D6B0C2145F11D00EF21B4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F1D6B0B2145F11D00EF21B4 /* AppDelegate.m */; };
 		3F1D6B122145F11D00EF21B4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F1D6B102145F11D00EF21B4 /* Main.storyboard */; };
 		3F1D6B142145F11E00EF21B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F1D6B132145F11E00EF21B4 /* Assets.xcassets */; };
@@ -45,6 +46,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3C700E9B214CAD6400B0EFC7 /* YFNetTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YFNetTools.h; sourceTree = "<group>"; };
+		3C700E9C214CAD6400B0EFC7 /* YFNetTools.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YFNetTools.m; sourceTree = "<group>"; };
 		3F1D6B072145F11D00EF21B4 /* LeisureMap-OC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LeisureMap-OC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F1D6B0A2145F11D00EF21B4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3F1D6B0B2145F11D00EF21B4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -115,6 +118,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3C700E99214CACC400B0EFC7 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3F1D6B132145F11E00EF21B4 /* Assets.xcassets */,
+				3F1D6B102145F11D00EF21B4 /* Main.storyboard */,
+				3F1D6B182145F11E00EF21B4 /* Info.plist */,
+				3F1D6B192145F11E00EF21B4 /* main.m */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		3C700E9A214CACE800B0EFC7 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				3C700E9B214CAD6400B0EFC7 /* YFNetTools.h */,
+				3C700E9C214CAD6400B0EFC7 /* YFNetTools.m */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
 		3F1D6AFE2145F11D00EF21B4 = {
 			isa = PBXGroup;
 			children = (
@@ -140,6 +163,7 @@
 		3F1D6B092145F11D00EF21B4 /* LeisureMap-OC */ = {
 			isa = PBXGroup;
 			children = (
+				3C700E99214CACC400B0EFC7 /* Resources */,
 				3F1D6B3F2145F41C00EF21B4 /* Classes */,
 			);
 			path = "LeisureMap-OC";
@@ -166,7 +190,8 @@
 		3F1D6B3F2145F41C00EF21B4 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				3F1D6B452145F4AB00EF21B4 /* Other */,
+				3C700E9A214CACE800B0EFC7 /* Tools */,
+				3F1D6B452145F4AB00EF21B4 /* Others */,
 				3F1D6B442145F49800EF21B4 /* Note */,
 				3F1D6B432145F48C00EF21B4 /* Map */,
 				3F1D6B422145F47B00EF21B4 /* Main */,
@@ -218,17 +243,13 @@
 			path = Note;
 			sourceTree = "<group>";
 		};
-		3F1D6B452145F4AB00EF21B4 /* Other */ = {
+		3F1D6B452145F4AB00EF21B4 /* Others */ = {
 			isa = PBXGroup;
 			children = (
-				3F1D6B132145F11E00EF21B4 /* Assets.xcassets */,
-				3F1D6B102145F11D00EF21B4 /* Main.storyboard */,
-				3F1D6B182145F11E00EF21B4 /* Info.plist */,
-				3F1D6B192145F11E00EF21B4 /* main.m */,
 				3F1D6B0A2145F11D00EF21B4 /* AppDelegate.h */,
 				3F1D6B0B2145F11D00EF21B4 /* AppDelegate.m */,
 			);
-			path = Other;
+			path = Others;
 			sourceTree = "<group>";
 		};
 		3F4BCA52214A08A000F81814 /* Controller */ = {
@@ -529,6 +550,7 @@
 				3F4BCA4E2149FE9300F81814 /* YFStore.m in Sources */,
 				3F8AB89021476DDF003772C9 /* YFService.m in Sources */,
 				3F1D6B0C2145F11D00EF21B4 /* AppDelegate.m in Sources */,
+				3C700E9D214CAD6400B0EFC7 /* YFNetTools.m in Sources */,
 				3F8AB89421479C1C003772C9 /* YFServiceCollectionViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -694,7 +716,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z55FN6W3PH;
-				INFOPLIST_FILE = "LeisureMap-OC/Classes/Other/Info.plist";
+				INFOPLIST_FILE = "LeisureMap-OC/Resources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -714,7 +736,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z55FN6W3PH;
-				INFOPLIST_FILE = "LeisureMap-OC/Classes/Other/Info.plist";
+				INFOPLIST_FILE = "LeisureMap-OC/Resources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
