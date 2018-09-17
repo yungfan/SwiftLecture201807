@@ -41,6 +41,7 @@
 //选中的Store
 @property (nonatomic, strong) YFStore *selectedStore;
 
+//退出
 - (IBAction)logout:(id)sender;
 
 @end
@@ -49,10 +50,17 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    //1.设置显示UI的细节
+
     self.title = @"Main";
     
+    [self setupCollectionView];
+    
+    [self setupTableView];
+    
+}
+
+-(void)setupCollectionView{
+
     UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc]init];
     
     layout.minimumLineSpacing = 5;//设置最小行间距
@@ -63,48 +71,30 @@
     
     self.serviceCollectionView.collectionViewLayout = layout;
     
-    self.storeTableView.rowHeight = 100.0;
-    
-    self.storeTableView.tableFooterView = [[UIView alloc]init];
-    
-    //2.获取CollectionView的数据源数据
+    //1.获取CollectionView的数据源数据
     [YFService getService:^(NSArray * services) {
         
         self.services = services;
         
-        //刚进来选中的索引为0的数据
-        //self.selectedService = services.firstObject;
-        
-       
-        
     }];
+}
+
+-(void)setupTableView{
     
-    //3.获取TableView的数据源数据
+    self.storeTableView.rowHeight = 100.0;
+    self.storeTableView.tableFooterView = [[UIView alloc]init];
+    
+    //2.获取TableView的数据源数据
     [YFStore getStore:^(NSArray * stores) {
         
         self.stores = stores;
         
-        /*//刚进来显示索引为0的数据
-         for (YFStore *store in stores) {
-         
-         if (store.serviceIndex == self.services.firstObject.index) {
-         
-         if(!self.selectedStores){
-         
-         self.selectedStores = [NSMutableArray array];
-         }
-         
-         [self.selectedStores addObject:store];
-         
-         [self.storeTableView reloadData];
-         }
-         
-         }*/
-        
-         [self.serviceCollectionView reloadData];
+        //3.刷新上面的菜单
+        [self.serviceCollectionView reloadData];
     }];
-    
 }
+
+
 
 #pragma mark - UICollectionViewDataSource, UICollectionViewDelegate
 
@@ -160,7 +150,7 @@
 }
 
 
-//当cell高亮时返回是否高亮
+//下面三个方法是让Item点击时高亮
 - (BOOL)collectionView:(UICollectionView *)collectionView shouldHighlightItemAtIndexPath:(NSIndexPath *)indexPath{
     
     return YES;
@@ -176,8 +166,8 @@
 - (void)collectionView:(UICollectionView *)colView  didUnhighlightItemAtIndexPath:(NSIndexPath *)indexPath{
     
     UICollectionViewCell* cell = [colView cellForItemAtIndexPath:indexPath];
+   
     //设置(Nomal)正常状态下的颜色
-    
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         
          [cell setBackgroundColor:[UIColor whiteColor]];
@@ -210,18 +200,6 @@
     NSString* key = [manager cacheKeyForURL:[NSURL URLWithString:strUrl]];
     
     SDImageCache* cache = [SDImageCache sharedImageCache];
-    
-    //    if (CGSizeEqualToSize([cache imageFromDiskCacheForKey:key].size, CGSizeZero)) {
-    //
-    //        cell.imageView.image = [UIImage imageNamed:@"food"];
-    //
-    //    }
-    //
-    //    else{
-    //
-    //        cell.imageView.image = [cache imageFromDiskCacheForKey:key];
-    //
-    //    }
     
     cell.imageView.image = [cache imageFromDiskCacheForKey:key];
     

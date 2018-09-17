@@ -23,7 +23,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    _webView = [[WKWebView alloc] initWithFrame:CGRectMake(0, 70, self.view.bounds.size.width, self.view.bounds.size.height - 10)];
+    self.title = @"Web";
+    
+    [self setupWebView];
+}
+
+-(void)setupWebView{
+    
+    _webView = [[WKWebView alloc] init];
     
     NSURLRequest *request = [[NSURLRequest alloc]initWithURL:[NSURL URLWithString:@"https://www.baidu.com"]];
     
@@ -35,7 +42,14 @@
     
     [self.view addSubview:_webView];
     
-    self.title = @"Web";
+}
+
+-(void)viewWillLayoutSubviews{
+    
+    NSLog(@"%d", SafeAreaTopHeight);
+    
+    self.webView.frame = CGRectMake(0, SafeAreaTopHeight + self.progressView.frame.size.height, ScreenW, ContentHeight);
+    
 }
 
 #pragma mark - KVO
@@ -46,8 +60,6 @@
         
          self.title = self.webView.title;
     }
-    
-    
     else if ([keyPath isEqual:@"estimatedProgress"] && object == self.webView) {
         
         [self.progressView setAlpha:1.0f];
@@ -66,7 +78,9 @@
                 
             }];
         }
-    }else{
+    }
+    else{
+        
         [super observeValueForKeyPath:keyPath ofObject:object change:change context:context];
     }
 }

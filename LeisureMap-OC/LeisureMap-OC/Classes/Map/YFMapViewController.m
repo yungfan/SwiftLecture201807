@@ -31,24 +31,18 @@
     
     self.title = @"Map";
     
-    [self.manager startUpdatingLocation];
-    
-    //用这句话可以自动缩放地图的显示区域
-    //self.map.userTrackingMode = MKUserTrackingModeFollowWithHeading;
-    
-    self.map.showsUserLocation = YES;
-    
-    YFAnnotation *annotation = [[YFAnnotation alloc]init];
-    
-    annotation.title = @"ABC";
-    
-    annotation.subtitle = @"Apple iOS by OC";
-
-    annotation.coordinate = [WGS84ConvertToGCJ02ForAMapView transformFromWGSToGCJ:CLLocationCoordinate2DMake(31.2926511800, 118.3623587000)];
-    
-    [self.map addAnnotation:annotation];
+    if ([CLLocationManager locationServicesEnabled] ) {
+        
+         [self.manager startUpdatingLocation];
+        
+        self.map.showsUserLocation = YES;
+        
+        //用这句话可以自动缩放地图的显示区域
+        //self.map.userTrackingMode = MKUserTrackingModeFollowWithHeading;
+    }
     
 }
+
 
 - (CLLocationManager *)manager{
     
@@ -78,7 +72,21 @@
     
     [self centerMapOnLocation:coordinate2D];
     
-    [self.manager stopUpdatingLocation];
+    [UIView animateWithDuration:2.0f animations:^{
+        
+        YFAnnotation *annotation = [[YFAnnotation alloc]init];
+        
+        annotation.title = @"ABC";
+        
+        annotation.subtitle = @"Apple iOS by OC";
+        
+        annotation.coordinate = [WGS84ConvertToGCJ02ForAMapView transformFromWGSToGCJ:CLLocationCoordinate2DMake(31.2926511800, 118.3623587000)];
+        
+        [self.map addAnnotation:annotation];
+    } completion:^(BOOL finished) {
+        
+        [self.manager stopUpdatingLocation];
+    }];
     
 }
 

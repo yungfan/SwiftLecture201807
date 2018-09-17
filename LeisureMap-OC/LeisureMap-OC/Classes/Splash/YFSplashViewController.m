@@ -21,7 +21,7 @@
     [super viewDidLoad];
     
     //获取的版本号对应version
-    NSString *version = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"];
+    NSString *version = AppVersion;
 
     //显示版本号
     self.lbVersion.text = version;

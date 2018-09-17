@@ -54,6 +54,7 @@
 /* Begin PBXFileReference section */
 		3C700E9B214CAD6400B0EFC7 /* YFNetTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YFNetTools.h; sourceTree = "<group>"; };
 		3C700E9C214CAD6400B0EFC7 /* YFNetTools.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YFNetTools.m; sourceTree = "<group>"; };
+		3C744BF8214F87330067C3C7 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		3F1D6B072145F11D00EF21B4 /* LeisureMap-OC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LeisureMap-OC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F1D6B0A2145F11D00EF21B4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3F1D6B0B2145F11D00EF21B4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -143,6 +144,7 @@
 				3F1D6B102145F11D00EF21B4 /* Main.storyboard */,
 				3F1D6B182145F11E00EF21B4 /* Info.plist */,
 				3F1D6B192145F11E00EF21B4 /* main.m */,
+				3C744BF8214F87330067C3C7 /* PrefixHeader.pch */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -766,6 +768,8 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z55FN6W3PH;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LeisureMap-OC/Resources/PrefixHeader.pch";
 				INFOPLIST_FILE = "LeisureMap-OC/Resources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -786,6 +790,8 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z55FN6W3PH;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LeisureMap-OC/Resources/PrefixHeader.pch";
 				INFOPLIST_FILE = "LeisureMap-OC/Resources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
