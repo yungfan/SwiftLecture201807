@@ -11,6 +11,7 @@
 #import "YFServiceCollectionViewCell.h"
 #import "YFStoreTableViewCell.h"
 #import "YFStore.h"
+#import "YFDetailsViewController.h"
 #import <SDWebImage.h>
 
 
@@ -36,6 +37,9 @@
 
 //选中的Service
 @property (nonatomic, strong) YFService *selectedService;
+
+//选中的Store
+@property (nonatomic, strong) YFStore *selectedStore;
 
 - (IBAction)logout:(id)sender;
 
@@ -71,7 +75,7 @@
         //刚进来选中的索引为0的数据
         //self.selectedService = services.firstObject;
         
-        [self.serviceCollectionView reloadData];
+       
         
     }];
     
@@ -96,6 +100,8 @@
          }
          
          }*/
+        
+         [self.serviceCollectionView reloadData];
     }];
     
 }
@@ -226,9 +232,22 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
+    YFStore *store = [self.selectedStores objectAtIndex:indexPath.row];
+
+    self.selectedStore = store;
+
+    [self performSegueWithIdentifier:@"MainMoveToDetails" sender:nil];
     
-    NSLog(@"%s", __func__);
+}
+
+
+#pragma mark - Segue传值
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     
+    YFDetailsViewController *detail = segue.destinationViewController;
+    
+    detail.selectedStore = self.selectedStore;
 }
 
 #pragma mark - 登出

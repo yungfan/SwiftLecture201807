@@ -18,6 +18,12 @@
 		3F4B640D21475FD500F44C6C /* YFMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F4B640C21475FD500F44C6C /* YFMainViewController.m */; };
 		3F4BCA4E2149FE9300F81814 /* YFStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F4BCA4D2149FE9300F81814 /* YFStore.m */; };
 		3F4BCA512149FEF800F81814 /* YFLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F4BCA502149FEF800F81814 /* YFLocation.m */; };
+		3F5823FD214F269300CA60F6 /* YFDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F5823FC214F269300CA60F6 /* YFDetailsViewController.m */; };
+		3F582400214F303200CA60F6 /* YFMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F5823FF214F303200CA60F6 /* YFMapViewController.m */; };
+		3F582402214F33C100CA60F6 /* abc.edu.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 3F582401214F33C100CA60F6 /* abc.edu.gpx */; };
+		3F58240B214F433F00CA60F6 /* WGS84ConvertToGCJ02ForAMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F582409214F433F00CA60F6 /* WGS84ConvertToGCJ02ForAMapView.m */; };
+		3F58240F214F487100CA60F6 /* YFAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F58240E214F487100CA60F6 /* YFAnnotation.m */; };
+		3F582419214F53AA00CA60F6 /* YFWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F582418214F53AA00CA60F6 /* YFWebViewController.m */; };
 		3F5EF919214A400900EBD6F0 /* YFStoreTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F5EF918214A400900EBD6F0 /* YFStoreTableViewCell.m */; };
 		3F81358421461CE900C8556F /* YFLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F81358321461CE900C8556F /* YFLoginViewController.m */; };
 		3F8AB89021476DDF003772C9 /* YFService.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F8AB88F21476DDF003772C9 /* YFService.m */; };
@@ -67,6 +73,17 @@
 		3F4BCA4D2149FE9300F81814 /* YFStore.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YFStore.m; sourceTree = "<group>"; };
 		3F4BCA4F2149FEF800F81814 /* YFLocation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YFLocation.h; sourceTree = "<group>"; };
 		3F4BCA502149FEF800F81814 /* YFLocation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YFLocation.m; sourceTree = "<group>"; };
+		3F5823FB214F269300CA60F6 /* YFDetailsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YFDetailsViewController.h; sourceTree = "<group>"; };
+		3F5823FC214F269300CA60F6 /* YFDetailsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YFDetailsViewController.m; sourceTree = "<group>"; };
+		3F5823FE214F303200CA60F6 /* YFMapViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YFMapViewController.h; sourceTree = "<group>"; };
+		3F5823FF214F303200CA60F6 /* YFMapViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YFMapViewController.m; sourceTree = "<group>"; };
+		3F582401214F33C100CA60F6 /* abc.edu.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = abc.edu.gpx; sourceTree = "<group>"; };
+		3F582409214F433F00CA60F6 /* WGS84ConvertToGCJ02ForAMapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WGS84ConvertToGCJ02ForAMapView.m; sourceTree = "<group>"; };
+		3F58240A214F433F00CA60F6 /* WGS84ConvertToGCJ02ForAMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WGS84ConvertToGCJ02ForAMapView.h; sourceTree = "<group>"; };
+		3F58240D214F487100CA60F6 /* YFAnnotation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YFAnnotation.h; sourceTree = "<group>"; };
+		3F58240E214F487100CA60F6 /* YFAnnotation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YFAnnotation.m; sourceTree = "<group>"; };
+		3F582417214F53AA00CA60F6 /* YFWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YFWebViewController.h; sourceTree = "<group>"; };
+		3F582418214F53AA00CA60F6 /* YFWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YFWebViewController.m; sourceTree = "<group>"; };
 		3F5EF917214A400900EBD6F0 /* YFStoreTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YFStoreTableViewCell.h; sourceTree = "<group>"; };
 		3F5EF918214A400900EBD6F0 /* YFStoreTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YFStoreTableViewCell.m; sourceTree = "<group>"; };
 		3F81358221461CE900C8556F /* YFLoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YFLoginViewController.h; sourceTree = "<group>"; };
@@ -121,6 +138,7 @@
 		3C700E99214CACC400B0EFC7 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				3F582401214F33C100CA60F6 /* abc.edu.gpx */,
 				3F1D6B132145F11E00EF21B4 /* Assets.xcassets */,
 				3F1D6B102145F11D00EF21B4 /* Main.storyboard */,
 				3F1D6B182145F11E00EF21B4 /* Info.plist */,
@@ -190,6 +208,7 @@
 		3F1D6B3F2145F41C00EF21B4 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				3F582416214F539500CA60F6 /* Web */,
 				3C700E9A214CACE800B0EFC7 /* Tools */,
 				3F1D6B452145F4AB00EF21B4 /* Others */,
 				3F1D6B442145F49800EF21B4 /* Note */,
@@ -232,6 +251,11 @@
 		3F1D6B432145F48C00EF21B4 /* Map */ = {
 			isa = PBXGroup;
 			children = (
+				3F58240C214F485400CA60F6 /* Model */,
+				3F58240A214F433F00CA60F6 /* WGS84ConvertToGCJ02ForAMapView.h */,
+				3F582409214F433F00CA60F6 /* WGS84ConvertToGCJ02ForAMapView.m */,
+				3F5823FE214F303200CA60F6 /* YFMapViewController.h */,
+				3F5823FF214F303200CA60F6 /* YFMapViewController.m */,
 			);
 			path = Map;
 			sourceTree = "<group>";
@@ -266,8 +290,28 @@
 			children = (
 				3F4B640B21475FD500F44C6C /* YFMainViewController.h */,
 				3F4B640C21475FD500F44C6C /* YFMainViewController.m */,
+				3F5823FB214F269300CA60F6 /* YFDetailsViewController.h */,
+				3F5823FC214F269300CA60F6 /* YFDetailsViewController.m */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		3F58240C214F485400CA60F6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3F58240D214F487100CA60F6 /* YFAnnotation.h */,
+				3F58240E214F487100CA60F6 /* YFAnnotation.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3F582416214F539500CA60F6 /* Web */ = {
+			isa = PBXGroup;
+			children = (
+				3F582417214F53AA00CA60F6 /* YFWebViewController.h */,
+				3F582418214F53AA00CA60F6 /* YFWebViewController.m */,
+			);
+			path = Web;
 			sourceTree = "<group>";
 		};
 		3F8AB88D21476DC5003772C9 /* Model */ = {
@@ -441,6 +485,7 @@
 			files = (
 				3F1D6B142145F11E00EF21B4 /* Assets.xcassets in Resources */,
 				3F1D6B122145F11D00EF21B4 /* Main.storyboard in Resources */,
+				3F582402214F33C100CA60F6 /* abc.edu.gpx in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -543,10 +588,15 @@
 				3FB3D3B5214613AA0040F8AA /* YFSplashViewController.m in Sources */,
 				3F4B640D21475FD500F44C6C /* YFMainViewController.m in Sources */,
 				3F81358421461CE900C8556F /* YFLoginViewController.m in Sources */,
+				3F58240F214F487100CA60F6 /* YFAnnotation.m in Sources */,
 				3F5EF919214A400900EBD6F0 /* YFStoreTableViewCell.m in Sources */,
 				3F1D6B1A2145F11E00EF21B4 /* main.m in Sources */,
+				3F58240B214F433F00CA60F6 /* WGS84ConvertToGCJ02ForAMapView.m in Sources */,
 				3F8AB8982147ACED003772C9 /* YFLogin.m in Sources */,
 				3F4BCA512149FEF800F81814 /* YFLocation.m in Sources */,
+				3F582419214F53AA00CA60F6 /* YFWebViewController.m in Sources */,
+				3F5823FD214F269300CA60F6 /* YFDetailsViewController.m in Sources */,
+				3F582400214F303200CA60F6 /* YFMapViewController.m in Sources */,
 				3F4BCA4E2149FE9300F81814 /* YFStore.m in Sources */,
 				3F8AB89021476DDF003772C9 /* YFService.m in Sources */,
 				3F1D6B0C2145F11D00EF21B4 /* AppDelegate.m in Sources */,

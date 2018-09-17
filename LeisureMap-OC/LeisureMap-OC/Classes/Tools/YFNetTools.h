@@ -36,10 +36,10 @@ typedef NS_ENUM (NSInteger, HTTPMethod) {
 具体的请求方法
  */
 - (void)requestWithURLString: (NSString * _Nonnull)URLString
-                  parameters: (NSDictionary * _Nullable )parameters
+                  parameters: (NSDictionary * _Nullable)parameters
                       method: (HTTPMethod)method
-                    success:(requestSuccess _Nonnull)success
-                     failure:(requestFailure _Nonnull)failure;
+                    success: (requestSuccess _Nonnull)success
+                     failure: (requestFailure _Nonnull)failure;
 
 NS_ASSUME_NONNULL_END
 
