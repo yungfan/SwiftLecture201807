@@ -7,6 +7,7 @@
 //
 
 #import "YFNetTools.h"
+#import "YFFileTools.h"
 
 @implementation YFNetTools
 
@@ -23,6 +24,47 @@
     
     return instance;
     
+}
+
+-(void)isNetworkAvailable {
+    
+    AFNetworkReachabilityManager *manager = [AFNetworkReachabilityManager sharedManager];
+    
+    [manager setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
+        
+        switch (status) {
+    
+            case AFNetworkReachabilityStatusUnknown: {
+                
+                break;
+            }
+            case AFNetworkReachabilityStatusNotReachable:{
+                //无法联网
+                NSLog(@"NotReachable");
+                
+                [[YFFileTools sharedTool] writeUserDataWithValue:@(NotReachable) forKey:@"AFNetworkReachabilityStatus"];
+                
+                break;
+            }
+                
+            case AFNetworkReachabilityStatusReachableViaWWAN:{
+                //手机自带网络
+                NSLog(@"WWAN");
+                [[YFFileTools sharedTool] writeUserDataWithValue:@(WWAN) forKey:@"AFNetworkReachabilityStatus"];
+                break;
+            }
+               
+            case AFNetworkReachabilityStatusReachableViaWiFi:{
+                //WIFI
+                NSLog(@"Wifi");
+                [[YFFileTools sharedTool] writeUserDataWithValue:@(Wifi) forKey:@"AFNetworkReachabilityStatus"];
+                break;
+            }
+                
+        }
+    }];
+    
+    [manager startMonitoring];
 }
 
 -(instancetype)initWithBaseURL:(NSURL *)url{

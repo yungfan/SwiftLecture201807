@@ -17,6 +17,7 @@ typedef void (^requestSuccess)(id  _Nullable responseObject);
 //请求失败回调block
 typedef void (^requestFailure)(NSError * _Nonnull error);
 
+//HTTP 请求类型
 typedef NS_ENUM (NSInteger, HTTPMethod) {
     GET = 0,
     POST = 1,
@@ -25,12 +26,25 @@ typedef NS_ENUM (NSInteger, HTTPMethod) {
 //    HEAD = 4
 };
 
+//HTTP 网络类型
+typedef NS_ENUM (NSInteger, NetworkAvailable) {
+    NotReachable = 100,
+    WWAN = 101,
+    Wifi = 102
+};
+
 @interface YFNetTools : AFHTTPSessionManager
 
 /**
 工具类的单例
  */
 + (instancetype)sharedTool;
+
+
+/**
+ 检测有无网络
+ */
+-(void)isNetworkAvailable;
 
 /**
 具体的请求方法

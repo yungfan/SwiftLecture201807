@@ -9,19 +9,23 @@
 /* Begin PBXBuildFile section */
 		1EC3402AB2528FEBCFD84448 /* libPods-LeisureMap-OC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 59B786948A989BF925D3FAD1 /* libPods-LeisureMap-OC.a */; };
 		3C700E9D214CAD6400B0EFC7 /* YFNetTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C700E9C214CAD6400B0EFC7 /* YFNetTools.m */; };
+		3CD24A9721526A1000DC6D10 /* YFDialogTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CD24A9621526A1000DC6D10 /* YFDialogTools.m */; };
+		3CD24A9A21526C2100DC6D10 /* YFImageTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CD24A9921526C2100DC6D10 /* YFImageTools.m */; };
+		3CD24A9D21526E5600DC6D10 /* YFModelTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CD24A9C21526E5600DC6D10 /* YFModelTools.m */; };
+		3CD24AA021527A1200DC6D10 /* YFMapTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CD24A9F21527A1200DC6D10 /* YFMapTools.m */; };
 		3F1D6B0C2145F11D00EF21B4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F1D6B0B2145F11D00EF21B4 /* AppDelegate.m */; };
 		3F1D6B122145F11D00EF21B4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F1D6B102145F11D00EF21B4 /* Main.storyboard */; };
 		3F1D6B142145F11E00EF21B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F1D6B132145F11E00EF21B4 /* Assets.xcassets */; };
 		3F1D6B1A2145F11E00EF21B4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F1D6B192145F11E00EF21B4 /* main.m */; };
 		3F1D6B242145F11E00EF21B4 /* LeisureMap_OCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F1D6B232145F11E00EF21B4 /* LeisureMap_OCTests.m */; };
 		3F1D6B2F2145F11E00EF21B4 /* LeisureMap_OCUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F1D6B2E2145F11E00EF21B4 /* LeisureMap_OCUITests.m */; };
+		3F1ED8A62150E40900101163 /* YFFileTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F1ED8A52150E40900101163 /* YFFileTools.m */; };
 		3F4B640D21475FD500F44C6C /* YFMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F4B640C21475FD500F44C6C /* YFMainViewController.m */; };
 		3F4BCA4E2149FE9300F81814 /* YFStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F4BCA4D2149FE9300F81814 /* YFStore.m */; };
 		3F4BCA512149FEF800F81814 /* YFLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F4BCA502149FEF800F81814 /* YFLocation.m */; };
 		3F5823FD214F269300CA60F6 /* YFDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F5823FC214F269300CA60F6 /* YFDetailsViewController.m */; };
 		3F582400214F303200CA60F6 /* YFMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F5823FF214F303200CA60F6 /* YFMapViewController.m */; };
 		3F582402214F33C100CA60F6 /* abc.edu.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 3F582401214F33C100CA60F6 /* abc.edu.gpx */; };
-		3F58240B214F433F00CA60F6 /* WGS84ConvertToGCJ02ForAMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F582409214F433F00CA60F6 /* WGS84ConvertToGCJ02ForAMapView.m */; };
 		3F58240F214F487100CA60F6 /* YFAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F58240E214F487100CA60F6 /* YFAnnotation.m */; };
 		3F582419214F53AA00CA60F6 /* YFWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F582418214F53AA00CA60F6 /* YFWebViewController.m */; };
 		3F5EF919214A400900EBD6F0 /* YFStoreTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F5EF918214A400900EBD6F0 /* YFStoreTableViewCell.m */; };
@@ -55,6 +59,14 @@
 		3C700E9B214CAD6400B0EFC7 /* YFNetTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YFNetTools.h; sourceTree = "<group>"; };
 		3C700E9C214CAD6400B0EFC7 /* YFNetTools.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YFNetTools.m; sourceTree = "<group>"; };
 		3C744BF8214F87330067C3C7 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		3CD24A9521526A1000DC6D10 /* YFDialogTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YFDialogTools.h; sourceTree = "<group>"; };
+		3CD24A9621526A1000DC6D10 /* YFDialogTools.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YFDialogTools.m; sourceTree = "<group>"; };
+		3CD24A9821526C2100DC6D10 /* YFImageTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YFImageTools.h; sourceTree = "<group>"; };
+		3CD24A9921526C2100DC6D10 /* YFImageTools.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YFImageTools.m; sourceTree = "<group>"; };
+		3CD24A9B21526E5600DC6D10 /* YFModelTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YFModelTools.h; sourceTree = "<group>"; };
+		3CD24A9C21526E5600DC6D10 /* YFModelTools.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YFModelTools.m; sourceTree = "<group>"; };
+		3CD24A9E21527A1200DC6D10 /* YFMapTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YFMapTools.h; sourceTree = "<group>"; };
+		3CD24A9F21527A1200DC6D10 /* YFMapTools.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YFMapTools.m; sourceTree = "<group>"; };
 		3F1D6B072145F11D00EF21B4 /* LeisureMap-OC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LeisureMap-OC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F1D6B0A2145F11D00EF21B4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3F1D6B0B2145F11D00EF21B4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -68,6 +80,8 @@
 		3F1D6B2A2145F11E00EF21B4 /* LeisureMap-OCUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "LeisureMap-OCUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F1D6B2E2145F11E00EF21B4 /* LeisureMap_OCUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LeisureMap_OCUITests.m; sourceTree = "<group>"; };
 		3F1D6B302145F11E00EF21B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F1ED8A42150E40900101163 /* YFFileTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YFFileTools.h; sourceTree = "<group>"; };
+		3F1ED8A52150E40900101163 /* YFFileTools.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YFFileTools.m; sourceTree = "<group>"; };
 		3F4B640B21475FD500F44C6C /* YFMainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YFMainViewController.h; sourceTree = "<group>"; };
 		3F4B640C21475FD500F44C6C /* YFMainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YFMainViewController.m; sourceTree = "<group>"; };
 		3F4BCA4C2149FE9300F81814 /* YFStore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YFStore.h; sourceTree = "<group>"; };
@@ -79,8 +93,6 @@
 		3F5823FE214F303200CA60F6 /* YFMapViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YFMapViewController.h; sourceTree = "<group>"; };
 		3F5823FF214F303200CA60F6 /* YFMapViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YFMapViewController.m; sourceTree = "<group>"; };
 		3F582401214F33C100CA60F6 /* abc.edu.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = abc.edu.gpx; sourceTree = "<group>"; };
-		3F582409214F433F00CA60F6 /* WGS84ConvertToGCJ02ForAMapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WGS84ConvertToGCJ02ForAMapView.m; sourceTree = "<group>"; };
-		3F58240A214F433F00CA60F6 /* WGS84ConvertToGCJ02ForAMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WGS84ConvertToGCJ02ForAMapView.h; sourceTree = "<group>"; };
 		3F58240D214F487100CA60F6 /* YFAnnotation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YFAnnotation.h; sourceTree = "<group>"; };
 		3F58240E214F487100CA60F6 /* YFAnnotation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YFAnnotation.m; sourceTree = "<group>"; };
 		3F582417214F53AA00CA60F6 /* YFWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YFWebViewController.h; sourceTree = "<group>"; };
@@ -154,6 +166,16 @@
 			children = (
 				3C700E9B214CAD6400B0EFC7 /* YFNetTools.h */,
 				3C700E9C214CAD6400B0EFC7 /* YFNetTools.m */,
+				3F1ED8A42150E40900101163 /* YFFileTools.h */,
+				3F1ED8A52150E40900101163 /* YFFileTools.m */,
+				3CD24A9521526A1000DC6D10 /* YFDialogTools.h */,
+				3CD24A9621526A1000DC6D10 /* YFDialogTools.m */,
+				3CD24A9821526C2100DC6D10 /* YFImageTools.h */,
+				3CD24A9921526C2100DC6D10 /* YFImageTools.m */,
+				3CD24A9B21526E5600DC6D10 /* YFModelTools.h */,
+				3CD24A9C21526E5600DC6D10 /* YFModelTools.m */,
+				3CD24A9E21527A1200DC6D10 /* YFMapTools.h */,
+				3CD24A9F21527A1200DC6D10 /* YFMapTools.m */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -254,8 +276,6 @@
 			isa = PBXGroup;
 			children = (
 				3F58240C214F485400CA60F6 /* Model */,
-				3F58240A214F433F00CA60F6 /* WGS84ConvertToGCJ02ForAMapView.h */,
-				3F582409214F433F00CA60F6 /* WGS84ConvertToGCJ02ForAMapView.m */,
 				3F5823FE214F303200CA60F6 /* YFMapViewController.h */,
 				3F5823FF214F303200CA60F6 /* YFMapViewController.m */,
 			);
@@ -592,16 +612,20 @@
 				3F81358421461CE900C8556F /* YFLoginViewController.m in Sources */,
 				3F58240F214F487100CA60F6 /* YFAnnotation.m in Sources */,
 				3F5EF919214A400900EBD6F0 /* YFStoreTableViewCell.m in Sources */,
+				3CD24A9D21526E5600DC6D10 /* YFModelTools.m in Sources */,
 				3F1D6B1A2145F11E00EF21B4 /* main.m in Sources */,
-				3F58240B214F433F00CA60F6 /* WGS84ConvertToGCJ02ForAMapView.m in Sources */,
 				3F8AB8982147ACED003772C9 /* YFLogin.m in Sources */,
 				3F4BCA512149FEF800F81814 /* YFLocation.m in Sources */,
 				3F582419214F53AA00CA60F6 /* YFWebViewController.m in Sources */,
 				3F5823FD214F269300CA60F6 /* YFDetailsViewController.m in Sources */,
 				3F582400214F303200CA60F6 /* YFMapViewController.m in Sources */,
+				3CD24A9A21526C2100DC6D10 /* YFImageTools.m in Sources */,
+				3F1ED8A62150E40900101163 /* YFFileTools.m in Sources */,
 				3F4BCA4E2149FE9300F81814 /* YFStore.m in Sources */,
 				3F8AB89021476DDF003772C9 /* YFService.m in Sources */,
+				3CD24A9721526A1000DC6D10 /* YFDialogTools.m in Sources */,
 				3F1D6B0C2145F11D00EF21B4 /* AppDelegate.m in Sources */,
+				3CD24AA021527A1200DC6D10 /* YFMapTools.m in Sources */,
 				3C700E9D214CAD6400B0EFC7 /* YFNetTools.m in Sources */,
 				3F8AB89421479C1C003772C9 /* YFServiceCollectionViewCell.m in Sources */,
 			);
@@ -771,7 +795,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LeisureMap-OC/Resources/PrefixHeader.pch";
 				INFOPLIST_FILE = "LeisureMap-OC/Resources/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -793,7 +817,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LeisureMap-OC/Resources/PrefixHeader.pch";
 				INFOPLIST_FILE = "LeisureMap-OC/Resources/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
