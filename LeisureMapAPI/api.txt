@@ -1,0 +1,4 @@
+http://localhost:8080/LeisureMapAPI/version.json
+http://localhost:8080/LeisureMapAPI/login.json
+http://localhost:8080/LeisureMapAPI/service.json
+http://localhost:8080/LeisureMapAPI/store.json

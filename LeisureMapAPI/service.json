@@ -1,0 +1,33 @@
+      
+[
+    {
+        "name":"火锅",
+        "imagePath":"http://localhost:8080/LeisureMapAPI/images/hg.png",
+        "index":0
+    },
+    {
+        "name":"西餐",
+        "imagePath":"http://localhost:8080/LeisureMapAPI/images/xc.png",
+        "index":1
+    },
+    {
+        "name":"海鲜",
+        "imagePath":"http://localhost:8080/LeisureMapAPI/images/hx.png",
+        "index":2
+    },
+    {
+        "name":"粤菜",
+        "imagePath":"http://localhost:8080/LeisureMapAPI/images/yc.png",
+        "index":3
+    },
+    {
+        "name":"徽菜",
+        "imagePath":"http://localhost:8080/LeisureMapAPI/images/hc.png",
+        "index":4
+    },
+    {
+        "name":"川菜",
+        "imagePath":"http://localhost:8080/LeisureMapAPI/images/cc.png",
+        "index":5
+    }
+]
