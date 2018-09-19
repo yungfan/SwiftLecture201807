@@ -14,10 +14,10 @@
     
     [super awakeFromNib];
     
-    self.textLabel.textColor = [UIColor grayColor];
-    
-    self.textLabel.font = [UIFont systemFontOfSize:16];
-   
+//    self.textLabel.textColor = [UIColor blueColor];
+//    
+//    self.textLabel.font = [UIFont systemFontOfSize:16];
+//   
 }
 
 -(void)layoutSubviews{

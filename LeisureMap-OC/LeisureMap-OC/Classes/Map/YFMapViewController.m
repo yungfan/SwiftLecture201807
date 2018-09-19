@@ -7,41 +7,23 @@
 //
 
 #import "YFMapViewController.h"
-
 #import <CoreLocation/CoreLocation.h>
 #import <MapKit/MapKit.h>
 #import "YFAnnotation.h"
+#import "YFMapTools.h"
 
-
-#import "WGS84ConvertToGCJ02ForAMapView.h"
 
 @interface YFMapViewController ()<CLLocationManagerDelegate, MKMapViewDelegate>
 
 @property (weak, nonatomic) IBOutlet MKMapView *map;
 
-@property(nonatomic, strong) CLLocationManager *manager;
+@property (nonatomic, strong) CLLocationManager *manager;
+
+@property (nonatomic, assign) int noteCount;
 
 @end
 
 @implementation YFMapViewController
-
-- (void)viewDidLoad {
-    
-    [super viewDidLoad];
-    
-    self.title = @"Map";
-    
-    if ([CLLocationManager locationServicesEnabled] ) {
-        
-         [self.manager startUpdatingLocation];
-        
-        self.map.showsUserLocation = YES;
-        
-        //用这句话可以自动缩放地图的显示区域
-        //self.map.userTrackingMode = MKUserTrackingModeFollowWithHeading;
-    }
-    
-}
 
 
 - (CLLocationManager *)manager{
@@ -62,39 +44,41 @@
     
 }
 
-#pragma mark - CLLocationManagerDelegate
 
--(void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray<CLLocation *> *)locations{
+- (void)viewDidLoad {
     
-    CLLocation *location = [locations lastObject];
-   
-    CLLocationCoordinate2D coordinate2D = [WGS84ConvertToGCJ02ForAMapView transformFromWGSToGCJ:location.coordinate];
+    [super viewDidLoad];
     
-    [self centerMapOnLocation:coordinate2D];
+    self.title = @"Map";
     
-    [UIView animateWithDuration:2.0f animations:^{
+    if ([CLLocationManager locationServicesEnabled] ) {
         
-        YFAnnotation *annotation = [[YFAnnotation alloc]init];
+        [self.manager startUpdatingLocation];
         
-        annotation.title = @"ABC";
+        self.map.showsUserLocation = YES;
         
-        annotation.subtitle = @"Apple iOS by OC";
-        
-        annotation.coordinate = [WGS84ConvertToGCJ02ForAMapView transformFromWGSToGCJ:CLLocationCoordinate2DMake(31.2926511800, 118.3623587000)];
-        
-        [self.map addAnnotation:annotation];
-    } completion:^(BOOL finished) {
-        
-        [self.manager stopUpdatingLocation];
-    }];
+        //用这句话可以自动缩放地图的显示区域
+        //self.map.userTrackingMode = MKUserTrackingModeFollowWithHeading;
+    }
     
 }
 
 
+#pragma mark - CLLocationManagerDelegate
+-(void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray<CLLocation *> *)locations{
+    
+    CLLocation *location = [locations lastObject];
+   
+    //火星坐标转换
+    CLLocationCoordinate2D coordinate2D = [[YFMapTools sharedTool] transformFromWGSToGCJ:location.coordinate];
+    
+    [self centerMapOnLocation:coordinate2D];
+    
+}
 
 -(void)centerMapOnLocation:(CLLocationCoordinate2D)location{
 
-    CLLocationDistance distance = 1000;
+    CLLocationDistance distance = 1500;
 
     MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(location, distance, distance);
 
@@ -143,12 +127,65 @@
     return mkav;
 }
 
+
+/**
+ *  点击地图的任一位置 都可以插入一个大头针，大头针的标题和副标题显示的是大头针的具体位置
+ *
+ */
+-(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    
+    //限制只能添加三个
+    self.noteCount++;
+    
+    if (self.noteCount >= 4) {
+        
+        return;
+    }
+    
+    CGPoint touchPoint = [[touches anyObject] locationInView:self.map];
+    
+    YFAnnotation *annotation = [[YFAnnotation alloc]init];
+    
+    //将坐标转换成为经纬度,然后赋值给大头针
+    CLLocationCoordinate2D coordinate = [self.map convertPoint:touchPoint toCoordinateFromView:self.map];
+    
+    annotation.coordinate = coordinate;
+    
+    CLGeocoder *geocoder = [[CLGeocoder alloc]init];
+    
+    CLLocation *location = [[CLLocation alloc]initWithLatitude:coordinate.latitude longitude:coordinate.longitude];
+    
+    //大头针显示地理位置
+    [geocoder reverseGeocodeLocation:location completionHandler:^(NSArray<CLPlacemark *> * _Nullable placemarks, NSError * _Nullable error) {
+        
+        CLPlacemark *mark = [placemarks lastObject];
+        
+        if (@available(iOS 11.0, *)) {
+            
+            annotation.title = mark.locality;
+            
+            annotation.subtitle = mark.name;
+           
+        } else{
+            
+            annotation.title = mark.addressDictionary[@"SubLocality"];
+            
+            annotation.subtitle = mark.addressDictionary[@"State"];
+  
+        }
+        
+        [self.map addAnnotation:annotation];
+        
+    }];
+    
+    
+}
+
 -(void)btnClick:(id)sender{
     
     [self performSegueWithIdentifier:@"MapMoveToWeb" sender:nil];
     
 }
-
 
 - (void)dealloc {
     

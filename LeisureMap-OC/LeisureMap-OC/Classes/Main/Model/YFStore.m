@@ -8,24 +8,42 @@
 
 #import "YFStore.h"
 #import "YFNetTools.h"
-#import <MJExtension.h>
+#import "YFFileTools.h"
+#import "YFModelTools.h"
 
 @implementation YFStore
 
-+(void)getStore:(void (^)(NSArray *))callback {
++(void)getStoreFromServer:(void (^)(NSArray *))callback {
     
     //请求的url
-    NSString *url = [NSString stringWithFormat:@"https://score.azurewebsites.net/api/store"];
+    NSString *url = [NSString stringWithFormat:@"http://localhost:8080/LeisureMapAPI/store.json"];
 
     [[YFNetTools sharedTool]  requestWithURLString:url parameters:nil method:GET success:^(id  _Nullable responseObject) {
         
-        callback([YFStore mj_objectArrayWithKeyValuesArray:responseObject]);
+        
+        [[YFFileTools sharedTool] writeToFile:responseObject FileName:@"stores.json" CompletionHandler:^{
+            
+            NSLog(@"stores写入成功");
+        }];
+       
+        callback([[YFModelTools sharedTool] object:YFStore.class withArraykeyValues:responseObject]);
         
     } failure:^(NSError * _Nonnull error) {
         
         NSLog(@"%@", error);
         
     }];
+}
+
+
++(void)getStoreFromLocal:(void (^)(NSArray *))callback{
+    
+    [[YFFileTools sharedTool] readFromFile:@"stores.json" FileType:Array CompletionHandler:^(id  _Nonnull content){
+        
+        callback([[YFModelTools sharedTool] object:YFStore.class withArraykeyValues:content]);
+        
+    }];
+    
 }
 
 @end

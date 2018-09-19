@@ -16,7 +16,9 @@
 
 @property (nonatomic , copy) NSString * name;
 
-+(void)getService:(void (^)(NSArray *))callback;
++(void)getServiceFromServer:(void (^)(NSArray *))callback;
+
++(void)getServiceFromLocal:(void (^)(NSArray *))callback;
 
 @end
 

@@ -46,14 +46,11 @@
 
 -(void)viewWillLayoutSubviews{
     
-    NSLog(@"%d", SafeAreaTopHeight);
-    
     self.webView.frame = CGRectMake(0, SafeAreaTopHeight + self.progressView.frame.size.height, ScreenW, ContentHeight);
     
 }
 
 #pragma mark - KVO
-// 只要观察者有新值改变就会调用
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context{
     
     if ([keyPath isEqual:@"title"] && object == self.webView) {

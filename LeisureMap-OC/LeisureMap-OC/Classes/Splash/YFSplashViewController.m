@@ -7,7 +7,6 @@
 //
 
 #import "YFSplashViewController.h"
-#import <AFNetworking.h>
 
 @interface YFSplashViewController ()
 
@@ -29,11 +28,17 @@
     //延迟2秒执行
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
             
-          [self performSegueWithIdentifier:@"SplashMoveToLogin" sender:nil];
+          [self performSegueWithIdentifier:@"SplashMoveToMain" sender:nil];
         
     });
         
    
+}
+
+-(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    
+     [self performSegueWithIdentifier:@"SplashMoveToMain" sender:nil];
+    
 }
 
 @end

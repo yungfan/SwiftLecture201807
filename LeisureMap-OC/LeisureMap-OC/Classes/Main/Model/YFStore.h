@@ -22,7 +22,9 @@
 
 @property (nonatomic , copy) NSString    * imagePath;
 
-+(void)getStore:(void (^)(NSArray *))callback;
++(void)getStoreFromServer:(void (^)(NSArray *))callback;
+
++(void)getStoreFromLocal:(void (^)(NSArray *))callback;
 
 @end
 

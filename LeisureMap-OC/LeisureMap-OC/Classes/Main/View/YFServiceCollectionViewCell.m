@@ -7,7 +7,7 @@
 //
 
 #import "YFServiceCollectionViewCell.h"
-#import <SDWebImage.h>
+#import "YFImageTools.h"
 
 @interface YFServiceCollectionViewCell()
 
@@ -23,7 +23,7 @@
     
     _service = service;
     
-    [self.imgView sd_setImageWithURL:[NSURL URLWithString:service.imagePath] placeholderImage:[UIImage imageNamed:@"food"]];
+    [[YFImageTools sharedTool]imageWithTarget:self.imgView URL:service.imagePath placeHolder:@"food"];
     
     self.lbName.text = service.name;
     
