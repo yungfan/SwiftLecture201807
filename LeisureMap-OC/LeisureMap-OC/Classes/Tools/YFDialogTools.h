@@ -11,6 +11,21 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+
+//普通对话框类型
+typedef NS_ENUM (NSInteger, DialogStyle) {
+    
+    StyleInfo = 0,
+    StyleError = 1
+};
+
+//UIAlertViewController类型
+typedef NS_ENUM (NSInteger, AlertStyle) {
+    
+    StyleActionSheet = 0,
+    StyleAlert = 1
+};
+
 @interface YFDialogTools : NSObject
 
 /**
@@ -19,19 +34,19 @@ NS_ASSUME_NONNULL_BEGIN
 + (instancetype)sharedTool;
 
 /**
- 显示普通信息
+ 显示普通对话框
  */
-- (void)showWithInfo :(NSString *) message;
+- (void)showDialogWithType:(DialogStyle)style message:(NSString *) message;
 
 /**
- 显示错误信息
- */
-- (void)showWithError :(NSString *) message;
-
-/**
- 显示错误信息
+ 关闭对话框
  */
 - (void)dissmissHub;
+
+/**
+ 显示UIAlertViewController
+ */
+- (UIAlertController *)alertWithTitle:(NSString *)title message:(NSString *)message style:(AlertStyle)style actionTitles:(NSArray *)titles actionStyles:(NSArray *)styles alerAction:(void (^)(NSInteger index))actionHandler;
 
 
 @end

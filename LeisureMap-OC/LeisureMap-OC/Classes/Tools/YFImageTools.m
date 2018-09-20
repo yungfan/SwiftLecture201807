@@ -46,5 +46,24 @@
     
 }
 
+- (UIImage *)downloadImageWithURL:(NSString *) url{
+    
+    __block UIImage *img = nil;
+    
+    SDWebImageDownloader *downloader = [SDWebImageDownloader sharedDownloader];
+    
+    [downloader downloadImageWithURL:[NSURL URLWithString:url]  options:SDWebImageDownloaderUseNSURLCache progress:^(NSInteger receivedSize, NSInteger expectedSize, NSURL * _Nullable targetURL) {
+        
+    } completed:^(UIImage * _Nullable image, NSData * _Nullable data, NSError * _Nullable error, BOOL finished) {
+        
+        if (!error) {
+            
+            img = image;
+        }
+        
+    }];
+    
+    return img;
+}
 
 @end

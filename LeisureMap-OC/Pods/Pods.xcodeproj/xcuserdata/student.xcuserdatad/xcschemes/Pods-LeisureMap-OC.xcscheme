@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "8E214DA654628366D3706CDBD7081CAB"
+               BlueprintIdentifier = "AD0E6A9F8FD9162D2817031E944D9083"
                BuildableName = "libPods-LeisureMap-OC.a"
                BlueprintName = "Pods-LeisureMap-OC"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "8E214DA654628366D3706CDBD7081CAB"
+            BlueprintIdentifier = "AD0E6A9F8FD9162D2817031E944D9083"
             BuildableName = "libPods-LeisureMap-OC.a"
             BlueprintName = "Pods-LeisureMap-OC"
             ReferencedContainer = "container:Pods.xcodeproj">

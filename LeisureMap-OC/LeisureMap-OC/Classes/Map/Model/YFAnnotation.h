@@ -11,6 +11,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+//大头针模型
 @interface YFAnnotation : NSObject <MKAnnotation>
 
 @property (nonatomic) CLLocationCoordinate2D coordinate;

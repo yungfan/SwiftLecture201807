@@ -10,6 +10,7 @@
 
 @interface YFSplashViewController ()
 
+//显示版本UILabel
 @property (weak, nonatomic) IBOutlet UILabel *lbVersion;
 
 @end

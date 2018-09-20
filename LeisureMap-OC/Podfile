@@ -6,8 +6,9 @@ target 'LeisureMap-OC' do
   # use_frameworks!
 pod 'AFNetworking', '~> 3.2.1'
 pod 'SDWebImage', '~> 5.0.0-beta3'
-pod 'SVProgressHUD'
+pod 'SVProgressHUD', '~> 2.2.5'
 pod 'MJExtension', '~> 3.0.15.1'
+pod 'CHTCollectionViewWaterfallLayout', '~> 0.9.7'
   # Pods for LeisureMap-OC
 
   target 'LeisureMap-OCTests' do

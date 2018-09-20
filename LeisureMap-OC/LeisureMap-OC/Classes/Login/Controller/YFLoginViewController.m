@@ -14,12 +14,16 @@
 
 @interface YFLoginViewController ()
 
+//用户名
 @property (weak, nonatomic) IBOutlet UITextField *txtUname;
-
+//密码
 @property (weak, nonatomic) IBOutlet UITextField *txtPwd;
 
-
+//登录按钮
 - (IBAction)login:(id)sender;
+
+//取消按钮
+- (IBAction)cancel:(id)sender;
 @end
 
 @implementation YFLoginViewController
@@ -29,11 +33,10 @@
     [super viewDidLoad];
     
      [self getUnameAndPwd];
-    
-    
 
 }
 
+#pragma mark - NSUserDefault读取用户信息
 -(void)getUnameAndPwd{
     
     NSString *username = [[YFFileTools sharedTool] readUserDataWithKey:@"username"];
@@ -49,13 +52,12 @@
 
 - (IBAction)login:(id)sender {
     
-    
+    //验证有没有网络
     NSInteger status = [[[YFFileTools sharedTool] readUserDataWithKey:@"AFNetworkReachabilityStatus"] integerValue];
     
     if (status == NotReachable) {
-        
-        [[YFDialogTools sharedTool] showWithError:@"没有网络"];
-        
+  
+        [[YFDialogTools sharedTool]showDialogWithType:StyleError message:@"没有网络"];
     }
     
     else{
@@ -63,12 +65,12 @@
         //1. 判断用户的输入是否合法
         if([_txtUname.text isEqualToString:@""] || [_txtPwd.text isEqualToString:@""]){
 
-             [[YFDialogTools sharedTool] showWithError:@"用户名或密码不能为空"];
+            [[YFDialogTools sharedTool]showDialogWithType:StyleError message:@"用户名或密码不能为空"];
             
             return;
         }
         
-         [[YFDialogTools sharedTool] showWithInfo:@"正在登录..."];
+        [[YFDialogTools sharedTool]showDialogWithType:StyleInfo message:@"正在登录..."];
         
         //2.发送网络请求进行验证
         [YFLogin isValidUser:_txtUname.text andPwd:_txtPwd.text withCallback:^(BOOL isValid) {
@@ -89,7 +91,7 @@
             }
             else{
       
-                [[YFFileTools sharedTool] writeUserDataWithValue:self.txtPwd.text forKey:@"用户名或密码不正确"];
+                [[YFDialogTools sharedTool]showDialogWithType:StyleError message:@"用户名或密码不正确"];
                 
             }
             
@@ -99,13 +101,16 @@
    
 }
 
+- (IBAction)cancel:(id)sender {
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
 #pragma mark - 退键盘
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
     
     [self.view endEditing:YES];
-    
-    [self dismissViewControllerAnimated:YES completion:nil];
-    
+
 }
 
 - (void)dealloc {

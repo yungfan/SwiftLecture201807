@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "9F3BE97BD7F9C0F7C3005FFBF35D0F61"
-               BuildableName = "libSDWebImage.a"
-               BlueprintName = "SDWebImage"
+               BlueprintIdentifier = "FAA239837235DCCDD4AA1BFF45A67FCF"
+               BuildableName = "libCHTCollectionViewWaterfallLayout.a"
+               BlueprintName = "CHTCollectionViewWaterfallLayout"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -45,9 +45,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "9F3BE97BD7F9C0F7C3005FFBF35D0F61"
-            BuildableName = "libSDWebImage.a"
-            BlueprintName = "SDWebImage"
+            BlueprintIdentifier = "FAA239837235DCCDD4AA1BFF45A67FCF"
+            BuildableName = "libCHTCollectionViewWaterfallLayout.a"
+            BlueprintName = "CHTCollectionViewWaterfallLayout"
             ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

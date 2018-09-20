@@ -14,6 +14,7 @@
 //WKWebView 不能直接在SB中使用
 @property (strong, nonatomic) WKWebView *webView;
 
+//进度条
 @property (weak, nonatomic) IBOutlet UIProgressView *progressView;
 
 @end
@@ -36,6 +37,7 @@
     
     [_webView loadRequest:request];
     
+    //监听进度条、标题
     [_webView addObserver:self forKeyPath:@"estimatedProgress" options:NSKeyValueObservingOptionNew context:nil];
     
     [_webView addObserver:self forKeyPath:@"title" options:NSKeyValueObservingOptionNew context:nil];

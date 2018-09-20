@@ -28,6 +28,11 @@ UIImageView显示图片
  */
 - (UIImage *)imageFromDiskCacheWithURL:(NSString *) url;
 
+/**
+下载图片
+ */
+- (UIImage *)downloadImageWithURL:(NSString *) url;
+
 @end
 
 NS_ASSUME_NONNULL_END

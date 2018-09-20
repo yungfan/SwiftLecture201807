@@ -19,6 +19,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
+    //监听网络
     [[YFNetTools sharedTool] isNetworkAvailable];
     
     return YES;

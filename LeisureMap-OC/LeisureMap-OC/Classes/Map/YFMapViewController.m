@@ -15,17 +15,20 @@
 
 @interface YFMapViewController ()<CLLocationManagerDelegate, MKMapViewDelegate>
 
+//地图
 @property (weak, nonatomic) IBOutlet MKMapView *map;
 
+//定位管理
 @property (nonatomic, strong) CLLocationManager *manager;
 
+//限制大头针个数
 @property (nonatomic, assign) int noteCount;
 
 @end
 
 @implementation YFMapViewController
 
-
+//懒加载
 - (CLLocationManager *)manager{
     
     if (!_manager) {
@@ -51,6 +54,7 @@
     
     self.title = @"Map";
     
+    //发起定位
     if ([CLLocationManager locationServicesEnabled] ) {
         
         [self.manager startUpdatingLocation];
@@ -65,6 +69,7 @@
 
 
 #pragma mark - CLLocationManagerDelegate
+//定位成功
 -(void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray<CLLocation *> *)locations{
     
     CLLocation *location = [locations lastObject];
@@ -76,6 +81,7 @@
     
 }
 
+//调整可是区域
 -(void)centerMapOnLocation:(CLLocationCoordinate2D)location{
 
     CLLocationDistance distance = 1500;
@@ -159,20 +165,11 @@
     [geocoder reverseGeocodeLocation:location completionHandler:^(NSArray<CLPlacemark *> * _Nullable placemarks, NSError * _Nullable error) {
         
         CLPlacemark *mark = [placemarks lastObject];
-        
-        if (@available(iOS 11.0, *)) {
             
-            annotation.title = mark.locality;
+        annotation.title = mark.locality;
             
-            annotation.subtitle = mark.name;
-           
-        } else{
-            
-            annotation.title = mark.addressDictionary[@"SubLocality"];
-            
-            annotation.subtitle = mark.addressDictionary[@"State"];
-  
-        }
+        annotation.subtitle = mark.name;
+    
         
         [self.map addAnnotation:annotation];
         
@@ -181,6 +178,7 @@
     
 }
 
+//大头针按钮点击
 -(void)btnClick:(id)sender{
     
     [self performSegueWithIdentifier:@"MapMoveToWeb" sender:nil];

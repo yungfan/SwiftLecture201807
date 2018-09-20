@@ -10,6 +10,9 @@
 
 @interface YFLogin : NSObject
 
+/**
+ 验证用户名和密码
+ */
 +(void)isValidUser:(NSString *)name andPwd:(NSString *)pwd withCallback:(void(^)(BOOL))callback;
 
 @end
