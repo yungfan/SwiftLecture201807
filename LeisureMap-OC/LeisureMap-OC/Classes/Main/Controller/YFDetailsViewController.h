@@ -13,6 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface YFDetailsViewController : UIViewController
 
+//选中的Store
 @property (nonatomic, strong) YFStore *selectedStore;
 
 @end

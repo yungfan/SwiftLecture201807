@@ -72,6 +72,7 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(notifi:) name:@"Login" object:nil];
 }
 
+//用户登录通知
 -(void)notifi:(NSNotification *)noti{
     
     self.isLogin = YES;
@@ -79,7 +80,7 @@
     self.loginItem.title = @"logout";
 }
     
-
+//根据网络状态设置数据
 -(void)setupData {
     
     //获取网络状态
@@ -217,7 +218,7 @@
     else{
         
  
-        [[YFDialogTools sharedTool] showWithError:@"请先登录"];
+        [[YFDialogTools sharedTool]showDialogWithType:StyleError message:@"请先登录"];
         
     }
     

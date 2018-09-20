@@ -11,8 +11,9 @@
 
 @interface YFServiceCollectionViewCell()
 
+//菜单图片
 @property (weak, nonatomic) IBOutlet UIImageView *imgView;
-
+//菜单文字
 @property (weak, nonatomic) IBOutlet UILabel *lbName;
 
 @end
