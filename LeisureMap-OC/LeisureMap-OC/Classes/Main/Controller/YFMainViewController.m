@@ -134,6 +134,7 @@
     }
 }
 
+#pragma mark - Set UI
 -(void)setupCollectionView{
 
     UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc]init];
@@ -267,9 +268,9 @@
     YFStore *store = [self.selectedStores objectAtIndex:indexPath.row];
     
     //从缓存中取图片
-    NSString* strUrl = self.selectedService.imagePath;
+    NSString *imageURL = [NSString stringWithFormat:@"%@/%@", BaseURL, self.selectedService.imagePath];;
     
-    cell.imageView.image = [[YFImageTools sharedTool] imageFromDiskCacheWithURL:strUrl];
+    cell.imageView.image = [[YFImageTools sharedTool] imageFromDiskCacheWithURL:imageURL];
     
     cell.textLabel.text = store.name;
     

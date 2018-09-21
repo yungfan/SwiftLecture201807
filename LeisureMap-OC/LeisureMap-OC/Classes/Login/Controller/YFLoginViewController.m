@@ -32,11 +32,11 @@
     
     [super viewDidLoad];
     
-     [self getUnameAndPwd];
+    [self getUnameAndPwd];
 
 }
 
-#pragma mark - NSUserDefault读取用户信息
+#pragma mark - NSUserDefault读取用户信息并填充
 -(void)getUnameAndPwd{
     
     NSString *username = [[YFFileTools sharedTool] readUserDataWithKey:@"username"];
@@ -58,6 +58,7 @@
     if (status == NotReachable) {
   
         [[YFDialogTools sharedTool]showDialogWithType:StyleError message:@"没有网络"];
+        return;
     }
     
     else{
@@ -78,8 +79,8 @@
             if (isValid) {
                 
                 [[YFDialogTools sharedTool]dissmissHub];
-                //3.保存用户名和密码
                 
+                //3.保存用户名和密码
                 [[YFFileTools sharedTool] writeUserDataWithValue:self.txtUname.text forKey:@"username"];
                 
                 [[YFFileTools sharedTool] writeUserDataWithValue:self.txtPwd.text forKey:@"password"];

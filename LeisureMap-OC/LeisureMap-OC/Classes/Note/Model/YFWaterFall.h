@@ -1,15 +1,16 @@
 //
-//  YFService.h
+//  YFWaterFall.h
 //  LeisureMap-OC
 //
-//  Created by student on 2018/9/11.
+//  Created by 杨帆 on 2018/9/21.
 //  Copyright © 2018年 abc. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 
-@interface YFService : NSObject
+NS_ASSUME_NONNULL_BEGIN
 
+@interface YFWaterFall : NSObject
 
 @property (nonatomic , assign) NSInteger index;//索引
 
@@ -17,10 +18,10 @@
 
 @property (nonatomic , copy) NSString  * imagePath;//图片
 
+@property (nonatomic , copy) NSString  * size;//图片大小
 
-+(void)getServiceFromServer:(void (^)(NSArray *))callback;//服务器获取数据
-
-+(void)getServiceFromLocal:(void (^)(NSArray *))callback;//本地获取数据
++(void)getWaterFall:(void (^)(NSArray *))callback;//服务器获取数据
 
 @end
 
+NS_ASSUME_NONNULL_END

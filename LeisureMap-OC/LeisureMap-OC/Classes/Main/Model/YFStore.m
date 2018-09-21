@@ -16,11 +16,11 @@
 +(void)getStoreFromServer:(void (^)(NSArray *))callback {
     
     //请求的url
-    NSString *url = [NSString stringWithFormat:@"http://localhost:8080/LeisureMapAPI/store.json"];
+    NSString *url = [NSString stringWithFormat:@"%@/LeisureMapAPI/store.json", BaseURL];
 
     [[YFNetTools sharedTool]  requestWithURLString:url parameters:nil method:GET success:^(id  _Nullable responseObject) {
         
-        
+         //转模型
         [[YFFileTools sharedTool] writeToFile:responseObject FileName:@"stores.json" CompletionHandler:^{
             
             NSLog(@"stores写入成功");

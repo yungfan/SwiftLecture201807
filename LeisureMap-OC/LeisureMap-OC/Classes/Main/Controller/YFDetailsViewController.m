@@ -38,16 +38,20 @@
     
     //获取bundlePath 路径
     NSString *bundlePath = [[NSBundle mainBundle] bundlePath];
+    
     //获取本地html目录 basePath
     NSString *basePath = [NSString stringWithFormat: @"%@/www", bundlePath];
+    
     //获取本地html目录 baseUrl
     NSURL *baseUrl = [NSURL fileURLWithPath: basePath isDirectory: YES];
-    NSLog(@"%@", baseUrl);
+    
     //html 路径
     NSString *indexPath = [NSString stringWithFormat: @"%@/sample.html", basePath];
+    
     //html 文件中内容
     NSString *indexContent = [NSString stringWithContentsOfFile:
                               indexPath encoding: NSUTF8StringEncoding error:nil];
+    
     //显示内容
     [_webView loadHTMLString: indexContent baseURL: baseUrl];
      

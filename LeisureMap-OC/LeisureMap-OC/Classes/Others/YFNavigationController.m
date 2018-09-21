@@ -20,7 +20,7 @@
     
     if (self.childViewControllers.count > 0) { // 非根控制器
         
-        //方案二 如果需要进一步定制 可以改为leftBarButtonItem
+        //改为leftBarButtonItem
         viewController.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"返回" style:UIBarButtonItemStylePlain target:self action:@selector(back)];
         
         //设置颜色

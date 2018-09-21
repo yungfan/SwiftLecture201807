@@ -15,10 +15,11 @@
 +(void)isValidUser:(NSString *)name andPwd:(NSString *)pwd withCallback:(void(^)(BOOL))callback{
     
     //请求的url
-    NSString *url = [NSString stringWithFormat:@"http://localhost:8080/LeisureMapAPI/login.json"];
+    NSString *url = [NSString stringWithFormat:@"%@/LeisureMapAPI/login.json", BaseURL];
     
     [[YFNetTools sharedTool]  requestWithURLString:url parameters:nil method:GET success:^(id  _Nullable responseObject) {
         
+        //判断用户是否合法
         if ([name isEqualToString:responseObject[@"username"]] && [pwd isEqualToString:responseObject[@"password"]]) {
            
             callback(YES);

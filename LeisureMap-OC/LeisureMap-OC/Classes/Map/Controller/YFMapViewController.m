@@ -92,7 +92,7 @@
 }
 
 
-
+#pragma mark - MKMapViewDelegate
 /**
  *  每当添加一个大头针 该方法被调用。如果该方法没有实现, 或者返回nil, 那么就会使用系统默认的大头针视图
  *  如果我希望自定义，怎么办？该方法的返回值就是你自定义的的大头针
@@ -170,7 +170,6 @@
             
         annotation.subtitle = mark.name;
     
-        
         [self.map addAnnotation:annotation];
         
     }];

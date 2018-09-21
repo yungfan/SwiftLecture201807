@@ -44,4 +44,6 @@
 #define ScaleW  (ScreenW/375.0)
 // 版本号
 #define AppVersion [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"]
+//BaseURL
+#define BaseURL @"http://192.168.199.105:8080"
 

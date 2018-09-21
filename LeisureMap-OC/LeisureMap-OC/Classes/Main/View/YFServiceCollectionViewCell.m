@@ -24,7 +24,9 @@
     
     _service = service;
     
-    [[YFImageTools sharedTool]imageWithTarget:self.imgView URL:service.imagePath placeHolder:@"food"];
+    NSString *imagePath = [NSString stringWithFormat:@"%@/%@", BaseURL, service.imagePath];
+    
+    [[YFImageTools sharedTool]imageWithTarget:self.imgView URL:imagePath placeHolder:@"food"];
     
     self.lbName.text = service.name;
     

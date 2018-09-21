@@ -11,11 +11,11 @@
 
 @interface YFLocation : NSObject
 
-@property (nonatomic , copy) NSString * address;
+@property (nonatomic , copy) NSString * address;//地址名称
 
-@property (nonatomic , assign) NSInteger latitude;
+@property (nonatomic , assign) NSInteger latitude;//纬度
 
-@property (nonatomic , assign) NSInteger  longitude;
+@property (nonatomic , assign) NSInteger  longitude;//经度
 
 @end
 

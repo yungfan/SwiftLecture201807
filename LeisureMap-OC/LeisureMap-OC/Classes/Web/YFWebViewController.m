@@ -29,11 +29,17 @@
     [self setupWebView];
 }
 
+-(void)viewWillLayoutSubviews{
+    
+    self.webView.frame = CGRectMake(0, SafeAreaTopHeight + self.progressView.frame.size.height, ScreenW, ContentHeight);
+    
+}
+
 -(void)setupWebView{
     
     _webView = [[WKWebView alloc] init];
     
-    NSURLRequest *request = [[NSURLRequest alloc]initWithURL:[NSURL URLWithString:@"https://www.baidu.com"]];
+    NSURLRequest *request = [[NSURLRequest alloc]initWithURL:[NSURL URLWithString:@"http://www.abc.edu.cn"]];
     
     [_webView loadRequest:request];
     
@@ -43,12 +49,6 @@
     [_webView addObserver:self forKeyPath:@"title" options:NSKeyValueObservingOptionNew context:nil];
     
     [self.view addSubview:_webView];
-    
-}
-
--(void)viewWillLayoutSubviews{
-    
-    self.webView.frame = CGRectMake(0, SafeAreaTopHeight + self.progressView.frame.size.height, ScreenW, ContentHeight);
     
 }
 

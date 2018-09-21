@@ -16,10 +16,11 @@
 +(void)getServiceFromServer:(void (^)(NSArray *))callback {
 
     //请求的url
-    NSString *url = [NSString stringWithFormat:@"http://localhost:8080/LeisureMapAPI/service.json"];
+    NSString *url = [NSString stringWithFormat:@"%@/LeisureMapAPI/service.json", BaseURL];
     
     [[YFNetTools sharedTool]  requestWithURLString:url parameters:nil method:GET success:^(id  _Nullable responseObject) {
         
+        //转模型
         callback([[YFModelTools sharedTool] object:YFService.class withArraykeyValues:responseObject]);
         
         [[YFFileTools sharedTool] writeToFile:responseObject FileName:@"services.json" CompletionHandler:^{

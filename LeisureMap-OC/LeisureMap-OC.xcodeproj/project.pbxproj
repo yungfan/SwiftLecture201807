@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1EC3402AB2528FEBCFD84448 /* libPods-LeisureMap-OC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 59B786948A989BF925D3FAD1 /* libPods-LeisureMap-OC.a */; };
+		3C210D3E21547F60008AEB23 /* YFWaterFall.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C210D3D21547F60008AEB23 /* YFWaterFall.m */; };
 		3C700E9D214CAD6400B0EFC7 /* YFNetTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C700E9C214CAD6400B0EFC7 /* YFNetTools.m */; };
 		3C7EF0AE2153BC5100C89B55 /* www in Resources */ = {isa = PBXBuildFile; fileRef = 3C7EF0AD2153BC5100C89B55 /* www */; };
 		3CD24A9721526A1000DC6D10 /* YFDialogTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CD24A9621526A1000DC6D10 /* YFDialogTools.m */; };
@@ -61,6 +62,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3C210D3C21547F60008AEB23 /* YFWaterFall.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YFWaterFall.h; sourceTree = "<group>"; };
+		3C210D3D21547F60008AEB23 /* YFWaterFall.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YFWaterFall.m; sourceTree = "<group>"; };
 		3C700E9B214CAD6400B0EFC7 /* YFNetTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YFNetTools.h; sourceTree = "<group>"; };
 		3C700E9C214CAD6400B0EFC7 /* YFNetTools.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YFNetTools.m; sourceTree = "<group>"; };
 		3C744BF8214F87330067C3C7 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
@@ -161,6 +164,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3C210D3921547F22008AEB23 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3F5823FE214F303200CA60F6 /* YFMapViewController.h */,
+				3F5823FF214F303200CA60F6 /* YFMapViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		3C210D3A21547F31008AEB23 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3FC1D0DE215336B6008D72D4 /* YFNoteViewController.h */,
+				3FC1D0DF215336B6008D72D4 /* YFNoteViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		3C210D3B21547F4E008AEB23 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3C210D3C21547F60008AEB23 /* YFWaterFall.h */,
+				3C210D3D21547F60008AEB23 /* YFWaterFall.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		3C700E99214CACC400B0EFC7 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -290,9 +320,8 @@
 		3F1D6B432145F48C00EF21B4 /* Map */ = {
 			isa = PBXGroup;
 			children = (
+				3C210D3921547F22008AEB23 /* Controller */,
 				3F58240C214F485400CA60F6 /* Model */,
-				3F5823FE214F303200CA60F6 /* YFMapViewController.h */,
-				3F5823FF214F303200CA60F6 /* YFMapViewController.m */,
 			);
 			path = Map;
 			sourceTree = "<group>";
@@ -300,9 +329,9 @@
 		3F1D6B442145F49800EF21B4 /* Note */ = {
 			isa = PBXGroup;
 			children = (
+				3C210D3B21547F4E008AEB23 /* Model */,
+				3C210D3A21547F31008AEB23 /* Controller */,
 				3FC1D0E121534C93008D72D4 /* View */,
-				3FC1D0DE215336B6008D72D4 /* YFNoteViewController.h */,
-				3FC1D0DF215336B6008D72D4 /* YFNoteViewController.m */,
 			);
 			path = Note;
 			sourceTree = "<group>";
@@ -640,6 +669,7 @@
 			files = (
 				3FB3D3B5214613AA0040F8AA /* YFSplashViewController.m in Sources */,
 				3F4B640D21475FD500F44C6C /* YFMainViewController.m in Sources */,
+				3C210D3E21547F60008AEB23 /* YFWaterFall.m in Sources */,
 				3F81358421461CE900C8556F /* YFLoginViewController.m in Sources */,
 				3F58240F214F487100CA60F6 /* YFAnnotation.m in Sources */,
 				3F5EF919214A400900EBD6F0 /* YFStoreTableViewCell.m in Sources */,

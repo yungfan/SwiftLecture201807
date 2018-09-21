@@ -25,6 +25,7 @@
     
 }
 
+//写入沙盒文件
 -(void)writeToFile:(id)content FileName:(NSString *)fileName CompletionHandler:(filewWriteCompleted)completionHandler {
     
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
@@ -54,6 +55,7 @@
     
 }
 
+//读取沙盒文件
 -(void)readFromFile:(id)fileName FileType:(FileType)fileType CompletionHandler:(filewReadCompleted)completionHandler {
     
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
