@@ -229,15 +229,5 @@
         },
         "index":20,
         "imagePath":""
-    },
-    {
-        "serviceIndex":5,
-        "name":"川菜006",
-        "location":{
-            "address":"",
-            "latitude":0,
-            "longitude":0
-        },
-        "index":21,
-        "imagePath":""
-    }]
+    }
+]
