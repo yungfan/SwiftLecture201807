@@ -45,5 +45,5 @@
 // 版本号
 #define AppVersion [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"]
 //BaseURL
-#define BaseURL @"http://192.168.199.105:8080"
+#define BaseURL @"http://localhost:8080"
 

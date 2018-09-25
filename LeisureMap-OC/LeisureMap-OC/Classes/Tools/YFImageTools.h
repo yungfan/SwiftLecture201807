@@ -33,6 +33,11 @@ UIImageView显示图片
  */
 - (UIImage *)downloadImageWithURL:(NSString *) url;
 
+/**
+ 颜色图片
+ */
+- (UIImage*)imageWithColor: (UIColor *) color;
+
 @end
 
 NS_ASSUME_NONNULL_END

@@ -142,8 +142,8 @@
     layout.minimumLineSpacing = 2;//设置最小行间距
     
     layout.minimumInteritemSpacing = 2;//item间距(最小值)
-    
-    layout.itemSize = CGSizeMake(120, 120);
+
+    layout.itemSize = CGSizeMake((ScreenW-10)/3, 100);
     
     self.serviceCollectionView.collectionViewLayout = layout;
     
@@ -152,7 +152,7 @@
 
 -(void)setupTableView{
     
-    self.storeTableView.rowHeight = 100.0;
+    self.storeTableView.rowHeight = 80.0;
     
     self.storeTableView.tableFooterView = [[UIView alloc]init];
 }
@@ -278,6 +278,8 @@
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
     YFStore *store = [self.selectedStores objectAtIndex:indexPath.row];
 

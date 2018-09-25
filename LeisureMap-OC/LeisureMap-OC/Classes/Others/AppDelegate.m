@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "YFNetTools.h"
+#import "YFFileTools.h"
 
 @interface AppDelegate ()
 
@@ -21,6 +22,26 @@
     
     //监听网络
     [[YFNetTools sharedTool] isNetworkAvailable];
+    
+    //判断版本号
+    //判断当前App安装的版本号 与 本地存储的App的版本号 进行比较
+    double installVersion =  [AppVersion doubleValue];
+    
+    double localVersion = [[[YFFileTools sharedTool] readUserDataWithKey:@"localVersion"] doubleValue];
+    
+    //1.安装的版本号 > 本地存储的版本号 显示新特性界面 保存版本号
+    if (installVersion > localVersion) {
+        
+        NSLog(@"显示新特性界面");
+        
+        [[YFFileTools sharedTool] writeUserDataWithValue:@(installVersion) forKey:@"localVersion"];
+    }
+    
+    //2.安装的版本号 = 本地存储的版本号 显示主界面
+    else{
+        
+        NSLog(@"显示主界面");
+    }
     
     return YES;
 }

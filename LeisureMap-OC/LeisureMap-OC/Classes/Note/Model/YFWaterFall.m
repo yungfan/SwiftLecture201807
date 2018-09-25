@@ -21,11 +21,6 @@
     [[YFNetTools sharedTool]  requestWithURLString:url parameters:nil method:GET success:^(id  _Nullable responseObject) {
         
         //转模型
-        [[YFFileTools sharedTool] writeToFile:responseObject FileName:@"stores.json" CompletionHandler:^{
-            
-            NSLog(@"stores写入成功");
-        }];
-        
         callback([[YFModelTools sharedTool] object:YFWaterFall.class withArraykeyValues:responseObject]);
         
     } failure:^(NSError * _Nonnull error) {

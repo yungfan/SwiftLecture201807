@@ -14,6 +14,12 @@
 
 @implementation YFNavigationController
 
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
+    self.navigationBar.tintColor = [UIColor blackColor];
+}
+
 //重写navC的pushVC方法，以便统一设置push进来的vc的左侧“返回”按钮
 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated {
     
@@ -21,7 +27,7 @@
     if (self.childViewControllers.count > 0) { // 非根控制器
         
         //改为leftBarButtonItem
-        viewController.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"返回" style:UIBarButtonItemStylePlain target:self action:@selector(back)];
+        viewController.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"leftArrow"] style:UIBarButtonItemStylePlain target:self action:@selector(back)];
         
         //设置颜色
         self.navigationBar.tintColor = [UIColor blackColor];

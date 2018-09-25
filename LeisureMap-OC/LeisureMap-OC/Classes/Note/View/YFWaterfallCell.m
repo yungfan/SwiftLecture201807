@@ -20,7 +20,7 @@
         
         _imageView.contentMode = UIViewContentModeScaleAspectFill;
         
-        [_imageView.layer setMasksToBounds:YES];
+        _imageView.layer.masksToBounds = YES;
         
         [self.contentView addSubview:self.imageView];
     }

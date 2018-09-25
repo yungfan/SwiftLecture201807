@@ -40,7 +40,7 @@
     NSString *bundlePath = [[NSBundle mainBundle] bundlePath];
     
     //获取本地html目录 basePath
-    NSString *basePath = [NSString stringWithFormat: @"%@/www", bundlePath];
+    NSString *basePath = [NSString stringWithFormat: @"%@/localWeb", bundlePath];
     
     //获取本地html目录 baseUrl
     NSURL *baseUrl = [NSURL fileURLWithPath: basePath isDirectory: YES];

@@ -76,17 +76,12 @@
 //设置瀑布流布局
 -(void)setupCollectionView{
     
+    //用的是第三方的CHTCollectionViewWaterfallLayout
     CHTCollectionViewWaterfallLayout *layout = [[CHTCollectionViewWaterfallLayout alloc] init];
     
     layout.sectionInset = UIEdgeInsetsMake(10, 10, 10, 10);
     
-    layout.minimumColumnSpacing = 10;
-    
-    layout.minimumInteritemSpacing = 10;
-    
     self.collectionView.collectionViewLayout = layout;
-    
-    self.collectionView.backgroundColor = [UIColor orangeColor];
     
 }
 
