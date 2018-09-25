@@ -65,7 +65,7 @@
     
     [super viewDidLoad];
     
-    self.title = @"Note";
+    self.title = NSLocalizedString(@"Note", @"Note");
 
     [self setupCollectionView];
     

@@ -15,6 +15,10 @@
 		3CD24A9A21526C2100DC6D10 /* YFImageTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CD24A9921526C2100DC6D10 /* YFImageTools.m */; };
 		3CD24A9D21526E5600DC6D10 /* YFModelTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CD24A9C21526E5600DC6D10 /* YFModelTools.m */; };
 		3CD24AA021527A1200DC6D10 /* YFMapTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CD24A9F21527A1200DC6D10 /* YFMapTools.m */; };
+		3CF63956215A59F30040789A /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CF63958215A59F30040789A /* Launch Screen.storyboard */; };
+		3CF6396A215A5F720040789A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3CF6396C215A5F720040789A /* Localizable.strings */; };
+		3CF63970215A63E40040789A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3CF63972215A63E40040789A /* InfoPlist.strings */; };
+		3CF63975215A64B40040789A /* Launch Screen-Chinese.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CF63974215A64B40040789A /* Launch Screen-Chinese.storyboard */; };
 		3F1D6B0C2145F11D00EF21B4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F1D6B0B2145F11D00EF21B4 /* AppDelegate.m */; };
 		3F1D6B122145F11D00EF21B4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F1D6B102145F11D00EF21B4 /* Main.storyboard */; };
 		3F1D6B142145F11E00EF21B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F1D6B132145F11E00EF21B4 /* Assets.xcassets */; };
@@ -35,14 +39,12 @@
 		3F8AB89021476DDF003772C9 /* YFService.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F8AB88F21476DDF003772C9 /* YFService.m */; };
 		3F8AB89421479C1C003772C9 /* YFServiceCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F8AB89321479C1C003772C9 /* YFServiceCollectionViewCell.m */; };
 		3F8AB8982147ACED003772C9 /* YFLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F8AB8972147ACED003772C9 /* YFLogin.m */; };
-		3FB0BEA02159D8B100747608 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FB0BE9F2159D8B100747608 /* Launch Screen.storyboard */; };
 		3FB3D3B5214613AA0040F8AA /* YFSplashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FB3D3B4214613AA0040F8AA /* YFSplashViewController.m */; };
 		3FC1D0DD21533367008D72D4 /* YFNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FC1D0DC21533367008D72D4 /* YFNavigationController.m */; };
 		3FC1D0E0215336B6008D72D4 /* YFNoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FC1D0DF215336B6008D72D4 /* YFNoteViewController.m */; };
 		3FC1D0E421534CC0008D72D4 /* YFWaterfallCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FC1D0E321534CC0008D72D4 /* YFWaterfallCell.m */; };
 		51FFF797B648E88013BF6AE3 /* libPods-LeisureMap-OCUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D5EEA7BDCD3F0C1249E0230D /* libPods-LeisureMap-OCUITests.a */; };
 		9EA57B0D2AAE07836391782B /* libPods-LeisureMap-OCTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CA589BE08C119D1DF48B7FD6 /* libPods-LeisureMap-OCTests.a */; };
-		AD5970752153695100E6451B /* timg.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = AD5970742153695100E6451B /* timg.jpeg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +79,16 @@
 		3CD24A9C21526E5600DC6D10 /* YFModelTools.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YFModelTools.m; sourceTree = "<group>"; };
 		3CD24A9E21527A1200DC6D10 /* YFMapTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YFMapTools.h; sourceTree = "<group>"; };
 		3CD24A9F21527A1200DC6D10 /* YFMapTools.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YFMapTools.m; sourceTree = "<group>"; };
+		3CF6395C215A5A9B0040789A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Base.lproj/Launch Screen.storyboard"; sourceTree = "<group>"; };
+		3CF63964215A5CCD0040789A /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		3CF63965215A5CCD0040789A /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Launch Screen.strings"; sourceTree = "<group>"; };
+		3CF6396B215A5F720040789A /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		3CF6396D215A63BA0040789A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		3CF6396E215A63BA0040789A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = "en.lproj/Launch Screen.strings"; sourceTree = "<group>"; };
+		3CF6396F215A63BA0040789A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		3CF63971215A63E40040789A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3CF63973215A63F70040789A /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		3CF63974215A64B40040789A /* Launch Screen-Chinese.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen-Chinese.storyboard"; sourceTree = "<group>"; };
 		3F1D6B072145F11D00EF21B4 /* LeisureMap-OC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LeisureMap-OC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F1D6B0A2145F11D00EF21B4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3F1D6B0B2145F11D00EF21B4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -117,7 +129,6 @@
 		3F8AB89321479C1C003772C9 /* YFServiceCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YFServiceCollectionViewCell.m; sourceTree = "<group>"; };
 		3F8AB8962147ACED003772C9 /* YFLogin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YFLogin.h; sourceTree = "<group>"; };
 		3F8AB8972147ACED003772C9 /* YFLogin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YFLogin.m; sourceTree = "<group>"; };
-		3FB0BE9F2159D8B100747608 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		3FB3D3B3214613AA0040F8AA /* YFSplashViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YFSplashViewController.h; sourceTree = "<group>"; };
 		3FB3D3B4214613AA0040F8AA /* YFSplashViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YFSplashViewController.m; sourceTree = "<group>"; };
 		3FC1D0DB21533367008D72D4 /* YFNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFNavigationController.h; sourceTree = "<group>"; };
@@ -131,7 +142,6 @@
 		5924E7671F7807B383AE488D /* Pods-LeisureMap-OCUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LeisureMap-OCUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LeisureMap-OCUITests/Pods-LeisureMap-OCUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		59B786948A989BF925D3FAD1 /* libPods-LeisureMap-OC.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LeisureMap-OC.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		96FA57065FF331D039E8AEE7 /* Pods-LeisureMap-OCTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LeisureMap-OCTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LeisureMap-OCTests/Pods-LeisureMap-OCTests.debug.xcconfig"; sourceTree = "<group>"; };
-		AD5970742153695100E6451B /* timg.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = timg.jpeg; sourceTree = "<group>"; };
 		C61B5DE4F9EB89B8DB79EC4C /* Pods-LeisureMap-OC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LeisureMap-OC.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LeisureMap-OC/Pods-LeisureMap-OC.debug.xcconfig"; sourceTree = "<group>"; };
 		CA589BE08C119D1DF48B7FD6 /* libPods-LeisureMap-OCTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LeisureMap-OCTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5EEA7BDCD3F0C1249E0230D /* libPods-LeisureMap-OCUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LeisureMap-OCUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -196,14 +206,16 @@
 		3C700E99214CACC400B0EFC7 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				AD5970742153695100E6451B /* timg.jpeg */,
 				3F582401214F33C100CA60F6 /* abc.edu.gpx */,
 				3F1D6B132145F11E00EF21B4 /* Assets.xcassets */,
 				3F1D6B102145F11D00EF21B4 /* Main.storyboard */,
 				3F1D6B182145F11E00EF21B4 /* Info.plist */,
 				3F1D6B192145F11E00EF21B4 /* main.m */,
 				3C744BF8214F87330067C3C7 /* PrefixHeader.pch */,
-				3FB0BE9F2159D8B100747608 /* Launch Screen.storyboard */,
+				3CF63958215A59F30040789A /* Launch Screen.storyboard */,
+				3CF63972215A63E40040789A /* InfoPlist.strings */,
+				3CF6396C215A5F720040789A /* Localizable.strings */,
+				3CF63974215A64B40040789A /* Launch Screen-Chinese.storyboard */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -546,8 +558,8 @@
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
 				Base,
+				en,
 			);
 			mainGroup = 3F1D6AFE2145F11D00EF21B4;
 			productRefGroup = 3F1D6B082145F11D00EF21B4 /* Products */;
@@ -566,11 +578,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3FB0BEA02159D8B100747608 /* Launch Screen.storyboard in Resources */,
+				3CF63956215A59F30040789A /* Launch Screen.storyboard in Resources */,
+				3CF63970215A63E40040789A /* InfoPlist.strings in Resources */,
 				3C7EF0AE2153BC5100C89B55 /* localWeb in Resources */,
+				3CF6396A215A5F720040789A /* Localizable.strings in Resources */,
+				3CF63975215A64B40040789A /* Launch Screen-Chinese.storyboard in Resources */,
 				3F1D6B142145F11E00EF21B4 /* Assets.xcassets in Resources */,
 				3F1D6B122145F11D00EF21B4 /* Main.storyboard in Resources */,
-				AD5970752153695100E6451B /* timg.jpeg in Resources */,
 				3F582402214F33C100CA60F6 /* abc.edu.gpx in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -731,10 +745,40 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		3CF63958215A59F30040789A /* Launch Screen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3CF6395C215A5A9B0040789A /* Base */,
+				3CF63965215A5CCD0040789A /* zh-Hans */,
+				3CF6396E215A63BA0040789A /* en */,
+			);
+			name = "Launch Screen.storyboard";
+			sourceTree = "<group>";
+		};
+		3CF6396C215A5F720040789A /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3CF6396B215A5F720040789A /* zh-Hans */,
+				3CF6396F215A63BA0040789A /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		3CF63972215A63E40040789A /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3CF63971215A63E40040789A /* en */,
+				3CF63973215A63F70040789A /* zh-Hans */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 		3F1D6B102145F11D00EF21B4 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				3F1D6B112145F11D00EF21B4 /* Base */,
+				3CF63964215A5CCD0040789A /* zh-Hans */,
+				3CF6396D215A63BA0040789A /* en */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -746,6 +790,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -804,6 +849,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

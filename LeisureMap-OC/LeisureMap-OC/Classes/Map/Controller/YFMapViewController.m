@@ -52,7 +52,9 @@
     
     [super viewDidLoad];
     
-    self.title = @"Map";
+    
+    
+    self.title = NSLocalizedString(@"Map", @"Map");
     
     //发起定位
     if ([CLLocationManager locationServicesEnabled] ) {

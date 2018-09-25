@@ -5,3 +5,16 @@
   Created by 杨帆 on 2018/9/25.
   Copyright © 2018 abc. All rights reserved.
 */
+"logout" = "退出";
+"No network" = "没有网络";
+"Username or password cannot be empty" = "用户名或密码不能为空";
+
+"Logining" = "正在登录..";
+"Username or password is incorrect" = "用户名或密码不正确";
+"Please login first" = "请先登录";
+"Map" = "地图";
+"Main" = "首页";
+"Note" = "札记";
+"Web" = "网页";
+
+

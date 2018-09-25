@@ -24,7 +24,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.title = @"Web";
+    self.title = NSLocalizedString(@"Web", @"Web");
     
     [self setupWebView];
 }

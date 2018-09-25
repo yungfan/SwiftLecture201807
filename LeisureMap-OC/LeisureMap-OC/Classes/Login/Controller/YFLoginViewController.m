@@ -56,8 +56,10 @@
     NSInteger status = [[[YFFileTools sharedTool] readUserDataWithKey:@"AFNetworkReachabilityStatus"] integerValue];
     
     if (status == NotReachable) {
+        
+        
   
-        [[YFDialogTools sharedTool]showDialogWithType:StyleError message:@"没有网络"];
+        [[YFDialogTools sharedTool]showDialogWithType:StyleError message:NSLocalizedString(@"no network", @"no network")];
         return;
     }
     
@@ -66,12 +68,14 @@
         //1. 判断用户的输入是否合法
         if([_txtUname.text isEqualToString:@""] || [_txtPwd.text isEqualToString:@""]){
 
-            [[YFDialogTools sharedTool]showDialogWithType:StyleError message:@"用户名或密码不能为空"];
+            [[YFDialogTools sharedTool]showDialogWithType:StyleError message:NSLocalizedString(@"Username or password cannot be empty", @"Username or password cannot be empty")];
             
             return;
         }
         
-        [[YFDialogTools sharedTool]showDialogWithType:StyleInfo message:@"正在登录..."];
+        
+        
+        [[YFDialogTools sharedTool]showDialogWithType:StyleInfo message:NSLocalizedString(@"logining", @"logining")];
         
         //2.发送网络请求进行验证
         [YFLogin isValidUser:_txtUname.text andPwd:_txtPwd.text withCallback:^(BOOL isValid) {
@@ -91,8 +95,9 @@
                 [self dismissViewControllerAnimated:YES completion:nil];
             }
             else{
-      
-                [[YFDialogTools sharedTool]showDialogWithType:StyleError message:@"用户名或密码不正确"];
+                
+            
+                [[YFDialogTools sharedTool]showDialogWithType:StyleError message:NSLocalizedString(@"Username or password is incorrect", @"Username or password is incorrect")];
                 
             }
             

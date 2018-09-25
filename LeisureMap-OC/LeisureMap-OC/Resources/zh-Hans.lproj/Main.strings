@@ -1,21 +1,21 @@
 
-/* Class = "UILabel"; text = "Label"; ObjectID = "25n-5f-JQo"; */
-"25n-5f-JQo.text" = "Label";
+/* Class = "UILabel"; text = "Label"; ObjectID = "25n-5f-JQo"; UICollectionViewCell中的
+"25n-5f-JQo.text" = "Label";*/
 
-/* Class = "UIBarButtonItem"; title = "login"; ObjectID = "KgA-Ir-W3w"; */
-"KgA-Ir-W3w.title" = "login";
+/* Class = "UIBarButtonItem"; title = "login"; ObjectID = "KgA-Ir-W3w"; 主界面登录按钮 */
+"KgA-Ir-W3w.title" = "登录";
 
 /* Class = "UITextField"; placeholder = "username"; ObjectID = "Th3-Bs-j08"; */
-"Th3-Bs-j08.placeholder" = "username";
+"Th3-Bs-j08.placeholder" = "用户名";
 
 /* Class = "UILabel"; text = "version"; ObjectID = "jDe-2D-EIv"; */
-"jDe-2D-EIv.text" = "version";
+"jDe-2D-EIv.text" = "版本";
 
 /* Class = "UIButton"; normalTitle = "login"; ObjectID = "l1F-oo-9lB"; */
-"l1F-oo-9lB.normalTitle" = "login";
+"l1F-oo-9lB.normalTitle" = "登录";
 
 /* Class = "UIButton"; normalTitle = "cancel"; ObjectID = "oQa-RD-fqP"; */
-"oQa-RD-fqP.normalTitle" = "cancel";
+"oQa-RD-fqP.normalTitle" = "取消";
 
 /* Class = "UITextField"; placeholder = "password"; ObjectID = "x2a-dD-UCl"; */
-"x2a-dD-UCl.placeholder" = "password";
+"x2a-dD-UCl.placeholder" = "密码";

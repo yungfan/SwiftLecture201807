@@ -58,7 +58,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    self.title = @"Main";
+    self.title = NSLocalizedString(@"Main", @"Main");
     
     [self setupCollectionView];
     
@@ -77,7 +77,8 @@
     
     self.isLogin = YES;
     
-    self.loginItem.title = @"logout";
+    //国际化字符串
+    self.loginItem.title =  NSLocalizedString(@"logout", @"logout")  ;
 }
     
 //根据网络状态设置数据
@@ -219,7 +220,7 @@
     else{
         
  
-        [[YFDialogTools sharedTool]showDialogWithType:StyleError message:@"请先登录"];
+        [[YFDialogTools sharedTool]showDialogWithType:StyleError message:NSLocalizedString(@"Please login first", @"Please login first")];
         
     }
     
