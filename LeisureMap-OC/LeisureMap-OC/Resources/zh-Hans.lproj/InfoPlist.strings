@@ -7,13 +7,13 @@
 */
 "CFBundleDisplayName" = "玩吧" ;
 "CFBundleName" = "玩吧" ;
-"NSCameraUsageDescription" = "访问相机获取图片进行记录" ;
-"NSPhotoLibraryAddUsageDescription" = "访问相册获取图片进行记录" ;
-"NSPhoto Library Additions Usage Description" = "访问相册获取图片进行记录" ;
-"NSLocationAlwaysUsageDescription" = "LeisureMap需要知道你的位置以提供更好的服务" ;
-"NSLocationUsageDescription" = "LeisureMap需要知道你的位置以提供更好的服务" ;
-"NSLocationAlwaysAndWhenInUseUsageDescription" = "LeisureMap需要知道你的位置以提供更好的服务" ;
-"NSLocationWhenInUseUsageDescription" = "LeisureMap需要知道你的位置以提供更好的服务" ;
+"NSCameraUsageDescription" = "启用相机进行拍照，记录生活美好瞬间" ;
+"NSPhotoLibraryAddUsageDescription" = "访问相册获取图片进行美好生活的记忆" ;
+"NSPhoto Library Additions Usage Description" = "访问相册获取图片进行美好生活的记忆" ;
+"NSLocationAlwaysUsageDescription" = "需要知道你的位置以提供更好的服务" ;
+"NSLocationUsageDescription" = "需要知道你的位置以提供更好的服务" ;
+"NSLocationAlwaysAndWhenInUseUsageDescription" = "需要知道你的位置以提供更好的服务" ;
+"NSLocationWhenInUseUsageDescription" = "需要知道你的位置以提供更好的服务" ;
 
 "UILaunchStoryboardName" = "Launch Screen-Chinese";
 
